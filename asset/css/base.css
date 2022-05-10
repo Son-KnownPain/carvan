@@ -6,6 +6,15 @@
     --primary-font: 'cambria';
 }
 
+html {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 .fh {
     height: 100%!important;
 }

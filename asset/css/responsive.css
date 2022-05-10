@@ -1,0 +1,7 @@
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+    /* Hide on mobile and tablet */
+    .HOMAT {
+        display: none;
+    }
+}
