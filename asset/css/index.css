@@ -1,0 +1,88 @@
+/* CSS for application */
+.app {
+    display: flex;
+    justify-content: center;
+}
+
+/* CSS for slider */
+.slider {
+    width: 100%;
+    position: relative;
+    max-width: 1600px;
+}
+
+.slider__prev-btn, .slider__next-btn {
+    position: absolute;
+    font-size: 1.6rem;
+    background-color: #fff;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    color: #000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.slider__prev-btn {
+    left: 8px;
+}
+
+.slider__next-btn {
+    right: 8px;
+}
+
+.slider__dots {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    display: flex;
+    bottom: 8px;
+    list-style: none;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.slider__dot-item {
+    color: #333;
+    padding: 0 4px;
+    text-shadow: 0 1px 7px #fff;
+}
+
+.slider__dot-item.active {
+    color: #fff;
+    text-shadow: 0 1px 7px #000;
+}
+
+.slider__dot-item::marker {
+
+}
+
+.slider__wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.slider__main {
+    display: flex;
+    position: relative;
+    transition: transform ease-out 0.3s;
+}
+
+.slider__item {
+    flex: 1 0 100%;
+}
+
+.slider__img {
+    width: 100%;
+}
+
+
+/* End CSS for slider */
