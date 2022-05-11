@@ -96,3 +96,85 @@
 
 
 /* End CSS for how it work */
+
+/* ------------------- */
+
+/* CSS for content */
+
+.product {
+    width: 100%;
+    background-color: #008b8b;
+}
+
+.product__section {
+
+}
+
+.product__heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #fff;
+    font-family: 'cambria';
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.product-item {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.product__img {
+    width: 100%;
+}
+
+.product-info {
+    bottom: 0;
+    padding-left: 8px;
+    font-family: 'cambria';
+    background-color: #333;
+}
+
+.product-name {
+    color: #fff;
+    font-size: 2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.product-price {
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+
+.product__view-more-box {
+    margin-top: 30px;
+}
+
+.product__view-more-btn {
+    color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    word-spacing: 4px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* End CSS for content */
+

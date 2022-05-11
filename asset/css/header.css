@@ -4,9 +4,13 @@
 .header {
     position: fixed;
     width: 100%;
-    height: var(--header-height);
-    z-index: 1;
+    height: var(--header-height-pc);
+    z-index: 2;
     top: 0;
+}
+
+.header--bg-white {
+    background-color: #fff;
 }
 
 .header-wrapper {
@@ -23,7 +27,7 @@
 }
 
 .header__img-logo {
-    width: 64px;
+    width: var(--width-logo-pc);
     border-radius: 6px;
 }
 
@@ -31,6 +35,12 @@
     text-shadow: 0 1px 7px #000;
     color: #fff;
     margin-left: 8px;
+    font-size: var(--font-size-logo-pc);
+}
+
+.header--bg-white .header__logo-text {
+    text-shadow: 0 1px 7px #fff;
+    color: var(--primary-color);
 }
 
 .header__nav {
@@ -57,10 +67,19 @@
     margin: 0 12px;
     text-decoration: none;
     text-shadow: 0 1px 7px #000;
+    font-size: 2rem;
+}
+
+.header--bg-white .header__nav-item-link {
+    color: #000;
+    text-shadow: 0 1px 7px #fff;
 }
 
 .header__nav-item-link:hover {
     color: aqua;
+}
 
+.header--bg-white .header__nav-item-link:hover {
+    color: var(--primary-color);
 }
 /* End CSS for header and navbar */

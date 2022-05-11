@@ -1,12 +1,14 @@
 :root {
-    --primary-color: #5d8aa8;
+    --primary-color: #cc0000;
     --white-color: #fff;
     --text-color: #333;
     --black-color: #000;
     --primary-font: 'cambria';
 
     /* Index.html */
-    --header-height: 115px
+    --header-height-pc: 115px;
+    --width-logo-pc: 64px;
+    --font-size-logo-pc: 3.6rem;
 }
 
 html {
@@ -20,4 +22,31 @@ html {
 
 .fh {
     height: 100%!important;
+}
+
+.strike-through { /* Not content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.strike-through-line {
+    border-radius: 8px;
+    height: 4px;
+    width: 180px;
+    background-color: #990000;
+}
+
+.strike-through-dark { /* Not content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.strike-through-dark-line {
+    border-radius: 8px;
+    height: 1px;
+    width: 100%;
+    background-color: #a9a9a9;
+    margin-bottom: 60px;
 }

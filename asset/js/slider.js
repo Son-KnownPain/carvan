@@ -49,7 +49,6 @@ window.addEventListener('load', function() {
             sliderMain.style = `transform: translateX(${xItem})`
         }
 
-        console.log(indexItem)
         // Handle dot item in UI
         Array(sliderDotsItem)[0].forEach((dotItem) => {
             if (dotItem.matches('.active') && -dotItem.dataset.index != indexItem) {
