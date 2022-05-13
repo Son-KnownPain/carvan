@@ -50,3 +50,7 @@ html {
     background-color: #a9a9a9;
     margin-bottom: 60px;
 }
+
+html {
+    scroll-behavior: smooth;
+}

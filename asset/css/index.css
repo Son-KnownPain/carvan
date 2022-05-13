@@ -1,3 +1,6 @@
+
+
+
 /* CSS for application */
 .app {
     display: flex;
@@ -103,7 +106,7 @@
 
 .product {
     width: 100%;
-    background-color: #008b8b;
+    background-color: #5d8aa8;
 }
 
 .product__section {
@@ -120,6 +123,16 @@
     font-size: 3rem;
     font-weight: 400;
     margin-top: 30px;
+}
+
+.product__layout {
+    width: 100%;
+}
+
+.product--loading {
+    text-align: center;
+    color: #00ffff;
+    font-family: Consolas;
 }
 
 .product-item {
