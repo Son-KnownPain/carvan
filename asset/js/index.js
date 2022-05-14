@@ -18,7 +18,7 @@ const app = {
     // ---------------|
     // Method in here |
     // ---------------|
-
+        // Display loading text
         loadingUI: function() {
             // When calling API then display 'loading' in UI
             var loadNumber = 0
@@ -39,6 +39,92 @@ const app = {
                 }
             }
 
+        },
+
+        // Slider client opinions
+        clientOpinionsSlider: function() {
+            // Get elements
+            const slider = $('.co-slider')
+            const sliderMain = $('.co-slider__main')
+            const sliderItem = $$('.co-slider__item')
+
+            const sliderPrevBtn = $('.co-slider__prev-btn')
+            const sliderNextBtn = $('.co-slider__next-btn')
+
+            let sliderDotsItem = $$('.co-slider__dot-item')
+
+            // Create default value of slide
+            let indexItem = 0 //as Item 0
+            let xItem = `${indexItem}00%`
+            const slideItemLength = sliderItem.length
+
+            // -----------------------------------------------------------
+
+            // Create function handling click prev, next slide or dot item
+            const handleClickToggleSlide = (direction) => {
+                // Next
+                if (direction === 1) {
+
+                    indexItem--
+                    if (indexItem === -slideItemLength) {
+                        indexItem = -0
+                    }
+                    xItem = `${indexItem}00%`
+
+                    sliderMain.style = `transform: translateX(${xItem})`
+                // Prev
+                } else if (direction === -1)  {
+
+                    indexItem++
+                    if (indexItem === 1) {
+                        indexItem = -slideItemLength + 1
+                    }
+                    xItem = `${indexItem}00%`
+
+                    sliderMain.style = `transform: translateX(${xItem})`
+                // Dot item
+                } else if (typeof direction == 'object') {
+                    
+                    indexItem = -direction.indexDotItem
+
+                    xItem = '-' + direction.xDotItem
+
+                    sliderMain.style = `transform: translateX(${xItem})`
+                }
+
+                // Handle dot item in UI
+                Array(sliderDotsItem)[0].forEach((dotItem) => {
+                    if (dotItem.matches('.active') && -dotItem.dataset.index != indexItem) {
+                        dotItem.classList.remove('active')
+                    } else if (-dotItem.dataset.index == indexItem) {
+                        dotItem.classList.add('active')
+                    }
+                })
+            }
+
+            // -----------------------------------------------------------
+            // Handle click prev btn
+            sliderPrevBtn.addEventListener('click', function() {
+                handleClickToggleSlide(-1)
+            })
+
+            // Handle click next btn
+            sliderNextBtn.addEventListener('click', function() {
+                handleClickToggleSlide(1)
+            })
+
+            // Handle click dot item
+            Array(sliderDotsItem)[0].forEach((dotItem) => {
+                dotItem.addEventListener('click', function() {
+
+                    handleClickToggleSlide({
+                        xDotItem: `${dotItem.dataset.index}00%`,
+                        indexDotItem: Number.parseInt(dotItem.dataset.index)
+                    })
+
+                })
+            })
+            
         },
 
         // --Handle events
@@ -123,6 +209,7 @@ const app = {
         this.loadingUI()
         this.handleEvents()
         this.renderProducts(this.idLayoutDisplayed, 4)
+        this.clientOpinionsSlider()
     }
 }
 

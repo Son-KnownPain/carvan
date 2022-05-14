@@ -72,7 +72,7 @@
 }
 
 .header--bg-white .header__nav-item-link {
-    color: #000;
+    color: var(--text-color);
     text-shadow: 0 1px 7px #fff;
 }
 

@@ -102,11 +102,11 @@
 
 /* ------------------- */
 
-/* CSS for content */
+/* CSS for Products */
 
 .product {
     width: 100%;
-    background-color: #5d8aa8;
+    background-color: #d3e8ff;
 }
 
 .product__section {
@@ -118,7 +118,7 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    color: #fff;
+    color: #444;
     font-family: 'cambria';
     font-size: 3rem;
     font-weight: 400;
@@ -131,13 +131,12 @@
 
 .product--loading {
     text-align: center;
-    color: #00ffff;
+    color: #79443b;
     font-family: Consolas;
 }
 
 .product-item {
     position: relative;
-    border-radius: 4px;
     overflow: hidden;
     margin-top: 12px;
     text-decoration: none;
@@ -150,7 +149,7 @@
 
 .product-info {
     bottom: 0;
-    padding-left: 8px;
+    padding: 8px;
     font-family: 'cambria';
     background-color: #333;
 }
@@ -180,7 +179,7 @@
     justify-content: center;
     align-items: center;
     font-size: 2.2rem;
-    font-family: sans-serif;
+    font-family: consolas;
     font-weight: 600;
     word-spacing: 4px;
     height: 50px;
@@ -189,5 +188,200 @@
     user-select: none;
 }
 
-/* End CSS for content */
+/* End CSS for Products */
 
+
+/* CSS for client opinions */
+
+.client-opinions {
+    background-color: #fff;
+    padding-bottom: 36px;
+}
+
+.co__heading-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 155px;
+    width: 100%;
+    font-family: cursive;
+    flex-direction: column;
+}
+
+.co__heading-text {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+.co-slider {
+    width: 100%;
+    position: relative;
+    max-width: 1600px;
+}
+
+.co-slider__prev-btn, .co-slider__next-btn {
+    position: absolute;
+    font-size: 1.6rem;
+    background-color: #e52b50;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.co-slider__prev-btn {
+    left: 0;
+}
+
+.co-slider__next-btn {
+    right: 0;
+}
+
+.co-slider__dots {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    display: flex;
+    bottom: 8px;
+    list-style: none;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.co-slider__dot-item {
+    color: #333;
+    padding: 0 4px;
+    text-shadow: 0 1px 7px #fff;
+}
+
+.co-slider__dot-item.active {
+    color: #fff;
+    text-shadow: 0 1px 7px #000;
+}
+
+.co-slider__dot-item::marker {
+
+}
+
+.co-slider__wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.co-slider__main {
+    display: flex;
+    position: relative;
+    transition: transform ease-out 0.4s;
+}
+
+.co-slider__item {
+    flex: 1 0 100%;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+.co-slider__info {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.co-slider__brand-img {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.co-slider__content {
+    font-size: 1.8rem;
+    font-family: consolas;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-left: 8px;
+}
+
+/* End CSS for client opinions */
+
+/* CSS for Advantages */
+
+.advantages {
+    background-color: #d3e8ff;
+    padding-bottom: 60px;
+}
+
+.advantages__heading-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 155px;
+    flex-direction: column;
+}
+
+.advantages__heading {
+    font-size: 3.6rem;
+    font-family: cursive;
+    margin-bottom: 12px;
+}
+
+.advantages__list {
+    padding: 40px 0;
+}
+
+.advantages__content-item {
+    margin-bottom: 75px;
+}
+
+.advantages-icon-box {
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.advantages-icon-box i {
+    font-size: 4rem;
+    padding: 0 4px;
+    color: #bf3641;
+}
+
+.advantages-item-heading-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 8px;
+    margin-bottom: 24px;
+    height: 88px;
+}
+
+.advantages-item-heading {
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.advantages-item-text {
+    font-size: 1.8rem;
+    font-family: cambria;
+    padding: 0 8px;
+    text-align: center;
+    word-spacing: 2px;
+}
+
+
+
+/* End CSS for Advantages */
