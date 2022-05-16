@@ -96,6 +96,26 @@
 
 /* CSS for how it work */
 
+.how-it-work {
+    height: 500px;
+    background-color: #333;
+}
+
+.hiw__heading-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 155px;
+}
+
+.hiw__heading {
+    color: #fff;
+    text-align: center;
+    font-size: 3.6rem;
+    font-family: cursive;
+    margin-bottom: 12px;
+}
 
 
 /* End CSS for how it work */
@@ -306,7 +326,7 @@
 }
 
 .co-slider__content {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-family: consolas;
     display: flex;
     align-items: center;
@@ -380,8 +400,89 @@
     padding: 0 8px;
     text-align: center;
     word-spacing: 2px;
+    line-height: 30px;
 }
 
 
 
 /* End CSS for Advantages */
+
+/* CSS for Why Carvan */
+
+.why {
+    background-color: #fff;
+    height: 500px;
+}
+
+.why__heading-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 155px;
+}
+
+.why__heading {
+    color: #333;
+    text-align: center;
+    font-size: 3.6rem;
+    font-family: cursive;
+    margin-bottom: 12px;
+}
+
+.why__introduce-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 88%;
+}
+
+.why__introduce {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.why__list {
+
+}
+
+.why__item {
+
+}
+
+.wi__icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.wi__icon {
+    font-size: 8rem;
+    color: #e52b50;
+}
+
+.wi__heading-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wi__heading {
+    font-size: 3.2rem;
+    color: var(--text-color);
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.wi__content-box {
+
+}
+
+
+
+/* End CSS for Why Carvan */
