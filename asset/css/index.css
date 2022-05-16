@@ -411,7 +411,7 @@
 
 .why {
     background-color: #fff;
-    height: 500px;
+    padding-bottom: 55px;
 }
 
 .why__heading-box {
@@ -448,12 +448,12 @@
 
 .why__list {
     --color-icon: #21abcd;
-    width: 98%;
-    margin: 0 auto;
 }
 
 .why__item {
-
+    width: 94%;
+    margin: 0 auto;
+    padding-bottom: 26px;
 }
 
 .wi__icon-box {
@@ -522,4 +522,186 @@
     font-weight: 300;
 }
 
+.wi__step-list { /* STEPS */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wi__step-item {
+    margin-bottom: 24px;
+}
+
+.wi__step-heading-box {
+    margin-bottom: 16px;
+}
+
+.wi__step-heading {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.wi__step-content {
+    
+}
+
+.wi__step-text {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #333;
+    line-height: 32px;
+}
+
+.wi__numbers-box {
+
+}
+
+.wi__square-box {
+    display: flex;
+
+}
+
+.wi__square-item {
+    width: 50%;
+    padding: 20px;
+}
+
+
+
+.wi__square-item.si-pt { /* sub CSS */
+    padding-top: 20px;
+}
+.wi__square-item.si-pb {
+    padding-bottom: 20px;
+}
+.wi__square-item.si-br {
+    border-right: 1px solid #c7c5c5;
+}
+.wi__square-item.si-bl {
+    border-left: 1px solid #c7c5c5;
+}
+.wi__square-item.si-bt {
+    border-top: 1px solid #c7c5c5;
+}
+.wi__square-item.si-bb {
+    border-bottom: 1px solid #c7c5c5;
+}
+
+
+
+.wi__number-heading {
+    font-size: 4.6rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.wi__number-text {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+}
+
+.wi__certification { /* certification */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wi__certification-text {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 26px;
+}
+
+.wi__certification-img {
+    width: 40%;
+}
+
+.wi__mobile-app {
+
+}
+
+.wi__mobile-app-text {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: center;
+}
+
+.wi__about-relationships {
+
+}
+
+.wi__about-relationships-text {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wi__about-relationships-signature {
+    font-size: 3.6rem;
+    font-family: Brush Script MT;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #cd5b45;
+    padding-top: 30px;
+}
+
 /* End CSS for Why Carvan */
+
+/* CSS for GUARANTEE */
+
+.guarantee {
+    background-color: #0000000d;
+    padding-bottom: 55px;
+}
+
+.guarantee__heading-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 155px;
+}
+
+.guarantee__heading {
+    color: #333;
+    text-align: center;
+    font-size: 3.6rem;
+    font-family: cursive;
+    margin-bottom: 12px;
+}
+
+.guarantee__content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.guarantee__text-section {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 32px;
+    word-spacing: 3px;
+    font-family: cambria;
+}
+
+
+/* End CSS for Guarantee */
