@@ -5,14 +5,18 @@
     --black-color: #000;
     --primary-font: 'cambria';
 
-    /* Index.html */
+    /* Index.html -> Header */
     --header-height-pc: 115px;
     --width-logo-pc: 64px;
     --font-size-logo-pc: 3.6rem;
+
+    /* Index.html -> Heading of a frame */
+    --font-size-heading: 3.6rem
 }
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -26,6 +30,23 @@ html {
 
 .fw {
     width: 100%!important;
+}
+
+.base__frame-heading-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 155px;
+    width: 100%;
+    font-family: cursive;
+    flex-direction: column;
+}
+
+.base__frame-heading {
+    font-size: var(--font-size-heading);
+    color: var(--text-color);
+    margin-bottom: 12px;
+    text-align: center;
 }
 
 .strike-through { /* Not content */
@@ -53,8 +74,4 @@ html {
     width: 100%;
     background-color: #a9a9a9;
     margin-bottom: 60px;
-}
-
-html {
-    scroll-behavior: smooth;
 }

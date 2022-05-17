@@ -137,7 +137,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    text-align: center;
+    min-height: 50px;
     color: #444;
     font-family: 'cambria';
     font-size: 3rem;
@@ -709,7 +710,7 @@
 /* CSS for Popular */
 
 .popular {
-    
+    padding-bottom: 55px;
 }
 
 .popular__heading-box {
@@ -727,5 +728,48 @@
     font-family: cursive;
     margin-bottom: 12px;
 }
+
+.popular__introduce {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular__introduce-text {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 55px;
+}
+
+.popular__brands-box {
+
+}
+
+.popular__brand {
+    margin-bottom: 24px;
+}
+
+.popular__logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular__logo {
+
+}
+
+.popular__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular__name-text {
+    font-size: 1.8rem;
+}
+
 
 /* End CSS for Popular */

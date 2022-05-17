@@ -8,7 +8,7 @@ ul{
 {
     background-color: #24262b;
     padding: 70px 0;
-
+    padding-bottom: 0;
 }
 .footer-col{
     width: 25%;
@@ -86,6 +86,36 @@ ul{
 .footer-icon:hover {
     color: #fff;
 }
+
+/* Son: do copyright */
+.footer__copyright {
+    height: 88px;
+    background-color: #4d4d4d;
+    margin-top: 70px;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.footer__copyright-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffffffcc;
+}
+
+.footer__copyright-icon {
+    padding: 0 8px 0 0;
+}
+
+.footer__copyright-text {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+
+
+
 
 /*responsive*/
 @media (max-width:767px) {
