@@ -95,29 +95,176 @@
 /* ------------------- */
 
 /* CSS for how it work */
-
-.how-it-work {
-    height: 500px;
-    background-color: #333;
+.how-it-works
+{
+    padding: 30px;
 }
 
-.hiw__heading-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 155px;
+.bg-how-it-works {
+    background-image: url(../img/backgrounds/how-it-work.webp)
 }
 
-.hiw__heading {
-    color: #fff;
+.bg-how-it-works {
+    background-size: cover;
+    background-position: 92%
+}
+
+@media screen and (min-width: 48em) {
+    .bg-how-it-works {
+        background-position:93%
+    }
+}
+
+.text-white {
+    color: #fff
+}
+
+body
+{
+    font-size: 20px;
+}
+
+.text-hw 
+{
+    font-weight: 300;
+}
+
+.title-main {
+    position: relative;
+    margin-bottom: 60px;
     text-align: center;
-    font-size: 3.6rem;
-    font-family: cursive;
-    margin-bottom: 12px;
+    font-size: 35px;
+    font-weight: 300;
 }
 
+.title-main:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50%);
+    border-bottom: 4px solid #c91d23;
+    width: 80px
+}
 
+.line-separator-lg {
+    padding: 30px 0;
+}
+
+.line-separator:first-child:before, .line-separator:last-child:after {
+    content: "";
+}
+
+.line-separator-lg:before {
+    content: "-----";
+    left: 50%;
+    top: 15px;
+}
+
+@media screen and (min-width: 992px) {
+    .line-separator-lg::before {
+        left: 0;
+        top: 60px;
+        transform: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .line-separator::before {
+        display: inline-block;
+        transform: rotate(90deg) translate(-90%,50%);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .line-separator-lg:after {
+        content: "-----";
+        right: 0;
+        top: 60px;
+        transform: none;
+    }
+}
+
+.line-separator:after, .line-separator:before {
+    position: absolute;
+}
+
+.line-white
+{
+    color: #fff;
+}
+
+@media screen and (min-width: 62em)
+{
+    .row [class^=col]
+    {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.padding-bottom-75 {
+    padding-bottom: 75px;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.m-auto {
+    margin: auto!important;
+}
+
+.flex-column {
+    flex-direction: column!important;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col 
+{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    .flex-lg-row {
+        flex-direction: row!important;
+    }
+}
+
+.after, .before {
+    box-sizing: border-box;
+}
+
+.img_hw1 {
+    height: 90px;
+    width: 90px;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 30px;
+}
+
+.img_hw2 {
+    height: 96px;
+    width: 96px;
+    background-color: rgb(253, 60, 60);
+    padding: 20px;
+    border-radius: 40px;
+}
 /* End CSS for how it work */
 
 /* ------------------- */
