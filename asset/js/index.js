@@ -19,13 +19,13 @@ const app = {
     // Method in here |
     // ---------------|
         // Display loading text
-        loadingUI: function() {
+        loadingUI: function(className) {
             // When calling API then display 'loading' in UI
             var loadNumber = 0
 
             const idInterval = setInterval(() => {
                 if (loadNumber < 100) {
-                    $$('.product--loading').forEach(loadEach => {
+                    $$('.' + className).forEach(loadEach => {
                         loadEach.innerHTML = `Loading...${loadNumber}%`
                     })
                 } 
@@ -147,7 +147,26 @@ const app = {
 
                         _this.idLayoutDisplayed = _this.idLayoutDisplayed.filter(id => id != indexBtn + 1)
                         _this.renderProducts(_this.idLayoutDisplayed, 4)
-                        btn.style = 'display: none;'
+                        
+                        // Loading UI
+                        var loadNumber = 0
+
+                        const idInterval = setInterval(() => {
+                            if (loadNumber < 100) {
+                                btn.innerHTML = `Loading...${loadNumber}%`
+                            } 
+                            loadNumber++
+                            clearLoading(loadNumber)
+                        }, 5)
+
+                        function clearLoading(num) {
+                            if (num == 100) {
+                                clearInterval(idInterval)
+                                btn.style = 'display: none;'
+                            }
+                        }
+                        // End loading UI
+                        
                         btn.textContent = 'Hide'
 
                     } else {
@@ -206,7 +225,7 @@ const app = {
     // Function 'start' is always called first
     start: function() {
         // Will call other function
-        this.loadingUI()
+        this.loadingUI('product--loading')
         this.handleEvents()
         this.renderProducts(this.idLayoutDisplayed, 4)
         this.clientOpinionsSlider()

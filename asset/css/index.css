@@ -97,7 +97,7 @@
 /* CSS for how it work */
 .how-it-works
 {
-    padding: 30px;
+    padding: 30px 0;
 }
 
 .bg-how-it-works {
@@ -119,10 +119,7 @@
     color: #fff
 }
 
-body
-{
-    font-size: 20px;
-}
+
 
 .text-hw 
 {
@@ -187,6 +184,7 @@ body
 
 .line-separator:after, .line-separator:before {
     position: absolute;
+    font-size: 2rem;
 }
 
 .line-white
@@ -196,7 +194,7 @@ body
 
 @media screen and (min-width: 62em)
 {
-    .row [class^=col]
+    .row-hiw [class^=col]
     {
         padding-left: 30px;
         padding-right: 30px;
@@ -219,22 +217,17 @@ body
     flex-direction: column!important;
 }
 
-.row {
+.row-hiw {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
 }
 
-.col 
+.col-hiw
 {
     position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-}
-
-.col {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;

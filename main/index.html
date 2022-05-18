@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../asset/css/header.css">
     <link rel="stylesheet" href="../asset/css/footer.css">
     <link rel="stylesheet" href="../asset/css/index.css">
+    <link rel="stylesheet" href="../asset/css/responsive-all.css">
     <link rel="stylesheet" href="../asset/css/responsive-index.css">
 
 </head>
@@ -42,22 +43,84 @@
                     <nav class="header__nav HOMAT">
                         <ul class="header__nav-list">
                             <li class="header__nav-item">
-                                <a href="" class="header__nav-item-link">About us</a>
+                                <a href="../main/about-us.html" class="header__nav-item-link">About us</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="" class="header__nav-item-link">Brands</a>
+                                <a href="../main/brands.html" class="header__nav-item-link">Brands</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="" class="header__nav-item-link">Range of cars</a>
+                                <a href="../main/range-of-cars.html" class="header__nav-item-link">Range of cars</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="" class="header__nav-item-link">PreOwned cars</a>
+                                <a href="../main/preowned-cars.html" class="header__nav-item-link">PreOwned cars</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="" class="header__nav-item-link">Contact us</a>
+                                <a href="../main/contact.html" class="header__nav-item-link">Contact us</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/site-map.html" class="header__nav-item-link">Site map</a>
                             </li>
                         </ul>
                     </nav>
+                    <!-- Menu on mobile and tablet -->
+                    <!-- mbm: Mobile menu -->
+                    <div class="header__mb-menu HOPC">
+                        <span class="header__mbm-btn">
+                            <i class="fa-solid fa-bars header__mbm-icon"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model mobile menu -->
+            <div class="mbm__model">
+                <div class="mbm__contain fh">
+                    <!-- Close model button -->
+                    <div class="mbm__close">
+                        <span class="mbm__close-btn">
+                            <i class="fa-regular fa-circle-xmark mbm__close-icon"></i>
+                        </span>
+                    </div>
+
+                    <!-- List navigate -->
+                    <ul class="mbm__nav-list">
+                        <li class="mbm__nav-item">
+                            <a href="../main/about-us.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-people-group mbm__nav-item-icon"></i>
+                                About us
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/brands.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-flag mbm__nav-item-icon"></i>
+                                Brands
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/range-of-cars.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-book-open mbm__nav-item-icon"></i>
+                                Range of cars
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/preowned-cars.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-truck-pickup mbm__nav-item-icon"></i>
+                                PreOwned cars
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/contact.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-phone-volume mbm__nav-item-icon"></i>
+                                Contact us
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/site-map.html" class="mbm__nav-link">
+                                <i class="fa-regular fa-map mbm__nav-item-icon"></i>
+                                Site map
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -92,36 +155,43 @@
         <!-- How it works -->
         <div class="bg-how-it-works">
             <div style="padding: 30px; padding-left: 100px; padding-right: 100px;">
-                <h1 class="text-white title-main">
-                    How it works
-                </h1>
-                <div class="row m-auto text-center flex-column flex-lg-row padding-bottom-75">
-                    <div class="col line-separator line-white line-separator-lg">
+                <!-- Heading -->
+                <div class="base__frame-heading-box" style="margin-bottom: 55px;">
+                    <h4 class="base__frame-heading" style="color: #fff;">
+                        How it works
+                    </h4>
+                    <div class="strike-through">
+                        <div class="strike-through-line"></div>
+                    </div>
+                </div>
+
+                <div class="row-hiw m-auto text-center flex-column flex-lg-row padding-bottom-75">
+                    <div class="col-hiw line-separator line-white line-separator-lg">
                         <img class="img_hw1" src="../asset/img/icon/user-account.svg">
                         <h2 class="text-white text-hw">You are thinking of buying a car</h2>
                     </div>
 
-                    <div class="col line-separator line-white line-separator-lg">
+                    <div class="col-hiw line-separator line-white line-separator-lg">
                         <img class="img_hw2" src="../asset/img/icon/list.svg">
                         <h2 class="text-white text-hw">You choose the car you want or ask for assistance</h2>
                     </div>
 
-                    <div class="col line-separator line-white line-separator-lg">
+                    <div class="col-hiw line-separator line-white line-separator-lg">
                         <img class="img_hw2" src="../asset/img/icon/car.svg">
                         <h2 class="text-white text-hw">We check and evaluate your car</h2>
                     </div>
 
-                    <div class="col line-separator line-white line-separator-lg">
+                    <div class="col-hiw line-separator line-white line-separator-lg">
                         <img class="img_hw2" src="../asset/img/icon/money.svg">
                         <h2 class="text-white text-hw">You accept the offer and finalize the payment</h2>
                     </div>
 
-                    <div class="col line-separator line-white line-separator-lg">
+                    <div class="col-hiw line-separator line-white line-separator-lg">
                         <img class="img_hw2" src="../asset/img/icon/car-carrier-truck.svg">
                         <h2 class="text-white text-hw">We deliver your car to your door</h2>
                     </div>
 
-                    <div class="col line-separator line-white line-separator-lg">
+                    <div class="col-hiw line-separator line-white line-separator-lg">
                         <img class="img_hw1" src="../asset/img/icon/smile.svg">
                         <h2 class="text-white text-hw">You are happy and "ready to go"!</h2>
                     </div>
@@ -1128,6 +1198,7 @@
 
 <script src="../asset/js/main.js"></script>
 <script src="../asset/js/headerIndex.js"></script>
+<script src="../asset/js/header.js"></script>
 <script src="../asset/js/slider.js"></script>
 <script src="../asset/js/index.js"></script>
 

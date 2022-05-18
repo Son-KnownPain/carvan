@@ -1,0 +1,5 @@
+.content {
+    background-color: #333;
+    height: 1000px;
+    margin-top: var(--header-height);
+}
