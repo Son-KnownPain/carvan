@@ -110,7 +110,7 @@
 
 .header--bg-white .header__mbm-icon {
     font-size: 2.6rem;
-    color: var(--text-color);
+    color: var(--primary-color);
     text-shadow: none;
 }
 
