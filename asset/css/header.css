@@ -79,10 +79,12 @@
 
 .header__nav-item-link:hover {
     color: aqua;
+    border-bottom: 1px solid aqua;
 }
 
 .header--bg-white .header__nav-item-link:hover {
     color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 /* End CSS for header and navbar */
 
