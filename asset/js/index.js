@@ -218,7 +218,7 @@ const app = {
                             }
                             
                             return `<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <a href="#" class="product-item">
+                                        <a href="./other-html/car-detail.html" class="product-item">
                                             <img src="${car.pathImg}" alt="" class="product__img">
                                             <div class="product-info">
                                                 <h5 class="product-name">

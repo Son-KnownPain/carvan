@@ -1,0 +1,51 @@
+.form__heading {
+    color: #21abcd;
+}
+
+#form-contact {
+
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-contact label {
+    font-size: 1.6rem;
+}
+
+.input__asterisk {
+    color: #e32636;
+}
+
+.form__input {
+    height: 38px;
+    padding: 4px;
+    font-size: 1.6rem;
+    background-color: #ececec;
+    border: none;
+    outline: none;
+}
+
+.form__textarea {
+    padding: 4px;
+    font-size: 1.6rem;
+    background-color: #ececec;
+    border: none;
+    outline: none;
+}
+
+.form__message {
+    font-size: 1.4rem;
+    color: #e32636;
+}
+
+.form__submit-btn {
+    padding: 4px 18px;
+    background-color: #5d8aa8;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}

@@ -124,6 +124,9 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 /* Font size */
+.fs-12 {
+    font-size: 1.2rem;
+}
 .fs-14 {
     font-size: 1.4rem;
 }
@@ -190,6 +193,22 @@ body::-webkit-scrollbar-thumb:hover {
 .flex-column {
     flex-direction: column;
 }
+
+/* handle a tag */
+.a-handle {
+    text-decoration: none;
+}
+
+/* Display: block */
+.dp-block {
+    display: block;
+}
+
+/* Push top */
+.fix-header {
+    margin-top: var(--header-height);
+}
+
 
 
 /*  */
