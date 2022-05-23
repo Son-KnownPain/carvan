@@ -38,12 +38,170 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 0;
 }
 
-.fh {
-    height: 100%!important;
+.b_text-weight-700 {
+    font-weight: 700;
 }
 
+
+
+.fh {
+    height: 100%;
+}
 .fw {
-    width: 100%!important;
+    width: 100%;
+}
+
+
+
+/* Margin top */
+.mt-60 {
+    margin-top: 60px;
+}
+.mt-48 {
+    margin-top: 48px;
+}
+.mt-36 {
+    margin-top: 36px;
+}
+.mt-24 {
+    margin-top: 24px;
+}
+.mt-12 {
+    margin-top: 12px;
+}
+
+/* Margin left */
+.ml-60 {
+    margin-left: 60px;
+}
+.ml-48 {
+    margin-left: 48px;
+}
+.ml-36 {
+    margin-left: 36px;
+}
+.ml-24 {
+    margin-left: 24px;
+}
+.ml-12 {
+    margin-left: 12px;
+}
+
+/* Margin right */
+.mr-60 {
+    margin-right: 60px;
+}
+.mr-48 {
+    margin-right: 48px;
+}
+.mr-36 {
+    margin-right: 36px;
+}
+.mr-24 {
+    margin-right: 24px;
+}
+.mr-12 {
+    margin-right: 12px;
+}
+
+/* Margin bottom */
+.mb-60 {
+    margin-bottom: 60px;
+}
+.mb-48 {
+    margin-bottom: 48px;
+}
+.mb-36 {
+    margin-bottom: 36px;
+}
+.mb-24 {
+    margin-bottom: 24px;
+}
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+
+
+/* Font size */
+.fs-14 {
+    font-size: 1.4rem;
+}
+.fs-16 {
+    font-size: 1.6rem;
+}
+.fs-18 {
+    font-size: 1.8rem;
+}
+.fs-20 {
+    font-size: 2rem;
+}
+.fs-22 {
+    font-size: 2.2rem;
+}
+.fs-24 {
+    font-size: 2.4rem;
+}
+.fs-28 {
+    font-size: 2.8rem;
+}
+.fs-32 {
+    font-size: 3.2rem;
+}
+.fs-36 {
+    font-size: 3.6rem;
+}
+
+
+
+.b_text-greenyellow {
+    color: greenyellow;
+}
+
+.b_text-black {
+    color: var(--black-color);
+}
+
+.b_bg-greenyellow {
+    background-color: #7ac608;
+}
+
+.hover-blur:hover {
+    opacity: 0.8;
+}
+
+
+/* Display: flex */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.flex-column {
+    flex-direction: column;
+}
+
+
+/*  */
+.pointer {
+    cursor: pointer;
+}
+
+
+
+/*  */
+.mw-1650 {
+    max-width: 1650px;
 }
 
 .base__frame-heading-box {

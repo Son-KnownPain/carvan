@@ -16,6 +16,10 @@
 /* Mobile */
 @media (max-width: 739px) {
 
+    .bi__description-text {
+        text-align: center;
+    }
+
     .t-center-mobile {
         text-align: center;
     }
