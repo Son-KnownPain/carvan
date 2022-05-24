@@ -156,7 +156,7 @@ body
 }
 
 .line-separator-lg:before {
-    content: "-----";
+    content: "----";
     left: 50%;
     top: 15px;
 }
@@ -178,7 +178,7 @@ body
 
 @media screen and (min-width: 992px) {
     .line-separator-lg:after {
-        content: "-----";
+        content: "----";
         right: 0;
         top: 60px;
         transform: none;
