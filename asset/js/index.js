@@ -19,13 +19,13 @@ const app = {
     // Method in here |
     // ---------------|
         // Display loading text
-        loadingUI: function() {
+        loadingUI: function(className) {
             // When calling API then display 'loading' in UI
             var loadNumber = 0
 
             const idInterval = setInterval(() => {
                 if (loadNumber < 100) {
-                    $$('.product--loading').forEach(loadEach => {
+                    $$('.' + className).forEach(loadEach => {
                         loadEach.innerHTML = `Loading...${loadNumber}%`
                     })
                 } 
@@ -127,6 +127,23 @@ const app = {
             
         },
 
+        // Function reveal
+        reveal: function() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+                } else {
+                reveals[i].classList.remove("active");
+                }
+            }
+        },
+
         // --Handle events
         handleEvents: function() {
             var _this = this;
@@ -147,7 +164,26 @@ const app = {
 
                         _this.idLayoutDisplayed = _this.idLayoutDisplayed.filter(id => id != indexBtn + 1)
                         _this.renderProducts(_this.idLayoutDisplayed, 4)
-                        btn.style = 'display: none;'
+                        
+                        // Loading UI
+                        var loadNumber = 0
+
+                        const idInterval = setInterval(() => {
+                            if (loadNumber < 100) {
+                                btn.innerHTML = `Loading...${loadNumber}%`
+                            } 
+                            loadNumber++
+                            clearLoading(loadNumber)
+                        }, 5)
+
+                        function clearLoading(num) {
+                            if (num == 100) {
+                                clearInterval(idInterval)
+                                btn.style = 'display: none;'
+                            }
+                        }
+                        // End loading UI
+                        
                         btn.textContent = 'Hide'
 
                     } else {
@@ -159,6 +195,11 @@ const app = {
                     }
                 }
             })
+            // Handle scroll to display sections
+            window.onscroll = function() {
+                _this.reveal()
+            }
+
             //----------------------------------------------
         },
         renderProducts: function(idLayout, quantity = 4) {
@@ -177,7 +218,7 @@ const app = {
                             }
                             
                             return `<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                                        <a href="#" class="product-item">
+                                        <a href="./other-html/car-detail.html" class="product-item">
                                             <img src="${car.pathImg}" alt="" class="product__img">
                                             <div class="product-info">
                                                 <h5 class="product-name">
@@ -206,7 +247,7 @@ const app = {
     // Function 'start' is always called first
     start: function() {
         // Will call other function
-        this.loadingUI()
+        this.loadingUI('product--loading')
         this.handleEvents()
         this.renderProducts(this.idLayoutDisplayed, 4)
         this.clientOpinionsSlider()

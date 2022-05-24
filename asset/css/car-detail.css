@@ -1,0 +1,300 @@
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ------------------------------------- */
+
+/* TabUI CSS for car detail page */
+.tab-UI {
+    margin-top: 24px;
+}
+
+.tabs .line {
+    background-color: #00ce00;
+}
+
+.tab-item {
+    background-color: #fff;
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+
+
+/* ------------------------------------- */
+.content {
+    margin-top: var(--header-height);
+    padding-bottom: 100px;
+}
+
+.car-detail {
+
+}
+
+.car__name {
+    height: 88px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.car__name-text {
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+.car__img-box {
+    display: flex;
+    height: 420px;
+    overflow: hidden;
+}
+
+.car__img-displaying-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.car__img-displaying {
+    width: 100%;
+    max-width: 99%;
+}
+
+.car__img-select-box {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.car__img-select-box::-webkit-scrollbar {
+    width: 4px;
+    background-color: #eeeeee;
+}
+.car__img-select-box::-webkit-scrollbar-thumb {
+    background-color: #00aa00;
+    border-radius: 2px;
+}
+
+.car__img-select-box::-webkit-scrollbar-thumb:hover {
+    background-color: #00ce00;
+}
+
+.car__img-select {
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 2px solid #fff;
+}
+
+.car__info {
+    margin-left: 12px;
+}
+
+.car__state-box {
+    margin: 0 0 24px;
+}
+
+.car__state-text {
+    font-size: 2.4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.car__price-table {
+
+}
+
+.car__net-price {
+
+}
+
+.car__price-box {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #bababa;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.car__price-box.no-strikethrough {
+    border: none;
+}
+
+.car__price-title {
+    display: flex;
+    align-items: center;
+    font-family: Candara, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.car__price-subtitle {
+    font-size: 1.4rem;
+    margin-left: 12px;
+    color: #777;
+}
+
+.car__warranty-modify-btn {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+.car__price-value {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.car__vat-value {
+    font-size: 1.4rem;
+    display: block;
+}
+
+/* Human and Protection */
+
+.protection-box {
+    background-color: #e5ffe5;
+    margin-top: 24px;
+    padding: 44px;
+}
+
+.protection__heading-box {
+    
+}
+
+.protection__heading {
+    font-size: 2.4rem;
+}
+
+.protection__list {
+    margin-top: 18px;
+}
+
+.protection__item {
+    font-size: 1.8rem;
+    color: #333;
+    padding: 16px 0;
+}
+
+.protection__item i {
+    color: #888;
+}
+
+.sales-man {
+
+}
+
+.sales-man-phone {
+    background-color: #00aa00;
+}
+
+/* How it work */
+
+.sub-hiw {
+    background-color: #ececec;
+    padding: 15px;
+}
+
+.shiw__list {
+
+}
+
+.shiw__item {
+    padding: 6px 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.shiw__icon {
+    margin: 0 8px;
+    color: #00a47b;
+}
+
+/* Car details */
+
+.details {
+
+}
+
+.details__heading-box {
+
+}
+
+.details__heading {
+
+}
+
+.details__wrapper {
+    width: 100%;
+    margin: 24px 0 0;
+}
+
+.details__wrapper.just-mt {
+    margin: 24px 0 0;
+}
+
+.details__section {
+    padding: 0 12px;
+}
+
+.details__item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 4px 0 12px;
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.details__title {
+
+}
+
+.details__value {
+    font-weight: 700;
+}
+
+.details__feature-section {
+
+}
+
+.details__feature-item {
+    font-size: 1.8rem;
+    padding: 4px 0;
+}
+
+.details__feature-check {
+    color: #00ce00;
+}
+
+.details__other-table {
+    font-size: 18px;
+}
+
+/* Buyer Protection on tab UI second */
+
+.buyer-protection {
+
+}
+
+.BY__item {
+
+}
+
+.BY__item-icon {
+    font-size: 5rem;
+    color: #60a4e9;
+}
+
+.BY__item-title {
+    color: var(--text-color);
+}
+
+.BY__item-content {
+    color: var(--text-color);
+}

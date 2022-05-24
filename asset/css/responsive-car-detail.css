@@ -1,0 +1,165 @@
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+
+}
+
+/* PC */
+@media (min-width: 1023.001px) {
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .tab-item {
+        font-size: 16px;
+    }
+
+    .details__section {
+        padding: 0;
+    }
+
+    .car__info {
+        margin-left: 0;
+    }
+
+    .car__price-subtitle {
+        font-size: 1rem;
+    }
+
+    .details__other-table {
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+    
+}
+
+/* max-LG */
+@media (max-width: 992px) {
+    
+}
+
+/* ----------------------------------------------- */
+
+/* sm */
+@media (min-width: 576px) {
+    
+}
+
+/* md */
+@media (min-width: 768px) {
+    
+}
+
+/* lg */
+@media (min-width: 992px) {
+    
+}
+
+/* xl */
+@media (min-width: 1200px) {
+    .hide-xl {
+        display: none!important;
+    }
+}
+
+/* xxl */
+@media (min-width: 1400px) {
+    
+}
+
+
+/* ----------------------------------------------- */
+
+/* < lg */
+@media (max-width: 991.9px) {
+    .car__img-box {
+        display: block;
+        height: auto;
+        overflow: initial;
+    }
+
+    .car__img-select-box {
+        flex-direction: row;
+        margin-top: 2px;
+    }
+
+    .car__img-select-box::-webkit-scrollbar {
+        height: 6px;
+        background-color: #eeeeee;
+    }
+    .car__img-select-box::-webkit-scrollbar-thumb {
+        background-color: #00aa00;
+        border-radius: 8px;
+    }
+    
+    .car__img-select {
+        width: 25%;
+        margin: 0 1px;
+    }
+
+    .car__state-text {
+        margin-top: 24px;
+    }
+
+}
+
+/* < xl */
+@media (max-width: 1199.9px) {
+
+    .sales-man-message, .sales-man-info {
+        text-align: center;
+        margin: 16px 0;
+    }
+
+    .sales-man-phone {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sub-hiw {
+        margin-top: 24px;
+    }
+}
+
+
+/* XL - XXL */
+@media (min-width: 1200px) and (max-width: 1399.9px) {
+    .car__img-select-box {
+        height: 360px;
+    }
+
+    .sub-hiw {
+        padding: 18px;
+    }
+
+    .shiw__item {
+        padding: 7px 0;
+    }
+}
+
+
+
+
+
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991.9px) {
+    
+}
+
+
+/* Large: lg */
+@media (min-width: 992px) and (max-width: 1199.9px) {
+    .car__img-select-box {
+        height: 300px;
+    }
+}

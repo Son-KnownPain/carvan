@@ -1,0 +1,76 @@
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+    /* Hide on mobile and tablet */
+    .HOMAT {
+        display: none;
+    }
+}
+
+/* PC */
+@media (min-width: 1023.001px) {
+    .HOPC {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    :root {
+        --header-height: 88px;
+        --width-logo-pc: 55px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    :root {
+        /* Index.html -> Header */
+        --header-height: 66px;
+        --width-logo-pc: 44px;
+        --font-size-logo-pc: 3.2rem;
+
+        /* Index.html -> Heading of a frame */
+        --font-size-heading: 2.4rem
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+    :root {
+        /* Index.html -> Header */
+        --header-height: 44px;
+        --width-logo-pc: 33px;
+        --font-size-logo-pc: 2.4rem;
+
+        /* Index.html -> Heading of a frame */
+        --font-size-heading: 2.4rem
+    }
+}
+
+
+/* ----------------------------------------------- */
+
+/* XL */
+@media (min-width: 1200px) {
+    
+}
+
+/* Large: lg */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
+
+/* SM */
+@media (min-width: 576px) and (max-width: 767px) {
+    
+}
+
+/* - */
+@media (max-width: 575px) {
+    
+}

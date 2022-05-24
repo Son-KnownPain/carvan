@@ -1,38 +1,26 @@
 /* Mobile and Tablet */
 @media (max-width: 1023px) {
-    /* Hide on mobile and tablet */
-    .HOMAT {
-        display: none;
-    }
+
 }
 
 /* PC */
-@media (min-width: 1024px) {
+@media (min-width: 1023.001px) {
 
 }
 
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
-    :root {
-        --header-height-pc: 88px;
-        --width-logo-pc: 55px;
-    }
+
 }
 
 /* Mobile */
 @media (max-width: 739px) {
-    :root {
-        /* Index.html -> Header */
-        --header-height-pc: 66px;
-        --width-logo-pc: 44px;
-        --font-size-logo-pc: 3.2rem;
-
-        /* Index.html -> Heading of a frame */
-        --font-size-heading: 2.4rem
-    }
-
     .co-slider__content {
         font-size: 1.5rem;
+    }
+
+    .product__heading {
+        font-size: 2.4rem;
     }
 
     .wi__step-heading {
@@ -49,17 +37,7 @@
 }
 
 /* Small Mobile */
-@media (max-width: 420px) {
-    :root {
-        /* Index.html -> Header */
-        --header-height-pc: 44px;
-        --width-logo-pc: 33px;
-        --font-size-logo-pc: 2.4rem;
-
-        /* Index.html -> Heading of a frame */
-        --font-size-heading: 2.4rem
-    }
-
+@media (max-width: 360px) {
     .co-slider__content {
         font-size: 1.2rem;
     }

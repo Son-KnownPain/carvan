@@ -4,7 +4,7 @@
 .header {
     position: fixed;
     width: 100%;
-    height: var(--header-height-pc);
+    height: var(--header-height);
     z-index: 2;
     top: 0;
 }
@@ -35,6 +35,7 @@
 .header__logo-text {
     text-shadow: 0 1px 7px #000;
     color: #fff;
+    margin: 0;
     margin-left: 8px;
     font-size: var(--font-size-logo-pc);
 }
@@ -78,9 +79,150 @@
 
 .header__nav-item-link:hover {
     color: aqua;
+    border-bottom: 1px solid aqua;
 }
 
 .header--bg-white .header__nav-item-link:hover {
     color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 /* End CSS for header and navbar */
+
+
+/* CSS for mobile menu button */
+
+.header__mb-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__mbm-btn {
+    display: block;
+    padding: 12px;
+}
+
+.header__mbm-icon {
+    font-size: 2.6rem;
+    color: #fff;
+    text-shadow: 0 1px 7px #000;
+}
+
+.header--bg-white .header__mbm-icon {
+    font-size: 2.6rem;
+    color: var(--primary-color);
+    text-shadow: none;
+}
+
+/* End CSS for mobile menu button */
+
+
+
+/* CSS for mobile menu model */
+
+.mbm__model {
+    background-color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    border-left: 1px solid #999;
+    animation: modelAnimation 0.3s ease-out;
+}
+
+.mbm__model.active {
+    display: flex;
+}
+
+@keyframes modelAnimation {
+    from {
+        transform: translateX(100%);
+        opacity: 0.3;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.mbm__contain {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.mbm__close {
+    height: 55px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mbm__close-btn {
+    height: 100%;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mbm__close-icon {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+}
+
+
+.mbm__nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mbm__nav-item {
+    width: 100%;
+}
+
+.mbm__nav-link {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.mbm__nav-link:hover {
+    color: var(--black-color);
+    background-color: #dbdbdb;
+}
+
+.mbm__nav-item-icon {
+    color: #79443b;
+    padding-right: 4px;
+}
+
+/* --------Responsive model */
+
+/* Mobile */
+@media (max-width: 739px) {
+    .mbm__model {
+        left: 0;
+    }
+}
+
+/* Large: lg */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header__nav-item-link {
+        font-size: 18px;
+    }
+}
+
+/* End CSS for mobile menu model */

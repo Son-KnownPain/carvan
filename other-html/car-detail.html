@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVAN - Car details and feature</title>
+
+    <!-- Bootstrap 5 link css -->
+    <link rel="stylesheet" href="../../asset/bootstrap5/css/bootstrap.min.css">
+    <!-- Bs5 js -->
+    <script src="../../asset/bootstrap5/js/bootstrap.bundle.js"></script>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://cdns.iconmonstr.com/wp-content/releases/preview/2016/240/iconmonstr-car-3.png" type="image/x-icon">
+    <!-- TabUI -->
+    <link rel="stylesheet" href="../../asset/libary/tab-ui/tabui.css">
+    <!-- style sheet -->
+    <link rel="stylesheet" href="../../asset/css/base.css">
+    <link rel="stylesheet" href="../../asset/css/header.css">
+    <link rel="stylesheet" href="../../asset/css/footer.css">
+    <link rel="stylesheet" href="../../asset/css/car-detail.css">
+    <link rel="stylesheet" href="../../asset/css/responsive-all.css">
+    <link rel="stylesheet" href="../../asset/css/responsive-car-detail.css">
+</head>
+
+<body>
+    
+    <!-- Create a div tag has class 'app' containing all -->
+    <div class="app">
+        <!-- Header -->
+        <header class="header header--bg-white">
+            <div class="container fh">
+                <div class="header-wrapper fh">
+                    <!-- Header logo -->
+                    <a class="header__logo-link" href="../../index.html">
+                        <img src="../../asset/img/logo/carvan-logo.jpg" alt="" class="header__img-logo">
+                        <h3 class="header__logo-text">
+                            CARVAN
+                        </h3>
+                    </a>
+                    <!-- Header nav menu -->
+                    <nav class="header__nav HOMAT">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="../../main/about-us.html" class="header__nav-item-link">About us</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../../main/brands.html" class="header__nav-item-link">Brands</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../../main/range-of-cars.html" class="header__nav-item-link">Range of cars</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../../main/preowned-cars.html" class="header__nav-item-link">PreOwned cars</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../../main/contact.html" class="header__nav-item-link">Contact us</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../../main/site-map.html" class="header__nav-item-link">Site map</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="./main/search.html" class="header__nav-item-link" title="Search cars">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Menu on mobile and tablet -->
+                    <!-- mbm: Mobile menu -->
+                    <div class="header__mb-menu HOPC">
+                        <span class="header__mbm-btn">
+                            <i class="fa-solid fa-bars header__mbm-icon"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model mobile menu -->
+            <div class="mbm__model">
+                <div class="mbm__contain fh">
+                    <!-- Close model button -->
+                    <div class="mbm__close">
+                        <span class="mbm__close-btn">
+                            <i class="fa-regular fa-circle-xmark mbm__close-icon"></i>
+                        </span>
+                    </div>
+
+                    <!-- List navigate -->
+                    <ul class="mbm__nav-list">
+                        <li class="mbm__nav-item">
+                            <a href="../../main/about-us.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-people-group mbm__nav-item-icon"></i>
+                                About us
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../../main/brands.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-flag mbm__nav-item-icon"></i>
+                                Brands
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../../main/range-of-cars.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-book-open mbm__nav-item-icon"></i>
+                                Range of cars
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../../main/preowned-cars.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-truck-pickup mbm__nav-item-icon"></i>
+                                PreOwned cars
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../../main/contact.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-phone-volume mbm__nav-item-icon"></i>
+                                Contact us
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../../main/site-map.html" class="mbm__nav-link">
+                                <i class="fa-regular fa-map mbm__nav-item-icon"></i>
+                                Site map
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="container">
+                <!-- Heading Name Car -->
+                <div class="row">
+                    <div class="car-detail">
+                        <div class="car__name">
+                            <h3 class="car__name-text">
+                                Audi A4 Avant 35 TDI/163CV S tronic S line PANORAMA / P
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car price and img -->
+                <div class="row pb-5">
+                    <div class="col-xl-7 col-lg-7">
+                        <div class="car__img-box">
+                            <div class="row fh">
+                                <div class="col-xl-9 col-lg-9 fh">
+                                    <div class="car__img-displaying-box">
+                                        <img src="../../asset/img/car-detail/test/select1.jfif" alt="" class="car__img-displaying">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 fh">
+                                    <div class="car__img-select-box">
+                                        <img src="../../asset/img/car-detail/test/select1.jfif" alt="" class="car__img-select">
+                                        <img src="../../asset/img/car-detail/test/select2.jfif" alt="" class="car__img-select">
+                                        <img src="../../asset/img/car-detail/test/select3.jfif" alt="" class="car__img-select">
+                                        <img src="../../asset/img/car-detail/test/select4.jfif" alt="" class="car__img-select">
+                                        <img src="../../asset/img/car-detail/test/select5.jfif" alt="" class="car__img-select">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-5 col-lg-5">
+                        <div class="car__info">
+                            <div class="car__state-box">
+                                <h4 class="car__state-text text-success">
+                                    The car is available
+                                </h4>
+                            </div>
+
+                            <div class="car__price-table">
+                                <!-- 1 row -->
+                                <div class="car__net-price car__price-box">
+                                    <p class="car__price-title">Net Price</p>
+                                    <p class="car__price-value">€ 26.246</p>
+                                </div>
+                                <!-- 1 row -->
+                                <div class="car__net-price car__price-box">
+                                    <p class="car__price-title">
+                                        Warranty
+                                        <span class="car__price-subtitle">[1 year, basic package]</span>
+                                        <span class="car__warranty-modify-btn btn btn-warning">Modify</span>
+                                    </p>
+                                    <p class="car__price-value">Included</p>
+                                </div>
+                                <!-- 1 row -->
+                                <div class="car__net-price car__price-box">
+                                    <p class="car__price-title">Transport</p>
+                                    <p class="car__price-value">On request</p>
+                                </div>
+                                <!-- 1 row -->
+                                <div class="car__net-price car__price-box">
+                                    <p class="car__price-title">Total Net Price</p>
+                                    <p class="car__price-value">€ 26.246</p>
+                                </div>
+                                <!-- 1 row -->
+                                <div class="car__net-price car__price-box no-strikethrough">
+                                    <p class="car__price-title">Total Gross Price</p>
+                                    <p class="car__price-value">€ 31.233</p>
+                                </div>
+                                <!-- 1 row -->
+                                <div class="car__net-price car__price-box">
+                                    <p class="car__price-title"></p>
+                                    <p class="car__price-value text-success car__vat-value">19% VAT reclaimable</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Print vehicles salesman -->
+                <div class="row">
+                    <!-- Protection -->
+                    <div class="col-xl-5 col-12">
+                        <div class="row">
+                            <!-- Get more detail -->
+                            <div class="hide-xl col-lg-3"></div>
+                            <div class="col-xl-12 col-lg-6 col-12">
+                                <a href="../other-html/get-more-detail.html" class="btn btn-success fw fs-20 text-uppercase p-3 a-handle dp-block">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    Get More Detail
+                                </a>
+                            </div>
+                            <div class="hide-xl col-lg-3"></div>
+
+                            <!-- Protection box -->
+                            <div class="hide-xl col-lg-2"></div>
+
+                            <div class="col-xl-12 col-lg-8">
+                                <div class="protection-box">
+                                    <div class="protection__heading-box">
+                                        <h3 class="protection__heading">
+                                            Buyer Protection
+                                        </h3>
+                                    </div>
+
+                                    <ul class="protection__list">
+                                        <li class="protection__item">
+                                            <i class="fa-solid fa-reply-all"></i>
+                                            100% money back guarantee
+                                        </li>
+                                        <li class="protection__item">
+                                            <i class="fa-solid fa-shield-halved"></i>
+                                            1 year warranty
+                                        </li>
+                                        <li class="protection__item">
+                                            <i class="fa-solid fa-trailer"></i>
+                                            Transport with trailer and cargo insurance
+                                        </li>
+                                    </ul>
+
+                                    <div class="btn btn-outline-success fs-16 b_text-weight-700">Read more about safety at CARVAN</div>
+                                </div>
+                            </div>
+
+                            <div class="hide-xl col-lg-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Sales man -->
+                    <div class="col-xl-7 col-12">
+                        <div class="row">
+                            <!-- Avatar -->
+                            <div class="col-lg-4 col-md-3 col-2 hide-xl"></div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-8">
+                                <div class="sales-man mt-4">
+                                    <img src="../../asset/img/sales-man/bukovinszky.webp" alt="" class="sales-man-avt fw">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-3 col-2 hide-xl"></div>
+
+
+                            <!-- Message -->
+                            <div class="col-xl-9">
+                                <div class="sales-man-message mb-4">
+                                    <h3 class="fs-24">Do you want to buy this car?</h3>
+                                    <p class="fs-16">I assure you that together we find the most advantageous solution.</p>
+                                </div>
+
+                                <div class="sales-man-info">
+                                    <h3 class="fs-20">Géza Bukovinszky</h3>
+                                    <p class="fs-16">Sales Manager</p>
+                                </div>
+
+                                <a href="tel:0389845752" class="sales-man-phone btn hover-blur b_text-weight-700 fs-18 mt-3 p-3 text-white a-handle">
+                                    <i class="fa-solid fa-phone-volume" style="margin-right: 8px;"></i>
+                                    (+84) 0389845752
+                                </a>
+                            </div>
+
+                            <!-- Sub - How it work -->
+                            <div class="col-12">
+                                <div class="sub-hiw">
+                                    <ul class="shiw__list">
+                                        <li class="shiw__item">
+                                            <i class="fa-solid fa-1 shiw__icon"></i>
+                                            You are thinking of buying a car
+                                        </li>
+                                        <li class="shiw__item">
+                                            <i class="fa-solid fa-2 shiw__icon"></i>
+                                            You choose the car you want or ask for assistance
+                                        </li>
+                                        <li class="shiw__item">
+                                            <i class="fa-solid fa-3 shiw__icon"></i>
+                                            We check and evaluate your car
+                                        </li>
+                                        <li class="shiw__item">
+                                            <i class="fa-solid fa-4 shiw__icon"></i>
+                                            You accept the offer and finalize the payment
+                                        </li>
+                                        <li class="shiw__item">
+                                            <i class="fa-solid fa-5 shiw__icon"></i>
+                                            We deliver your car to your door
+                                        </li>
+                                        <li class="shiw__item">
+                                            <i class="fa-solid fa-6 shiw__icon"></i>
+                                            You are happy and "ready to go"!
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Tab UI: Car Detail and Buyer Protection -->
+                <div class="tab-UI">
+                    <div class="container flex-center">
+                        <div class="tabs">
+                            <div class="tab-item active">
+                                <i class="fa-solid fa-indent"></i>
+                                Car details
+                            </div>
+                            <div class="tab-item">
+                                <i class="fa-solid fa-user-shield"></i>
+                                Buyer protection
+                            </div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Car detail tab content -->
+                    <div class="tab-pane active">
+                        <div id="name-tab"></div>
+                        <!-- Content of tab -->
+                        <div class="mw-1650 fw">
+
+                            <!-- Car detail -->
+                            <div class="details mt-48">
+                                <!-- heading car detail -->
+                                <div class="details__heading-box flex-left">
+                                    <h3 class="details__heading fs-22">Car details</h3>
+                                </div>
+
+                                <!-- Car details content -->
+                                <div class="details__wrapper">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <!-- section -->
+                                            <div class="details__section">
+                                                <div class="details__item">
+                                                    <p class="details__title">ID no.</p>
+                                                    <p class="details__value">fdZbHNfE1v5</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Condition</p>
+                                                    <p class="details__value">Second hand car</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Body style</p>
+                                                    <p class="details__value">Other</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Year</p>
+                                                    <p class="details__value">-</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">First registration</p>
+                                                    <p class="details__value">12/2017</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Registered in</p>
+                                                    <p class="details__value">-</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Mileage</p>
+                                                    <p class="details__value">119.207 km</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Fuel type</p>
+                                                    <p class="details__value">Diesel</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Transmission</p>
+                                                    <p class="details__value">Automatic gear</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">General inspection</p>
+                                                    <p class="details__value">-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- section -->
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="details__section">
+                                                <div class="details__item">
+                                                    <p class="details__title">Power</p>
+                                                    <p class="details__value">183 kW (249 HP)</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Cubic capacity</p>
+                                                    <p class="details__value">2.993 cm³</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Exterior color</p>
+                                                    <p class="details__value">Blue, Metallic</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Interior</p>
+                                                    <p class="details__value">Full leather, Brown</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Number of seats</p>
+                                                    <p class="details__value">5</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Number of doors</p>
+                                                    <p class="details__value">4/5</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Sliding doors</p>
+                                                    <p class="details__value">-</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Air conditioning</p>
+                                                    <p class="details__value">A/C (man.)</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Emission class</p>
+                                                    <p class="details__value">Euro6</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Energy efficiency class</p>
+                                                    <p class="details__value">-</p>
+                                                </div>
+                                                <div class="details__item">
+                                                    <p class="details__title">Delivery date</p>
+                                                    <p class="details__value">-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Car detail -->
+                            <div class="details mt-48">
+                                <!-- heading car detail -->
+                                <div class="details__heading-box flex-left">
+                                    <h3 class="details__heading fs-22">Feature</h3>
+                                </div>
+
+                                <!-- Car details content -->
+                                <div class="details__wrapper just-mt">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                            <div class="details__feature-section">
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    ABS
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Alloy wheels
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Bluetooth
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    CD player
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Central locking
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Cruise control
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                            <div class="details__feature-section">
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Front and Side and More Airbags
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Immobilizer
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Isofix
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    On-broad computer
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Particulate filter
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                            <div class="details__feature-section">
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    ESP
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Electric seat adjustment
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Electric side mirror
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Fog lamp
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Four wheel drive
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                            <div class="details__feature-section">
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Rain sensor
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Sport seats
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Start-stop system
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Traction control
+                                                </div>
+                                                <div class="details__feature-item">
+                                                    <i class="fa-solid fa-check details__feature-check"></i>
+                                                    Tuner/radio
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Car detail -->
+                            <div class="details mt-48">
+                                <!-- heading car detail -->
+                                <div class="details__heading-box flex-left">
+                                    <h3 class="details__heading fs-22">Other details</h3>
+                                </div>
+
+                                <!-- Car details content -->
+                                <div class="details__wrapper just-mt">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="details__other">
+                                                <table class="details__other-table">
+                                                    <tr>
+                                                        <td>Fuel consumption:</td>
+                                                        <td class="ml-12" style="display: block;"><span class="b_text-weight-700">5,7 l / 100km</span> <span>(Combined)</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td class="ml-12" style="display: block;"><span class="b_text-weight-700">5,3 l / 100km</span> <span>(City)</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td class="ml-12" style="display: block;"><span class="b_text-weight-700">3,8 l / 100km</span> <span>(Highway)</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CO₂ emissions:</td>
+                                                        <td class="ml-12" style="display: block;"><span class="b_text-weight-700">150 g / km</span></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buyer protection tab content -->
+                    <div class="tab-pane">
+                        <div class="container">
+                            <div id="name-tab"></div>
+                            <!-- Content of tab -->
+                            <div class="mw-1650 container">
+                                <div class="buyer-protection mt-36"> <!-- BY: Buyer Protection -->
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-solid fa-stamp BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">CARVAN Guaranteed for each car delivered</h3>
+                                                <P class="BY__item-content fs-16 mt-24">WEBCAR Guaranteed actually means: being happy with the choice you made by having eliminated all the worries regarding the tedious administrative tasks. The pre-owned cars we deliver are a maximum of 8 years old, have a verified mileage of a maximum of 150,000 kilometres and are sold by approved dealers. WEBCAR does not compromise on quality, therefore you can be certain that the car you purchase is in excellent condition.</P>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-solid fa-file BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">Bespoke personal assistance</h3>
+                                                <P class="BY__item-content fs-16 mt-24">
+                                                    We are there for you throughout the entire acquisition process! We help you choose the desired car, with the correct configuration and equipment. If you do not know how to start your search you can let us know what you expect from your new car and we will transform all these expectations to reality and lead you to the perfect car. Furthermore, we will rid you of all the administrative inconveniences and inform you about all the documents you need to prepare and we answer all your questions that may arise along the way. We will continuously keep you updated about the status of your purchase the whole time.
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-solid fa-money-bill-transfer BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">Transaction security</h3>
+                                                <P class="BY__item-content fs-16 mt-24">
+                                                    Purchase your car knowing that all the transactions are made under maximum safety conditions! All payments, irrespective of the country they have been made in, are secure, monitored and verified. You will not have the unpleasant surprise of encountering hidden costs, so the amount you pay is the final one. WEBCAR has wide-ranging European Economic Area acquisition experience, and all our suppliers and collaborators are verified entities and have been active on the market for a long time.
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-solid fa-car BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">Technical and aesthetic evaluation</h3>
+                                                <P class="BY__item-content fs-16 mt-24">
+                                                    All WEBCAR cars are delivered after having undergone a thorough technical and aesthetic inspection. Our experts will perform this evaluation right before the moment of purchase. We make sure from the very beginning that the car will be delivered to your door, perfectly respecting the description and specifications accepted in the final offer.
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-regular fa-thumbs-up BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">Verified partners and dealers</h3>
+                                                <P class="BY__item-content fs-16 mt-24">
+                                                    All WEBCAR partners and dealers involved in the acquisition and delivery process have proven their professionalism throughout the years. Our partners and dealers are verified and approved, so transactions with them are always carried out safely, in compliance with the deadlines and conditions imposed by us.
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-solid fa-medal BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">ISO 9001:2015 certified procedures</h3>
+                                                <P class="BY__item-content fs-16 mt-24">
+                                                    Our quality management systems function in accordance with ISO 9001:2015 certified procedures, so that clients have the certainty of quality at any purchase. Through these procedures we are making sure that the whole system runs like a well-oiled machine and our clients benefit from the perfect purchase experience.
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-solid fa-shield-halved BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">Warranty and extended warranty</h3>
+                                                <P class="BY__item-content fs-16 mt-24">
+                                                    All the cars purchased through WEBCAR will automatically benefit from the “Basic” warranty for 1 year after the acquisition. You will have the opportunity to opt for an extended warranty of 2 or 3 years, in addition to that of the manufacturer. In order to be sure that you have taken all measures of safety we recommend the extended warranty.
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-solid fa-caravan BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">Safe delivery</h3>
+                                                <P class="BY__item-content fs-16 mt-24">
+                                                    We deliver your car quickly and safely, with our own trailers, anywhere in the country! Your car will be delivered on an authorised trailer, under conditions of maximum security, and the transportation is entirely covered by insurance.
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-solid fa-magnifying-glass BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">Pre-delivery inspection</h3>
+                                                <P class="BY__item-content fs-16 mt-24">
+                                                    Absolutely all the cars we deliver undergo a final inspection in order to make sure that the car arrives at your address in impeccable state. This service is called "Pre-delivery inspection" and it is the last technical and aesthetic evaluation of the car that will take place before it arrives to you.
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-solid fa-bolt BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">We deliver your car "ready to go"</h3>
+                                                <P class="BY__item-content fs-16 mt-24">
+                                                    WEBCAR delivers your car "ready to go", so you can enjoy it right from the moment of delivery! You will receive it in a perfectly functional condition, accompanied by all the necessary documents. You can leave all the inconvenient procedures to us, your only task will be to get behind the wheel. This service was designed to give you the freedom to enjoy the thrill and excitement of owning your dream car from the very first moment.
+                                                </P>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-12">
+                                            <div class="BY__item mt-24">
+                                                <i class="fa-solid fa-handshake BY__item-icon"></i>
+                                                <h3 class="BY__item-title fs-24 mt-24">After sales services</h3>
+                                                <P class="BY__item-content fs-16 mt-24">
+                                                    WEBCAR provides a wide range of after sales services specially designed to accommodate all your needs. Choose an ideal package by opting for extended warranty, which will become valid after the one offered by the manufacturer expires. What’s more, our team offers their consultancy when it comes to buying accessories and supplies for your car or in any other unforeseen situation that might occur.
+                                                </P>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 'Do you have any questions?' -->
+                <div class="hotline mt-48">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="flex-center flex-column">
+                                <h3 class="fs-28 b_text-weight-700 text-center">Do you have any questions?</h3>
+                                <a href="tel:0389845752" class="fs-24 b_text-weight-700 mt-12 text-danger pointer a-handle dp-block">
+                                    <i class="fa-solid fa-phone-flip"></i>
+                                    (+84) 0389 845 752
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>BUYER PROTECTION</h4>
+                        <ul>
+                            <li><a href="#">CARVAN guaranteed</a></li>
+                            <li><a href="#">Bespoke personal assistance</a></li>
+                            <li><a href="#">Transaction security</a></li>
+                            <li><a href="#">Technical and aeshetic evaluation</a></li>
+                            <li><a href="#">Verified partners and dealers</a></li>
+                            <li><a href="#">IOS 9001:2022 certified procedures</a></li>
+                            <li><a href="#">warranty and extended warranty</a></li>
+                            <li><a href="#">Safe delivery</a></li>
+                            <li><a href="#">Pre-delivery</a></li>
+                            <li><a href="#">WE deliver your car "Ready to go"</a></li>
+                            <li><a href="#">After-sales services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>LEGAL & ASSISTANCE INFORMATION</h4>
+                        <ul>
+                            <li><a href="#">Impressum</a></li>
+                            <li><a href="#">Terms and conditions</a></li>
+                            <li><a href="#">presonal data protection</a></li>
+                            <li><a href="#">Cookie policy</a></li>
+                            <li><a href="#">Glossary</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>ADVANTAGES & BENEFITS</h4>
+                        <ul>
+                            <li><a href="#">Used cars with warranty</a></li>
+                            <li><a href="#">New cars with short delivery time</a></li>
+                            <li><a href="#">Any car of  your choice securely traded</a></li>
+                            <li><a href="#">Extended warranty for your car</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>FOLLOW </h4>
+                        <div class="footer__icon-box">
+                            <a href="#"><i class="fab fa-facebook-f footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-twitter footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-instagram footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in footer-icon"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <div class="container fh">
+                    <div class="row fh">
+                        <div class="col-12 fh">
+                            <div class="footer__copyright-box fh">
+                                <i class="fa-regular fa-copyright footer__copyright-icon"></i>
+                                <h3 class="footer__copyright-text">
+                                    Copyright CARVAN 2011 - 2022
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+<!-- Base js in all file html -->
+<script src="../../asset/js/main.js"></script>
+<!-- Handle header -->
+<script src="../../asset/js/header.js"></script>
+<!-- Handle car detail -->
+<script src="../../asset/js/handle-car-detail.js"></script>
+<!-- Libary TabUI -->
+<script src="../../asset/libary/tab-ui/tabui.js"></script>
+
+</html>
