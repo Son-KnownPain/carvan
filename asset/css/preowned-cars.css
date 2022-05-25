@@ -7,14 +7,14 @@ a {
     background-color: transparent;
 }
 
-body {
+section {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     color: #336;
     font-weight: 350;
     line-height: 1.8;
-    font-size: 1.0625rem;
+    font-size: 1.8rem;
 }
 
 html {
@@ -49,6 +49,10 @@ section {
     background-color: rgba(0,0,0,.05);
 }
 
+.bg-gray-a-200 {
+    background-color: rgba(0,0,0,.02);
+}
+
 .breadcrumb {
     margin-bottom: 0;
     list-style: none;
@@ -59,7 +63,7 @@ section {
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    font-size: .8125rem;
+    font-size: 1.25rem;
 }
 
 .breadcrumb-item {
@@ -76,6 +80,10 @@ section {
 
 .breadcrumb-item:last-child {
     font-weight: 700;
+}
+
+.padding-top-115 {
+    padding-top: 115px;
 }
 
 .title-main {
