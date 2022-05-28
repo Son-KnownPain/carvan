@@ -1,0 +1,75 @@
+
+
+[
+    {
+        "id": 1,
+        "name": "Audi A6 RS6 Avant 4.0 TFSI V8 Quattro Tiptronic",
+        "brand": "AUDI", /* Name UPPERCASE all letter */
+        "model": "A1",
+        "rangeOfCar": "JEEP",
+        "netPrice": "150.389",
+        "currencyIcon": "€",
+        "vatPercent": "19",
+        "availableState": "available",
+        "homeMode": "cars-recommended", /* cars-recommended, cars-list-in-the-last-24h, most-searched-cars, cars-viewed-by-clients */
+        "carDetails": {
+            "idNo": "f8UaAvrbRWK",
+            "condition": "New or pre-registered car",
+            "bodyStyle": "Estate Car",
+            "year": "-",
+            "firstRegistration": "02/2022",
+            "registeredIn": "-",
+            "mileage": "1.800 km",
+            "fuelType": "Hybrid (petrol/electric)",
+            "Transmission": "Automatic gear",
+            "generalInspection": "-",
+            "power": "441 kW (600 HP)",
+            "cubicCapacity": "3.996 cm³",
+            "exteriorColor": "Grey, Metallic",
+            "interior": "Full leather, Beige",
+            "numberOfSeats": 5,
+            "numberOfDoors": "4/5",
+            "slidingDoors": "-",
+            "airConditioning": "A/C (man.)",
+            "emissionClass": "Euro6",
+            "eneryEfficiencyClass": "-",
+            "deliveryDate": "-"
+        },
+        "feature": [
+            "Alloy wheels",
+            "Auxiliary heating",
+            "Bluetooth",
+            "Central locking",
+            "Cruise control",
+            "Daytime running lights",
+            "Electric heated seats",
+            "Electric seat adjustment",
+            "Electric side mirror",
+            "Electric windows",
+            "Four wheel drive",
+            "Front and Side Airbags",
+            "Immobilizer",
+            "Isofix",
+            "Light sensor",
+            "Multifunction steering wheel",
+            "Navigation system",
+            "On-board computer",
+            "Panoramic roof",
+            "Power Assisted Steering",
+            "Rain sensor",
+            "Sport seats",
+            "Sports package",
+            "Start-stop system",
+            "Sunroof",
+            "Tuner/radio"
+        ],
+        "otherDetails": {
+            "fuelConsumption": [
+                "11,5 l / 100km (Combined)",
+                "16,2 l / 100km (City)",
+                "8,8 l / 100km (Highway)"
+            ],
+            "co2Emissions": "263 g / km"
+        }
+    }
+]

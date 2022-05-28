@@ -2,6 +2,7 @@
 
 // Set state for model
 let isShowMenu = false
+let isShowBrands = false
 
 // Get element
 const showMenuBtn = document.querySelector('.header__mbm-btn')
@@ -24,4 +25,20 @@ closeMenuBtn.onclick = function() {
 
 function checkShowMenu(state) {
     menuModel.classList.toggle('active', state)
+}
+
+
+// Handle click show brands on mobile menu
+$('.mbm__brands-arrow').onclick = function() {
+    if (!isShowBrands) {
+        isShowBrands = true
+        $('.mbm__subnav-list').style = 'padding: 0 16px 16px; height: 105px;'
+        $('.mbm__brands-arrow').classList.remove('fa-chevron-down')
+        $('.mbm__brands-arrow').classList.add('fa-chevron-up')
+    } else {
+        isShowBrands = false
+        $('.mbm__subnav-list').style = ''
+        $('.mbm__brands-arrow').classList.add('fa-chevron-down')
+        $('.mbm__brands-arrow').classList.remove('fa-chevron-up')
+    }
 }

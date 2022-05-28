@@ -1,4 +1,11 @@
-
+// Defint array prototype noIncludes >< includes
+Array.prototype.noIncludes = function(data) {
+    if (this.includes(data)) {
+        return false
+    } else {
+        return true
+    }
+}
 
 
 
@@ -166,12 +173,11 @@ const app = {
                         _this.renderProducts(_this.idLayoutDisplayed, 4)
                         
                         // Loading UI
+                        btn.innerHTML = '<i class="fa-solid fa-fan loading-spiner"></i>'
                         var loadNumber = 0
 
                         const idInterval = setInterval(() => {
-                            if (loadNumber < 100) {
-                                btn.innerHTML = `Loading...${loadNumber}%`
-                            } 
+                            
                             loadNumber++
                             clearLoading(loadNumber)
                         }, 5)
@@ -183,8 +189,6 @@ const app = {
                             }
                         }
                         // End loading UI
-                        
-                        btn.textContent = 'Hide'
 
                     } else {
 
@@ -215,7 +219,7 @@ const app = {
                         html = data.cars.map((car, index) => {
                             if (index + 1 > quantity && idLayout.includes(indexData + 1)) {
                                 return ''
-                            }
+                            } 
                             
                             return `<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                                         <a href="./other-html/car-detail.html" class="product-item">

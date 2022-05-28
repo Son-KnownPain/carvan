@@ -11,6 +11,20 @@
     opacity: 1;
 }
 
+.loading-spiner {
+    color: #006a4e;
+    animation: spinning linear 0.8s infinite;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 
 
@@ -348,7 +362,7 @@
 }
 
 .product__view-more-btn {
-    color: #444;
+    color: #222;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -360,6 +374,10 @@
     line-height: 50px;
     cursor: pointer;
     user-select: none;
+}
+
+.product__view-more-icon {
+    padding-left: 8px;
 }
 
 /* End CSS for Products */
