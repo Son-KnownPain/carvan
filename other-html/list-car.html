@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVAN - List car for you</title>
+
+    <!-- Bootstrap 5 link css -->
+    <link rel="stylesheet" href="../../asset/bootstrap5/css/bootstrap.min.css">
+    <!-- Bs5 js -->
+    <script src="../../asset/bootstrap5/js/bootstrap.bundle.js"></script>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://cdns.iconmonstr.com/wp-content/releases/preview/2016/240/iconmonstr-car-3.png" type="image/x-icon">
+    <!-- TabUI -->
+    <link rel="stylesheet" href="../../asset/libary/tab-ui/tabui.css">
+    <!-- style sheet -->
+    <link rel="stylesheet" href="../../asset/css/base.css">
+    <link rel="stylesheet" href="../../asset/css/header.css">
+    <link rel="stylesheet" href="../../asset/css/footer.css">
+    <link rel="stylesheet" href="../../asset/css/list-car.css">
+    <link rel="stylesheet" href="../../asset/css/responsive-all.css">
+</head>
+
+
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header header--bg-white">
+            <div class="container fh">
+                <div class="header-wrapper fh">
+                    <!-- Header logo -->
+                    <a class="header__logo-link" href="../index.html">
+                        <img src="../asset/img/logo/carvan-logo.jpg" alt="" class="header__img-logo">
+                        <h3 class="header__logo-text">
+                            CARVAN
+                        </h3>
+                    </a>
+                    <!-- Header nav menu -->
+                    <nav class="header__nav HOMAT">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="../main/about-us.html" class="header__nav-item-link">About us</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/brands.html" class="header__nav-item-link">
+                                    Brands
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a>
+                                <ul class="header__subnav-list">
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">BMW</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">AUDI</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">FORD</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">MAZDA</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">MERCEDES</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">LAND ROVER</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">MITSUBISHI</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">NISSAN</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">OPEL</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">PORSCHE</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">SKODA</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">VOLKSWAGEN</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/range-of-cars.html" class="header__nav-item-link">Range of cars</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/preowned-cars.html" class="header__nav-item-link">PreOwned cars</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/contact.html" class="header__nav-item-link">Contact us</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/site-map.html" class="header__nav-item-link">Site map</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/search.html" class="header__nav-item-link" title="Search cars">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Menu on mobile and tablet -->
+                    <!-- mbm: Mobile menu -->
+                    <div class="header__mb-menu HOPC">
+                        <span class="header__mbm-btn">
+                            <i class="fa-solid fa-bars header__mbm-icon"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Model mobile menu -->
+            <div class="mbm__model">
+                <div class="mbm__contain fh">
+                    <!-- Close model button -->
+                    <div class="mbm__close">
+                        <span class="mbm__close-btn">
+                            <i class="fa-regular fa-circle-xmark mbm__close-icon"></i>
+                        </span>
+                    </div>
+        
+                    <!-- List navigate -->
+                    <ul class="mbm__nav-list">
+                        <li class="mbm__nav-item">
+                            <a href="../main/about-us.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-people-group mbm__nav-item-icon"></i>
+                                About us
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/brands.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-flag mbm__nav-item-icon"></i>
+                                Brands
+                            </a>
+                            <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__brands-arrow"></i>
+        
+                            <ul class="mbm__subnav-list">
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">BMW</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">AUDI</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">FORD</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">MAZDA</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">MERCEDES</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">LAND ROVER</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">MITSUBISHI</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">NISSAN</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">OPEL</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">PORSCHE</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">SKODA</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">VOLKSWAGEN</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/range-of-cars.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-book-open mbm__nav-item-icon"></i>
+                                Range of cars
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/preowned-cars.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-truck-pickup mbm__nav-item-icon"></i>
+                                PreOwned cars
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/contact.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-phone-volume mbm__nav-item-icon"></i>
+                                Contact us
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/site-map.html" class="mbm__nav-link">
+                                <i class="fa-regular fa-map mbm__nav-item-icon"></i>
+                                Site map
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/search.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-magnifying-glass mbm__nav-item-icon"></i>
+                                Search cars
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    
+        <!-- Content -->
+        <div class="content fix-header">
+            <div class="container">
+                <!-- Heading and introduce -->
+                <div class="base__frame-heading-box">
+                    <h3 class="base__frame-heading">
+                        Mercedes-benz used and new cars for sale
+                    </h3>
+                    <div class="strike-through">
+                        <div class="strike-through-line"></div>
+                    </div>
+                </div>
+                <div class="base__frame-introduce">
+                    <p class="base__frame-introduce-text">
+                        Car list for you to choose
+                    </p>
+                </div>
+
+                <!-- Nav -->
+                <div class="row">
+                    <!-- Detailed search button -->
+                    <div class="col-xl-3">
+                        <a class="detailed-search flex-left pointer no-select a-handle" href="../main/search.html">
+                            <i class="fa-solid fa-arrow-left fs-18 mr-12"></i>
+                            <h3 class="text-uppercase fs-18 b_text-weight-700">detailed search</h3>
+                        </a>
+                    </div>
+
+                    <!-- Filter -->
+                    <div class="col-xl-9">
+                        <div class="filter">
+                            <div class="filter-section">
+                                <h3 class="filter__name">Mercedes-benz</h3>
+                                <div class="filter__remove-btn">
+                                    <i class="fa-regular fa-circle-xmark filter__remove-icon"></i>
+                                </div>
+                            </div>
+                            <div class="filter-section">
+                                <h3 class="filter__name">Small car</h3>
+                                <div class="filter__remove-btn">
+                                    <i class="fa-regular fa-circle-xmark filter__remove-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strike-through-dark">
+                    <div class="strike-through-dark-line"></div>
+                </div>
+
+                <!-- List car -->
+                <div class="list-car">
+                    <div class="row gx-5">
+                        <!-- 1 car -->
+                        <div class="mb-60 col-xl-4 col-lg-4 col-md-6 col-12">
+                            <a href="" class="list-car__item a-handle">
+                                <div class="list-car__img-wrapper flex-center">
+                                    <img src="../asset/img/car-detail/test/select1.jfif" alt="" class="list-car__img">
+                                </div>
+                                <div class="list-car__info">
+                                    <h4 class="list-car__name">Mercedes-benz E 200 E 200 MULTIBEAM+AHK+SHZ</h4>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__first-registration fs-16">
+                                            <i class="fa-regular fa-calendar" style="color: #007fff;"></i>
+                                            06/2017
+                                        </p>
+                                        <h3 class="list-car__net-price b_text-weight-700">€ 73.955</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__mileage fs-16">
+                                            <i class="fa-solid fa-gauge-high" style="color: #6e7f80;"></i>
+                                            46.000 km
+                                        </p>
+                                        <h3 class="list-car__total-price b_text-weight-400">€ 88.006</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__fuel-type fs-16">
+                                            <i class="fa-solid fa-gas-pump" style="color: #ffbf00;"></i>
+                                            Diesel
+                                        </p>
+                                        <p class="list-car__vat fs-12 text-success">19% VAT reclaimable</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 1 car -->
+                        <div class="mb-60 col-xl-4 col-lg-4 col-md-6 col-12">
+                            <a href="" class="list-car__item a-handle">
+                                <div class="list-car__img-wrapper flex-center">
+                                    <img src="../asset/img/car-detail/test/select1.jfif" alt="" class="list-car__img">
+                                </div>
+                                <div class="list-car__info">
+                                    <h4 class="list-car__name">Mercedes-benz E 200 E 200 MULTIBEAM+AHK+SHZ</h4>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__first-registration fs-16">
+                                            <i class="fa-regular fa-calendar" style="color: #007fff;"></i>
+                                            06/2017
+                                        </p>
+                                        <h3 class="list-car__net-price b_text-weight-700">€ 73.955</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__mileage fs-16">
+                                            <i class="fa-solid fa-gauge-high" style="color: #6e7f80;"></i>
+                                            46.000 km
+                                        </p>
+                                        <h3 class="list-car__total-price b_text-weight-400">€ 88.006</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__fuel-type fs-16">
+                                            <i class="fa-solid fa-gas-pump" style="color: #ffbf00;"></i>
+                                            Diesel
+                                        </p>
+                                        <p class="list-car__vat fs-12 text-success">19% VAT reclaimable</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 1 car -->
+                        <div class="mb-60 col-xl-4 col-lg-4 col-md-6 col-12">
+                            <a href="" class="list-car__item a-handle">
+                                <div class="list-car__img-wrapper flex-center">
+                                    <img src="../asset/img/car-detail/test/select1.jfif" alt="" class="list-car__img">
+                                </div>
+                                <div class="list-car__info">
+                                    <h4 class="list-car__name">Mercedes-benz E 200 E 200 MULTIBEAM+AHK+SHZ</h4>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__first-registration fs-16">
+                                            <i class="fa-regular fa-calendar" style="color: #007fff;"></i>
+                                            06/2017
+                                        </p>
+                                        <h3 class="list-car__net-price b_text-weight-700">€ 73.955</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__mileage fs-16">
+                                            <i class="fa-solid fa-gauge-high" style="color: #6e7f80;"></i>
+                                            46.000 km
+                                        </p>
+                                        <h3 class="list-car__total-price b_text-weight-400">€ 88.006</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__fuel-type fs-16">
+                                            <i class="fa-solid fa-gas-pump" style="color: #ffbf00;"></i>
+                                            Diesel
+                                        </p>
+                                        <p class="list-car__vat fs-12 text-success">19% VAT reclaimable</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 1 car -->
+                        <div class="mb-60 col-xl-4 col-lg-4 col-md-6 col-12">
+                            <a href="" class="list-car__item a-handle">
+                                <div class="list-car__img-wrapper flex-center">
+                                    <img src="../asset/img/car-detail/test/select1.jfif" alt="" class="list-car__img">
+                                </div>
+                                <div class="list-car__info">
+                                    <h4 class="list-car__name">Mercedes-benz E 200 E 200 MULTIBEAM+AHK+SHZ</h4>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__first-registration fs-16">
+                                            <i class="fa-regular fa-calendar" style="color: #007fff;"></i>
+                                            06/2017
+                                        </p>
+                                        <h3 class="list-car__net-price b_text-weight-700">€ 73.955</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__mileage fs-16">
+                                            <i class="fa-solid fa-gauge-high" style="color: #6e7f80;"></i>
+                                            46.000 km
+                                        </p>
+                                        <h3 class="list-car__total-price b_text-weight-400">€ 88.006</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__fuel-type fs-16">
+                                            <i class="fa-solid fa-gas-pump" style="color: #ffbf00;"></i>
+                                            Diesel
+                                        </p>
+                                        <p class="list-car__vat fs-12 text-success">19% VAT reclaimable</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 1 car -->
+                        <div class="mb-60 col-xl-4 col-lg-4 col-md-6 col-12">
+                            <a href="" class="list-car__item a-handle">
+                                <div class="list-car__img-wrapper flex-center">
+                                    <img src="../asset/img/car-detail/test/select1.jfif" alt="" class="list-car__img">
+                                </div>
+                                <div class="list-car__info">
+                                    <h4 class="list-car__name">Mercedes-benz E 200 E 200 MULTIBEAM+AHK+SHZ</h4>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__first-registration fs-16">
+                                            <i class="fa-regular fa-calendar" style="color: #007fff;"></i>
+                                            06/2017
+                                        </p>
+                                        <h3 class="list-car__net-price b_text-weight-700">€ 73.955</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__mileage fs-16">
+                                            <i class="fa-solid fa-gauge-high" style="color: #6e7f80;"></i>
+                                            46.000 km
+                                        </p>
+                                        <h3 class="list-car__total-price b_text-weight-400">€ 88.006</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__fuel-type fs-16">
+                                            <i class="fa-solid fa-gas-pump" style="color: #ffbf00;"></i>
+                                            Diesel
+                                        </p>
+                                        <p class="list-car__vat fs-12 text-success">19% VAT reclaimable</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 1 car -->
+                        <div class="mb-60 col-xl-4 col-lg-4 col-md-6 col-12">
+                            <a href="" class="list-car__item a-handle">
+                                <div class="list-car__img-wrapper flex-center">
+                                    <img src="../asset/img/car-detail/test/select1.jfif" alt="" class="list-car__img">
+                                </div>
+                                <div class="list-car__info">
+                                    <h4 class="list-car__name">Mercedes-benz E 200 E 200 MULTIBEAM+AHK+SHZ</h4>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__first-registration fs-16">
+                                            <i class="fa-regular fa-calendar" style="color: #007fff;"></i>
+                                            06/2017
+                                        </p>
+                                        <h3 class="list-car__net-price b_text-weight-700">€ 73.955</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__mileage fs-16">
+                                            <i class="fa-solid fa-gauge-high" style="color: #6e7f80;"></i>
+                                            46.000 km
+                                        </p>
+                                        <h3 class="list-car__total-price b_text-weight-400">€ 88.006</h3>
+                                    </div>
+                                    <div class="flex-space-between mt-24">
+                                        <p class="list-car__fuel-type fs-16">
+                                            <i class="fa-solid fa-gas-pump" style="color: #ffbf00;"></i>
+                                            Diesel
+                                        </p>
+                                        <p class="list-car__vat fs-12 text-success">19% VAT reclaimable</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Show more button -->
+                <div class="flex-center show-more-btn pointer">
+                    <span class="fs-18 b_text-weight-700">
+                        Show more
+                        <i class="fa-regular fa-circle-down"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>BUYER PROTECTION</h4>
+                        <ul>
+                            <li><a href="#">CARVAN guaranteed</a></li>
+                            <li><a href="#">Bespoke personal assistance</a></li>
+                            <li><a href="#">Transaction security</a></li>
+                            <li><a href="#">Technical and aeshetic evaluation</a></li>
+                            <li><a href="#">Verified partners and dealers</a></li>
+                            <li><a href="#">IOS 9001:2022 certified procedures</a></li>
+                            <li><a href="#">warranty and extended warranty</a></li>
+                            <li><a href="#">Safe delivery</a></li>
+                            <li><a href="#">Pre-delivery</a></li>
+                            <li><a href="#">WE deliver your car "Ready to go"</a></li>
+                            <li><a href="#">After-sales services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>LEGAL & ASSISTANCE INFORMATION</h4>
+                        <ul>
+                            <li><a href="#">Impressum</a></li>
+                            <li><a href="#">Terms and conditions</a></li>
+                            <li><a href="#">presonal data protection</a></li>
+                            <li><a href="#">Cookie policy</a></li>
+                            <li><a href="#">Glossary</a></li>
+        
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>ADVANTAGES & BENEFITS</h4>
+                        <ul>
+                            <li><a href="#">Used cars with warranty</a></li>
+                            <li><a href="#">New cars with short delivery time</a></li>
+                            <li><a href="#">Any car of  your choice securely traded</a></li>
+                            <li><a href="#">Extended warranty for your car</a></li>
+        
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>FOLLOW </h4>
+                        <div class="footer__icon-box">
+                            <a href="#"><i class="fab fa-facebook-f footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-twitter footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-instagram footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in footer-icon"></i></a>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer__copyright">
+                <div class="container fh">
+                    <div class="row fh">
+                        <div class="col-12 fh">
+                            <div class="footer__copyright-box fh">
+                                <i class="fa-regular fa-copyright footer__copyright-icon"></i>
+                                <h3 class="footer__copyright-text">
+                                    Copyright CARVAN 2011 - 2022
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<!-- Base js in all file html -->
+<script src="../../asset/js/main.js"></script>
+<!-- Handle header -->
+<script src="../../asset/js/header.js"></script>
+<!-- List car handler -->
+<script src="../asset/js/list-car.js"></script>
+
+</html>

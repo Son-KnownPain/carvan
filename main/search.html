@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARVAN - Search</title>
+
+    <!-- Bootstrap 5 link css -->
+    <link rel="stylesheet" href="../../asset/bootstrap5/css/bootstrap.min.css">
+    <!-- Bs5 js -->
+    <script src="../../asset/bootstrap5/js/bootstrap.bundle.js"></script>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://cdns.iconmonstr.com/wp-content/releases/preview/2016/240/iconmonstr-car-3.png" type="image/x-icon">
+    <!-- style sheet -->
+    <link rel="stylesheet" href="../../asset/css/base.css">
+    <link rel="stylesheet" href="../../asset/css/header.css">
+    <link rel="stylesheet" href="../../asset/css/footer.css">
+    <link rel="stylesheet" href="../../asset/css/responsive-all.css">
+    <link rel="stylesheet" href="../../asset/css/search.css">
+</head>
+
+
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header header--bg-white">
+            <div class="container fh">
+                <div class="header-wrapper fh">
+                    <!-- Header logo -->
+                    <a class="header__logo-link" href="../index.html">
+                        <img src="../asset/img/logo/carvan-logo.jpg" alt="" class="header__img-logo">
+                        <h3 class="header__logo-text">
+                            CARVAN
+                        </h3>
+                    </a>
+                    <!-- Header nav menu -->
+                    <nav class="header__nav HOMAT">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="../main/about-us.html" class="header__nav-item-link">About us</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/brands.html" class="header__nav-item-link">
+                                    Brands
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a>
+                                <ul class="header__subnav-list">
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">BMW</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">AUDI</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">FORD</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">MAZDA</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">MERCEDES</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">LAND ROVER</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">MITSUBISHI</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">NISSAN</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">OPEL</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">PORSCHE</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">SKODA</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">VOLKSWAGEN</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/range-of-cars.html" class="header__nav-item-link">Range of cars</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/preowned-cars.html" class="header__nav-item-link">PreOwned cars</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/contact.html" class="header__nav-item-link">Contact us</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/site-map.html" class="header__nav-item-link">Site map</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/search.html" class="header__nav-item-link" title="Search cars">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Menu on mobile and tablet -->
+                    <!-- mbm: Mobile menu -->
+                    <div class="header__mb-menu HOPC">
+                        <span class="header__mbm-btn">
+                            <i class="fa-solid fa-bars header__mbm-icon"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Model mobile menu -->
+            <div class="mbm__model">
+                <div class="mbm__contain fh">
+                    <!-- Close model button -->
+                    <div class="mbm__close">
+                        <span class="mbm__close-btn">
+                            <i class="fa-regular fa-circle-xmark mbm__close-icon"></i>
+                        </span>
+                    </div>
+    
+                    <!-- List navigate -->
+                    <ul class="mbm__nav-list">
+                        <li class="mbm__nav-item">
+                            <a href="../main/about-us.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-people-group mbm__nav-item-icon"></i>
+                                About us
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/brands.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-flag mbm__nav-item-icon"></i>
+                                Brands
+                            </a>
+                            <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__brands-arrow"></i>
+
+                            <ul class="mbm__subnav-list">
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">BMW</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">AUDI</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">FORD</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">MAZDA</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">MERCEDES</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">LAND ROVER</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">MITSUBISHI</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">NISSAN</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">OPEL</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">PORSCHE</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">SKODA</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">VOLKSWAGEN</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/range-of-cars.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-book-open mbm__nav-item-icon"></i>
+                                Range of cars
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/preowned-cars.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-truck-pickup mbm__nav-item-icon"></i>
+                                PreOwned cars
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/contact.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-phone-volume mbm__nav-item-icon"></i>
+                                Contact us
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/site-map.html" class="mbm__nav-link">
+                                <i class="fa-regular fa-map mbm__nav-item-icon"></i>
+                                Site map
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/search.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-magnifying-glass mbm__nav-item-icon"></i>
+                                Search cars
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="content fix-header mb-60">
+            <div class="container">
+                <!-- Content heading -->
+                <div class="base__frame-heading-box">
+                    <h3 class="base__frame-heading">
+                        Car search
+                    </h3>
+                    <div class="strike-through">
+                        <div class="strike-through-line"></div>
+                    </div>
+                </div>
+                <!-- Introduce -->
+                <div class="base__frame-introduce">
+                    <p class="base__frame-introduce-text">
+                        Search for the car you want!
+                    </p>
+                </div>
+
+                <!-- Search -->
+                <div class="search">
+                    <div class="row">
+
+                        <div class="col-xl-6 col-lg-6 col-12 mt-12">
+                            <!-- Reset input -->
+                            <div class="flex-left">
+                                <div class="search__reset-btn btn fs-18 b_text-weight-700 text-white air-force-blue-bg-color">Reset search</div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-12 mt-12">
+                            <!-- Search car by ID no. -->
+                            <div class="search__by-id">
+                                <p class="search__title">Seach only by ID no.</p>
+                                <input id="search-id" type="text" class="search__input">
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-48 mb-48">
+                            <!-- Title -->
+                            <div class="search__type-name">
+                                <h3 class="text-uppercase">BRANDS, MODEL</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-12 mt-12">
+                            <!-- Select brand -->
+                            <div class="search__brands flex-left">
+                                <p class="search__title">Brands</p>
+                                <select id="search-select-brands" class="form-select flex-1 fs-16">
+                                    <!--  -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-12 mt-12">
+                            <!-- Select model -->
+                            <div class="search__brands flex-left">
+                                <p class="search__title">Model</p>
+                                <select id="search-select-models" class="form-select flex-1 fs-16" aria-label="Default select example">
+                                    <!--  -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-48 mb-48">
+                            <!-- Title -->
+                            <div class="search__type-name">
+                                <h3 class="text-uppercase">Vehicle type</h3>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__body-style" name="fuel-type" id="type1" value="Cabriolet / Roadster">
+                                <label class="form-check-label no-select" for="type1">
+                                    Cabriolet / Roadster
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__body-style" name="fuel-type" id="type2" value="Estate Car">
+                                <label class="form-check-label no-select" for="type2">
+                                    Estate Car
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__body-style" name="fuel-type" id="type3" value="Saloon">
+                                <label class="form-check-label no-select" for="type3">
+                                    Saloon
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__body-style" name="fuel-type" id="type4" value="Small Car">
+                                <label class="form-check-label no-select" for="type4">
+                                    Small Car
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__body-style" name="fuel-type" id="type5" value="Sports Car / Coupe">
+                                <label class="form-check-label no-select" for="type5">
+                                    Sports Car / Coupe
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__body-style" name="fuel-type" id="type6" value="SUV / Off-road Vehicle / Pickup Truck">
+                                <label class="form-check-label no-select" for="type6">
+                                    SUV / Off-road Vehicle / Pickup Truck
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__body-style" name="fuel-type" id="type7" value="Van / Minibus">
+                                <label class="form-check-label no-select" for="type7">
+                                    Van / Minibus
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__body-style" name="fuel-type" id="type8" value="Other">
+                                <label class="form-check-label no-select" for="type8">
+                                    Other
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-12 mt-12">
+                            <!-- Search car by ID no. -->
+                            <div class="search__num-seats flex-left">
+                                <p class="search__title">Number of seats</p>
+                                <input id="search-num-of-seats" type="number" class="search__input">
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-12 mt-12">
+                            <!-- Select Number of doors -->
+                            <div class="search__brands flex-left">
+                                <p class="search__title">Number of doors</p>
+                                <select id="search-num-of-doors" class="form-select flex-1 fs-16" aria-label="Default select example">
+                                    <option selected value="">Any</option>
+                                    <option value="2/3">2/3</option>
+                                    <option value="4/5">4/5</option>
+                                    <option value="6/7">6/7</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-12 mt-36">
+                            <!-- Select Number of doors -->
+                            <div class="search__brands flex-left">
+                                <p class="search__title">Sliding Doors</p>
+                                <select id="search-sliding-doors" class="form-select flex-1 fs-16" aria-label="Default select example">
+                                    <option selected value="">Any</option>
+                                    <option value="Sliding door right">Sliding door right</option>
+                                    <option value="Sliding door left">Sliding door left</option>
+                                    <option value="Sliding door both-sided">Sliding door both-sided</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-48 mb-48">
+                            <!-- Title -->
+                            <div class="search__type-name">
+                                <h3 class="text-uppercase">Fuel type</h3>
+                            </div>
+                        </div>
+
+                        <!-- Check box fuel type -->
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-petrol" value="petrol">
+                                <label class="form-check-label no-select" for="fuel-petrol">
+                                    Petrol
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-diesel" value="diesel">
+                                <label class="form-check-label no-select" for="fuel-diesel">
+                                    Diesel
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-eletric" value="electric">
+                                <label class="form-check-label no-select" for="fuel-eletric">
+                                    Electric
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-ethanol" value="Ethanol">
+                                <label class="form-check-label no-select" for="fuel-ethanol">
+                                    Ethanol (FFV, E85, etc.)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-hybrid-pe" value="hybrid-pe">
+                                <label class="form-check-label no-select" for="fuel-hybrid-pe">
+                                    Hybrid (petrol/electric)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-hybrid-de" value="hybrid-de">
+                                <label class="form-check-label no-select" for="fuel-hybrid-de">
+                                    Hybrid (diesel/electric)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-lpg" value="lpg">
+                                <label class="form-check-label no-select" for="fuel-lpg">
+                                    LPG
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-ng" value="natural-gas">
+                                <label class="form-check-label no-select" for="fuel-ng">
+                                    Natural Gas
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-hydrogen" value="hydrogen">
+                                <label class="form-check-label no-select" for="fuel-hydrogen">
+                                    Hydrogen
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 fs-18 mt-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-other" value="other">
+                                <label class="form-check-label no-select" for="fuel-other">
+                                    Other
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Search result -->
+        <a class="result a-handle" href="../other-html/list-car.html">
+            <h4 class="result-text">show 6 result</h4>
+        </a>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>BUYER PROTECTION</h4>
+                        <ul>
+                            <li><a href="#">CARVAN guaranteed</a></li>
+                            <li><a href="#">Bespoke personal assistance</a></li>
+                            <li><a href="#">Transaction security</a></li>
+                            <li><a href="#">Technical and aeshetic evaluation</a></li>
+                            <li><a href="#">Verified partners and dealers</a></li>
+                            <li><a href="#">IOS 9001:2022 certified procedures</a></li>
+                            <li><a href="#">warranty and extended warranty</a></li>
+                            <li><a href="#">Safe delivery</a></li>
+                            <li><a href="#">Pre-delivery</a></li>
+                            <li><a href="#">WE deliver your car "Ready to go"</a></li>
+                            <li><a href="#">After-sales services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>LEGAL & ASSISTANCE INFORMATION</h4>
+                        <ul>
+                            <li><a href="#">Impressum</a></li>
+                            <li><a href="#">Terms and conditions</a></li>
+                            <li><a href="#">presonal data protection</a></li>
+                            <li><a href="#">Cookie policy</a></li>
+                            <li><a href="#">Glossary</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>ADVANTAGES & BENEFITS</h4>
+                        <ul>
+                            <li><a href="#">Used cars with warranty</a></li>
+                            <li><a href="#">New cars with short delivery time</a></li>
+                            <li><a href="#">Any car of  your choice securely traded</a></li>
+                            <li><a href="#">Extended warranty for your car</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>FOLLOW </h4>
+                        <div class="footer__icon-box">
+                            <a href="#"><i class="fab fa-facebook-f footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-twitter footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-instagram footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in footer-icon"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <div class="container fh">
+                    <div class="row fh">
+                        <div class="col-12 fh">
+                            <div class="footer__copyright-box fh">
+                                <i class="fa-regular fa-copyright footer__copyright-icon"></i>
+                                <h3 class="footer__copyright-text">
+                                    Copyright CARVAN 2011 - 2022
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<!-- Base js in all file html -->
+<script src="../../asset/js/main.js"></script>
+<!-- Handle header -->
+<script src="../../asset/js/header.js"></script>
+<!-- Search -->
+<script src="../asset/js/search.js"></script>
+
+</html>

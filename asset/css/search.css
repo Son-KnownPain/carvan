@@ -1,0 +1,97 @@
+/* Reset margin, padding tags */
+p, h1, h2, h3, h4, h5, h6, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Declare root css */
+:root {
+
+}
+
+/* CSS base */
+.air-force-blue-bg-color {
+    background-color: #5d8aa8;
+}
+
+
+
+/* CSS main */
+.app {
+    position: relative;
+}
+
+.search {
+
+}
+
+.search__by-id {
+    display: flex;
+    align-items: center;
+}
+
+.search__title {
+    font-size: 1.8rem;
+    margin-right: 20px;
+}
+
+.search__input {
+    background-color: #fff;
+    border: 1px solid #bbbbbb;
+    border-radius: 2px;
+    padding: 4px;
+    font-size: 1.6rem;
+    min-width: 200px;
+    flex: 1;
+}
+
+.search__input:focus {
+    outline: 1px solid aqua;
+}
+
+.search__reset-btn:hover {
+    background-color: #76a6c6;
+}
+
+.search__type-name {
+    position: relative;
+}
+
+.search__type-name:after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-top: 1px solid #bbbbbb;
+    position: absolute;
+    bottom: -12px;
+}
+
+.search__type-name h3 {
+    color: #76a6c6;
+    font-weight: 800;
+}
+
+.result {
+    position: fixed;
+    /* top: var(--header-height);
+    left: 0; */
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.4rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 2px;
+}
+
+.result:hover {
+    background-color: #e90036;
+    color: #fff;
+}
+
+.result-text {
+    text-transform: uppercase;
+}

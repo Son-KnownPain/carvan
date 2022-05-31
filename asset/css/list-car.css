@@ -1,0 +1,92 @@
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --padding-filter: 12px;
+}
+
+.content {
+    padding-bottom: 50px;
+}
+
+.detailed-search {
+    border-right: 2px solid #999;
+    padding: var(--padding-filter);
+    box-sizing: content-box;
+    color: var(--text-color);
+}
+
+.detailed-search:hover {
+    color: var(--text-color);
+}
+
+
+.filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-section {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    padding: var(--padding-filter);
+    box-sizing: content-box;
+    background-color: #dbdbdb;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.filter__name {
+
+}
+
+.filter__remove-btn {
+    padding: 12px;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.filter__remove-icon {
+
+}
+
+/* List car */
+
+.list-car {
+
+}
+
+.list-car__item {
+    
+}
+
+.list-car__img-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+
+.list-car__img {
+    width: 100%;
+}
+
+.list-car__info {
+
+}
+
+.list-car__name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+}

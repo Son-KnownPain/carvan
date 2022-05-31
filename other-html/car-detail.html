@@ -29,6 +29,393 @@
     
     <!-- Create a div tag has class 'app' containing all -->
     <div class="app">
+        <!-- Modify warranty model -->
+        <div class="warranty__model">
+            <div class="warranty__contain">
+                <!-- X button -->
+                <div class="warranty__close fs-20 text-danger">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <!-- Heading -->
+                <div class="base__frame-heading-box mb-24">
+                    <h3 class="base__frame-heading" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: 400;">
+                        Warranty
+                    </h3>
+                    <div class="strike-through">
+                        <div class="strike-through-line"></div>
+                    </div>
+                </div>
+
+                <!-- Model content -->
+                <!-- Year choice -->
+                <div class="warranty__choice-year">
+                    <div class="choice-year__title fs-18">
+                        Choose period:
+                    </div>
+                    <div class="choice-year-box ml-24">
+                        <div class="choice-year-group flex-center fs-16">
+                            <input name="choice-period" id="choice-1year" type="radio" class="choice-year-input" value="1-year" checked>
+                            <label for="choice-1year" class="choice-year-label">1 year</label>
+                        </div>
+                        <div class="choice-year-group flex-center fs-16">
+                            <input name="choice-period" id="choice-2years" type="radio" class="choice-year-input" value="2-years">
+                            <label for="choice-2years" class="choice-year-label">2 years</label>
+                        </div>
+                        <div class="choice-year-group flex-center fs-16">
+                            <input name="choice-period" id="choice-3years" type="radio" class="choice-year-input" value="3-years">
+                            <label for="choice-3years" class="choice-year-label">3 years</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Warranty level choice -->
+                <div class="warranty-level-choice mt-36"> <!-- wlc -->
+                    <div class="wlc__box">
+                        <div class="row">
+                            <!-- 1 setion -->
+                            <div class="col-xl-4">
+                                <div class="wlc__section active">
+                                    <!-- Icon -->
+                                    <div class="wlc__icon flex-center fs-32" style="color: #b2beb5;">
+                                        <i class="fa-solid fa-shield"></i>
+                                    </div>
+                                    <!-- Level name -->
+                                    <div class="wlc__level-name flex-center mt-12">
+                                        <h3 class="fs-24 text-center text-uppercase">Basic</h3>
+                                    </div>
+                                    <!-- Ways -->
+                                    <div class="wlc__ways flex-center mt-36">
+                                        <h2 class="fs-36 text-center b_text-weight-700 text-secondary">Included</h2>
+                                    </div>
+                                    <!-- Strikethrough dark -->
+                                    <div class="strike-through-dark mt-24">
+                                        <div class="strike-through-dark-line"></div>
+                                    </div>
+                                    <!-- List warranted -->
+                                    <ul class="wlc__list">
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Engine</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Gearbox, Differential</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Transmission</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Direction</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Braking system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Fuel supply system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Exhaust system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Electric system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Electronic system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Cooling and air conditioning system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Security systems</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Mobility</p>
+                                        </li>
+
+                                    </ul>
+                                    <!-- Choose button -->
+                                    <div class="wlc__choose-btn mt-24 mb-12" data-value="basic">
+                                        <div class="btn text-uppercase text-white fw fs-20 b_text-weight-700">Choose</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 setion -->
+                            <div class="col-xl-4">
+                                <div class="wlc__section">
+                                    <!-- Icon -->
+                                    <div class="wlc__icon flex-center fs-32" style="color: #08e8de;">
+                                        <i class="fa-solid fa-shield"></i>
+                                    </div>
+                                    <!-- Most popular -->
+                                    <div class="wlc__most-popular">
+                                        <h4 class="text-uppercase text-white">Most popular</h4>
+                                    </div>
+                                    <!-- Level name -->
+                                    <div class="wlc__level-name flex-center mt-12">
+                                        <h3 class="fs-24 text-center text-uppercase">Pro</h3>
+                                    </div>
+                                    <!-- Ways -->
+                                    <div class="wlc__ways flex-center mt-36">
+                                        <h2 class="fs-36 text-center b_text-weight-700">On request</h2>
+                                    </div>
+                                    <!-- Strikethrough dark -->
+                                    <div class="strike-through-dark mt-24">
+                                        <div class="strike-through-dark-line"></div>
+                                    </div>
+                                    <!-- List warranted -->
+                                    <ul class="wlc__list">
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Engine</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Gearbox, Differential</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Transmission</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Direction</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Braking system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Fuel supply system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Exhaust system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Electric system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Electronic system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Cooling and air conditioning system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Security systems</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Mobility</p>
+                                        </li>
+
+                                    </ul>
+                                    <!-- Choose button -->
+                                    <div class="wlc__choose-btn mt-24 mb-12" data-value="pro">
+                                        <div class="btn text-uppercase text-white fw fs-20 b_text-weight-700">Choose</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1 setion -->
+                            <div class="col-xl-4">
+                                <div class="wlc__section">
+                                    <!-- Icon -->
+                                    <div class="wlc__icon flex-center fs-32" style="color: #e9d66b;">
+                                        <i class="fa-solid fa-shield"></i>
+                                    </div>
+                                    <!-- Level name -->
+                                    <div class="wlc__level-name flex-center mt-12">
+                                        <h3 class="fs-24 text-center text-uppercase" style="padding: 0 4px;color: #fff; background-image: linear-gradient(to right, #ff8c00 , #fee504);;">Premium</h3>
+                                    </div>
+                                    <!-- Ways -->
+                                    <div class="wlc__ways flex-center mt-36">
+                                        <h2 class="fs-36 text-center b_text-weight-700">On request</h2>
+                                    </div>
+                                    <!-- Strikethrough dark -->
+                                    <div class="strike-through-dark mt-24">
+                                        <div class="strike-through-dark-line"></div>
+                                    </div>
+                                    <!-- List warranted -->
+                                    <ul class="wlc__list">
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Engine</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Gearbox, Differential</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Transmission</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Direction</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Braking system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Fuel supply system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Exhaust system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Electric system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Electronic system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Cooling and air conditioning system</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Security systems</p>
+                                        </li>
+
+                                        <li class="wlc__item">
+                                            <div class="wlc__item-icon">
+                                                <i class="fa-solid fa-check"></i>
+                                            </div>
+                                            <p class="wlc__item-name">Mobility</p>
+                                        </li>
+
+                                    </ul>
+                                    <!-- Choose button -->
+                                    <div class="wlc__choose-btn mt-24 mb-12" data-value="premium">
+                                        <div class="btn text-uppercase text-white fw fs-20 b_text-weight-700">Choose</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Header -->
         <header class="header header--bg-white">
             <div class="container fh">
@@ -44,25 +431,66 @@
                     <nav class="header__nav HOMAT">
                         <ul class="header__nav-list">
                             <li class="header__nav-item">
-                                <a href="../../main/about-us.html" class="header__nav-item-link">About us</a>
+                                <a href="../main/about-us.html" class="header__nav-item-link">About us</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="../../main/brands.html" class="header__nav-item-link">Brands</a>
+                                <a href="../main/brands.html" class="header__nav-item-link">
+                                    Brands
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a>
+                                <ul class="header__subnav-list">
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">BMW</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">AUDI</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">FORD</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">MAZDA</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">MERCEDES</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">LAND ROVER</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">MITSUBISHI</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">NISSAN</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">OPEL</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">PORSCHE</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">SKODA</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a href="" class="header__subnav-item-link">VOLKSWAGEN</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="header__nav-item">
-                                <a href="../../main/range-of-cars.html" class="header__nav-item-link">Range of cars</a>
+                                <a href="../main/range-of-cars.html" class="header__nav-item-link">Range of cars</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="../../main/preowned-cars.html" class="header__nav-item-link">PreOwned cars</a>
+                                <a href="../main/preowned-cars.html" class="header__nav-item-link">PreOwned cars</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="../../main/contact.html" class="header__nav-item-link">Contact us</a>
+                                <a href="../main/contact.html" class="header__nav-item-link">Contact us</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="../../main/site-map.html" class="header__nav-item-link">Site map</a>
+                                <a href="../main/site-map.html" class="header__nav-item-link">Site map</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="./main/search.html" class="header__nav-item-link" title="Search cars">
+                                <a href="../main/search.html" class="header__nav-item-link" title="Search cars">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
                             </li>
@@ -77,7 +505,7 @@
                     </div>
                 </div>
             </div>
-
+    
             <!-- Model mobile menu -->
             <div class="mbm__model">
                 <div class="mbm__contain fh">
@@ -87,43 +515,89 @@
                             <i class="fa-regular fa-circle-xmark mbm__close-icon"></i>
                         </span>
                     </div>
-
+    
                     <!-- List navigate -->
                     <ul class="mbm__nav-list">
                         <li class="mbm__nav-item">
-                            <a href="../../main/about-us.html" class="mbm__nav-link">
+                            <a href="../main/about-us.html" class="mbm__nav-link">
                                 <i class="fa-solid fa-people-group mbm__nav-item-icon"></i>
                                 About us
                             </a>
                         </li>
                         <li class="mbm__nav-item">
-                            <a href="../../main/brands.html" class="mbm__nav-link">
+                            <a href="../main/brands.html" class="mbm__nav-link">
                                 <i class="fa-solid fa-flag mbm__nav-item-icon"></i>
                                 Brands
                             </a>
+                            <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__brands-arrow"></i>
+
+                            <ul class="mbm__subnav-list">
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">BMW</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">AUDI</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">FORD</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">MAZDA</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">MERCEDES</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">LAND ROVER</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">MITSUBISHI</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">NISSAN</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">OPEL</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">PORSCHE</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">SKODA</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="" class="mbm__subnav-item-link">VOLKSWAGEN</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="mbm__nav-item">
-                            <a href="../../main/range-of-cars.html" class="mbm__nav-link">
+                            <a href="../main/range-of-cars.html" class="mbm__nav-link">
                                 <i class="fa-solid fa-book-open mbm__nav-item-icon"></i>
                                 Range of cars
                             </a>
                         </li>
                         <li class="mbm__nav-item">
-                            <a href="../../main/preowned-cars.html" class="mbm__nav-link">
+                            <a href="../main/preowned-cars.html" class="mbm__nav-link">
                                 <i class="fa-solid fa-truck-pickup mbm__nav-item-icon"></i>
                                 PreOwned cars
                             </a>
                         </li>
                         <li class="mbm__nav-item">
-                            <a href="../../main/contact.html" class="mbm__nav-link">
+                            <a href="../main/contact.html" class="mbm__nav-link">
                                 <i class="fa-solid fa-phone-volume mbm__nav-item-icon"></i>
                                 Contact us
                             </a>
                         </li>
                         <li class="mbm__nav-item">
-                            <a href="../../main/site-map.html" class="mbm__nav-link">
+                            <a href="../main/site-map.html" class="mbm__nav-link">
                                 <i class="fa-regular fa-map mbm__nav-item-icon"></i>
                                 Site map
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/search.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-magnifying-glass mbm__nav-item-icon"></i>
+                                Search cars
                             </a>
                         </li>
                     </ul>
@@ -131,6 +605,7 @@
             </div>
         </header>
 
+        <!-- Content -->
         <div class="content">
             <div class="container">
                 <!-- Heading Name Car -->

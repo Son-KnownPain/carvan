@@ -41,6 +41,9 @@ body::-webkit-scrollbar-thumb:hover {
 .b_text-weight-700 {
     font-weight: 700;
 }
+.b_text-weight-400 {
+    font-weight: 400;
+}
 
 
 
@@ -49,6 +52,74 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .fw {
     width: 100%;
+}
+
+/* padding top */
+.pt-60 {
+    padding-top: 60px;
+}
+.pt-48 {
+    padding-top: 48px;
+}
+.pt-36 {
+    padding-top: 36px;
+}
+.pt-24 {
+    padding-top: 24px;
+}
+.pt-12 {
+    padding-top: 12px;
+}
+
+/* padding left */
+.pl-60 {
+    padding-left: 60px;
+}
+.pl-48 {
+    padding-left: 48px;
+}
+.pl-36 {
+    padding-left: 36px;
+}
+.pl-24 {
+    padding-left: 24px;
+}
+.pl-12 {
+    padding-left: 12px;
+}
+
+/* padding right */
+.pr-60 {
+    padding-right: 60px;
+}
+.pr-48 {
+    padding-right: 48px;
+}
+.pr-36 {
+    padding-right: 36px;
+}
+.pr-24 {
+    padding-right: 24px;
+}
+.pr-12 {
+    padding-right: 12px;
+}
+
+/* padding bottom */
+.pb-60 {
+    padding-bottom: 60px;
+}
+.pb-48 {
+    padding-bottom: 48px;
+}
+.pb-36 {
+    padding-bottom: 36px;
+}
+.pb-24 {
+    padding-bottom: 24px;
+}
+.pb-12 {
+    padding-bottom: 12px;
 }
 
 
@@ -154,6 +225,9 @@ body::-webkit-scrollbar-thumb:hover {
 .fs-36 {
     font-size: 3.6rem;
 }
+.fs-42 {
+    font-size: 4.2rem;
+}
 
 
 
@@ -175,6 +249,9 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 /* Display: flex */
+.flex {
+    display: flex;
+}
 .flex-center {
     display: flex;
     justify-content: center;
@@ -190,8 +267,24 @@ body::-webkit-scrollbar-thumb:hover {
     justify-content: flex-end;
     align-items: center;
 }
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .flex-column {
     flex-direction: column;
+}
+.flex-1 {
+    flex: 1;
+}
+.flex {
+    display: flex;
+}
+
+/* Don't selected */
+.no-select {
+    user-select: none;
 }
 
 /* handle a tag */
@@ -199,9 +292,15 @@ body::-webkit-scrollbar-thumb:hover {
     text-decoration: none;
 }
 
+
 /* Display: block */
 .dp-block {
     display: block;
+}
+
+/* Display: inline-block */
+.dp-inline-block {
+    display: inline-block;
 }
 
 /* Push top */
@@ -229,7 +328,7 @@ body::-webkit-scrollbar-thumb:hover {
     align-items: center;
     min-height: 155px;
     width: 100%;
-    font-family: cursive;
+    /* font-family: cursive; */
     flex-direction: column;
 }
 
@@ -238,6 +337,7 @@ body::-webkit-scrollbar-thumb:hover {
     color: var(--text-color);
     margin-bottom: 12px;
     text-align: center;
+    font-weight: 400;
 }
 
 .base__frame-introduce {
