@@ -6,7 +6,6 @@
         "name": "Audi A6 RS6 Avant 4.0 TFSI V8 Quattro Tiptronic",
         "brand": "AUDI", /* Name UPPERCASE all letter */
         "model": "A1",
-        "rangeOfCar": "JEEP",
         "netPrice": "150.389",
         "currencyIcon": "€",
         "vatPercent": "19",

@@ -1,0 +1,64 @@
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.strikethrough {
+    flex: 1;
+    border-top: 1px solid #b3b3b3;
+}
+
+.roc__name {
+    margin-bottom: 32px;
+}
+
+.roc__name-text {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 8px;
+    color: #5d8aa8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roc__illustration-wrapper {
+    width: 100px;
+}
+
+/* List car of body style */
+
+.list-car {
+
+}
+
+.list-car__item {
+    
+}
+
+.list-car__img-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+
+.list-car__img {
+    width: 100%;
+}
+
+.list-car__info {
+
+}
+
+.list-car__name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+}

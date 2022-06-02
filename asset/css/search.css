@@ -95,3 +95,16 @@ p, h1, h2, h3, h4, h5, h6, ul, li {
 .result-text {
     text-transform: uppercase;
 }
+
+.result-loading-icon {
+    animation: spinning linear 1s infinite;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

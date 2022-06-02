@@ -9,3 +9,22 @@
 .contact__heading {
     color: #21abcd;
 }
+
+.contact__email-us {
+
+}
+
+.contact__section-btn {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-family: cambria;
+    color: #555;
+}
+
+.contact__section-btn:hover {
+    color: var(--primary-color);
+}
+
+.contact__address-text {
+    
+}

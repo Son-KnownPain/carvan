@@ -124,9 +124,19 @@ const brandsName = [
     'VOLKSWAGEN',
 ]
 
+const DATA_SEARCH = 'APP_DATA_SEARCH'
+const ID_VALID_ARRAY = 'IDS_VALID_ARRAY'
 
 
 const app = {
+    // get data from local storage and function set data search
+    dataSearch: JSON.parse(localStorage.getItem(DATA_SEARCH)) || {},
+    uploadIdValid: function(idValid) {
+        localStorage.setItem(ID_VALID_ARRAY, JSON.stringify(idValid))
+    },
+    setDataSearch: function() {
+        localStorage.setItem(DATA_SEARCH, JSON.stringify(this.dataSearch))
+    },
     renderBrandsSelect: function() {
         // The function changes the name to a valid value with the object's key
         function changeValue(brand) {
@@ -147,9 +157,9 @@ const app = {
         const brandRenderHtml = brandsName.map((brand, index) => {
 
             if (index == 0) {
-                return `<option value="" selected>Any</option><option value="${changeValue(brand)}">${brand}</option>`
+                return `<option class="search__options-brand" value="any" selected>Any</option><option class="search__options-brand" value="${changeValue(brand)}">${brand}</option>`
             } else {
-                return `<option value="${changeValue(brand)}">${brand}</option>`
+                return `<option class="search__options-brand" value="${changeValue(brand)}">${brand}</option>`
             }
 
         })
@@ -158,17 +168,146 @@ const app = {
 
         $('#search-select-brands').innerHTML = brandRenderHtml.join('')
     },
+    // When i choose a brand then model select will rendered
     renderModelsSelect: function(brandInputValue) {
-        const modelRenderHtml = selectModel[brandInputValue].map((model, index) => {
-            if (index == 0) {
-                return `<option value="" selected>Any</option><option value="${model}">${model}</option>`
+        let modelRenderHtml
+        if (selectModel[brandInputValue]) {
+            modelRenderHtml = selectModel[brandInputValue].map((model, index) => {
+                if (index == 0) {
+                    return `<option class="search__options-model" value="ANY" selected>Any</option><option class="search__options-model" value="${model}">${model}</option>`
+                } else {
+                    return `<option class="search__options-model" value="${model}">${model}</option>`
+                }
+            })
+        } else {
+            modelRenderHtml = []
+        }
+
+        if (brandInputValue == 'any') {
+            $('#search-select-models').innerHTML = ''
+        } else {
+            $('#search-select-models').innerHTML = modelRenderHtml.join('')
+        }
+    },
+    // Function set value for form input from localStorage
+    loadDataFormSearch: function(dataSearch) {
+        $('#search-id').value = this.dataSearch.idNo
+        // So sánh value của option với dataSearch.brand, giống nhau thì set selected = true
+        $$('.search__options-brand').forEach(option => {
+            if (option.value.toUpperCase() == this.dataSearch.brand) {
+                option.selected = true
             } else {
-                return `<option value="${model}">${model}</option>`
+                option.selected = false
             }
         })
-
-        $('#search-select-models').innerHTML = modelRenderHtml.join('')
+        // Render lại select model với brand vừa render ra UI
+        this.renderModelsSelect(this.dataSearch.brand.toLowerCase())
+        // Xong kiểm tra value của option giống với trong dataSearch.model thì selected = true
+        $$('.search__options-model').forEach(option => {
+            if (option.value == this.dataSearch.model) {
+                option.selected = true
+            } else {
+                option.selected = false
+            }
+        })
+        // gắn value cho các form
+        $('#search-num-of-seats').value = this.dataSearch.numberOfSeats
+        $('#search-num-of-doors').value = this.dataSearch.numberOfDoors
+        $('#search-sliding-doors').value = this.dataSearch.slidingDoors
+        $$('.search__body-style').forEach(element => {
+            if (dataSearch.bodyStyle.includes(element.value)) {
+                element.checked = true
+            }
+        })
+        $$('.search__fuel-type').forEach(element => {
+            if (dataSearch.fuelType.includes(element.value)) {
+                element.checked = true
+            }
+        })
     },
+    loadResultSearch: function(dataSearch) {
+        $('.result-text').innerHTML = `<i class="fa-solid fa-gear result-loading-icon" style="margin-right: 4px;"></i>Loading`
+        const _this = this // Get 'this' keyword
+        fetch('https://62205fd0ce99a7de19577611.mockapi.io/user/cars')
+            .then(response => response.json())
+            .then(cars => {
+                let resultNumber = 0
+                let idValid = [] // Array of valid vehicle ids
+                const checkCar = function(car, dataSearch) {
+                    let result = true
+                    // Kiểm tra coi các mảng bodyStyle và fuelType có phần tử nào hay không
+                    let numOfElementBodyStyle = 0
+                    let numOfElementFuelType = 0
+                    dataSearch.bodyStyle.forEach(element => {
+                        numOfElementBodyStyle++
+                    })
+                    dataSearch.fuelType.forEach(element => {
+                        numOfElementFuelType++
+                    })
+                    if (dataSearch.brand != 'ANY' && dataSearch.brand != '') {
+                        result = car.brand == dataSearch.brand ? true : false
+                    } else {
+                        result = true
+                    }
+                    if (dataSearch.model != 'ANY' && dataSearch.model != '') {
+                        result = car.model == dataSearch.model ? true : false
+                    }
+                    // Kiểm tra xem đã đúng brand hoặc model r mới kiểm tra tiếp
+                    if (result) {
+                        if (dataSearch.numberOfSeats != 'ANY' && dataSearch.numberOfSeats != '') {
+                            result = car.carDetails.numberOfSeats == dataSearch.numberOfSeats ? true : false
+                        }
+                        // Đúng số ghế
+                        if (result) {
+                            if (dataSearch.numberOfDoors != 'ANY' && dataSearch.numberOfDoors != '') {
+                                result = car.carDetails.numberOfDoors == dataSearch.numberOfDoors ? true : false
+                            }
+                            // Đúng số cửa
+                            if (result) {
+                                if (dataSearch.slidingDoors != 'ANY' && dataSearch.slidingDoors != '') {
+                                    result = car.carDetails.slidingDoors == dataSearch.slidingDoors ? true : false
+                                }
+                                // Đúng cửa kéo
+                                if (result) {
+                                    // Chưa xử lí được khi chọn other
+                                    if (!dataSearch.bodyStyle.includes(car.carDetails.bodyStyle) && numOfElementBodyStyle > 0) {
+                                        result = false
+                                    }
+                                    // Đúng body style
+                                    if (result) {
+                                        // Chưa xử lí được khi chọn other
+                                        if (!dataSearch.fuelType.includes(car.carDetails.fuelType) && numOfElementFuelType > 0) {
+                                            result = false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                    return result
+                }
+                // set it up, check and push which ids are valid for the search request into the idValid array
+                // Also, if it is valid, it will increase the Result Number by 1 to render the UI
+                cars.forEach(car => {
+                    if ( car.carDetails.idNo == dataSearch.idNo && _this.dataSearch.idNo != '' ) {
+                        resultNumber++
+                        idValid.push(car.id)
+                    } else if (car.carDetails.idNo != dataSearch.idNo && _this.dataSearch.idNo != '') {
+                        // If the check is not valid then stop doing nothing
+                    } else if (checkCar(car, dataSearch)) {
+                        resultNumber++
+                        idValid.push(car.id)
+                    }
+                })
+                // Submit array of Ids accepted by the search filter
+                _this.uploadIdValid(idValid)
+                // Inner html UI numbers of result
+                $('.result-text').innerHTML = `<i class="fa-solid fa-list" style="margin-right: 4px;"></i>show ${resultNumber} result`
+            });
+    },
+    // Function get value for search when i change form input
     getValueSearch: function() {
         const searchValue = {
             idNo: $('#search-id').value,
@@ -186,10 +325,13 @@ const app = {
         $$('.search__fuel-type:checked').forEach(elementChecked => {
             searchValue.fuelType.push(elementChecked.value)
         })
-        // console.log(searchValue);
+        // Assign searchValue to dataSearch and call function set data to localStorage
+        this.dataSearch = searchValue
+        this.setDataSearch()
+        this.loadResultSearch(this.dataSearch)
     },
     resetSearch: function() {
-
+        this.getValueSearch()
     },
     handleEvents: function() {
         const _this = this
@@ -233,34 +375,41 @@ const app = {
         // Reset form search
         $('.search__reset-btn').onclick = function() {
             // Input, select -> set value empty
-            [
-                '#search-select-brands',
-                '#search-select-models',
+            _this.renderBrandsSelect()
+            _this.renderModelsSelect()
+            const arrId = [
                 '#search-num-of-seats',
                 '#search-num-of-doors',
-                '#search-sliding-doors'
-            ].forEach(idSelecter => {
+                '#search-sliding-doors',
+                '#search-id'
+            ]
+            arrId.forEach(idSelecter => {
                 $(idSelecter).value = ''
             })
             // Checkbox -> uncheck
             // I don't understand array no work so i declare 1 variable contain that array
-            const arr = [
+            const arrClassCheckbox = [
                 '.search__body-style',
                 '.search__fuel-type'
             ]
-            arr.forEach((classSelecter) => {
+            arrClassCheckbox.forEach((classSelecter) => {
                 $$(classSelecter).forEach(element => {
                     if (element.checked) {
                         element.checked = false
                     }
                 })
             })
+            _this.resetSearch()
         }
     },
     start: function() {
-        this.handleEvents()
         this.renderBrandsSelect()
+        this.loadDataFormSearch(this.dataSearch)
+        this.loadResultSearch(this.dataSearch)
+        this.handleEvents()
     }
 }
 
-app.start()
+window.addEventListener('load', function() {
+    app.start()
+})

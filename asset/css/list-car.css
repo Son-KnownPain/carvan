@@ -18,7 +18,6 @@ ul {
 }
 
 .detailed-search {
-    border-right: 2px solid #999;
     padding: var(--padding-filter);
     box-sizing: content-box;
     color: var(--text-color);
@@ -34,6 +33,8 @@ ul {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+    border-left: 1px solid #999;
+    padding-left: 6px;
 }
 
 .filter-section {
@@ -64,7 +65,24 @@ ul {
 /* List car */
 
 .list-car {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.list-car-loading-icon {
+    animation: spinning linear 1s infinite;
+    font-size: 2.2rem;
+    color: var(--text-color);
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .list-car__item {
@@ -89,4 +107,8 @@ ul {
     overflow: hidden;
     white-space: nowrap;
     font-size: 2rem;
+}
+
+.show-more-btn:hover {
+    color: #5d8aa8;
 }

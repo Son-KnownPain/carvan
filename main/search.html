@@ -99,7 +99,7 @@
                                 <a href="../main/site-map.html" class="header__nav-item-link">Site map</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="../main/search.html" class="header__nav-item-link" title="Search cars">
+                                <a href="../main/search.html" class="header__nav-item-link active" title="Search cars">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
                             </li>
@@ -248,7 +248,7 @@
                             <!-- Search car by ID no. -->
                             <div class="search__by-id">
                                 <p class="search__title">Seach only by ID no.</p>
-                                <input id="search-id" type="text" class="search__input">
+                                <input id="search-id" type="text" class="search__input" value="">
                             </div>
                         </div>
 
@@ -315,7 +315,7 @@
 
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__body-style" name="fuel-type" id="type4" value="Small Car">
+                                <input type="checkbox" class="form-check-input search__body-style" name="fuel-type" id="type4" value="Small car">
                                 <label class="form-check-label no-select" for="type4">
                                     Small Car
                                 </label>
@@ -402,7 +402,7 @@
                         <!-- Check box fuel type -->
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-petrol" value="petrol">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-petrol" value="Petrol">
                                 <label class="form-check-label no-select" for="fuel-petrol">
                                     Petrol
                                 </label>
@@ -410,7 +410,7 @@
                         </div>
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-diesel" value="diesel">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-diesel" value="Diesel">
                                 <label class="form-check-label no-select" for="fuel-diesel">
                                     Diesel
                                 </label>
@@ -418,7 +418,7 @@
                         </div>
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-eletric" value="electric">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-eletric" value="Electric">
                                 <label class="form-check-label no-select" for="fuel-eletric">
                                     Electric
                                 </label>
@@ -426,7 +426,7 @@
                         </div>
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-ethanol" value="Ethanol">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-ethanol" value="Ethanol (FFV, E85, etc.)">
                                 <label class="form-check-label no-select" for="fuel-ethanol">
                                     Ethanol (FFV, E85, etc.)
                                 </label>
@@ -434,7 +434,7 @@
                         </div>
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-hybrid-pe" value="hybrid-pe">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-hybrid-pe" value="Hybrid (petrol/electric)">
                                 <label class="form-check-label no-select" for="fuel-hybrid-pe">
                                     Hybrid (petrol/electric)
                                 </label>
@@ -442,7 +442,7 @@
                         </div>
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-hybrid-de" value="hybrid-de">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-hybrid-de" value="Hybrid (diesel/electric)">
                                 <label class="form-check-label no-select" for="fuel-hybrid-de">
                                     Hybrid (diesel/electric)
                                 </label>
@@ -450,7 +450,7 @@
                         </div>
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-lpg" value="lpg">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-lpg" value="LPG">
                                 <label class="form-check-label no-select" for="fuel-lpg">
                                     LPG
                                 </label>
@@ -458,7 +458,7 @@
                         </div>
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-ng" value="natural-gas">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-ng" value="Natural Gas">
                                 <label class="form-check-label no-select" for="fuel-ng">
                                     Natural Gas
                                 </label>
@@ -466,7 +466,7 @@
                         </div>
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-hydrogen" value="hydrogen">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-hydrogen" value="Hydrogen">
                                 <label class="form-check-label no-select" for="fuel-hydrogen">
                                     Hydrogen
                                 </label>
@@ -474,7 +474,7 @@
                         </div>
                         <div class="col-xl-3 fs-18 mt-12">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-other" value="other">
+                                <input type="checkbox" class="form-check-input search__fuel-type" name="fuel-type" id="fuel-other" value="Other">
                                 <label class="form-check-label no-select" for="fuel-other">
                                     Other
                                 </label>
@@ -489,7 +489,10 @@
 
         <!-- Search result -->
         <a class="result a-handle" href="../other-html/list-car.html">
-            <h4 class="result-text">show 6 result</h4>
+            <h4 class="result-text">
+                <i class="fa-solid fa-gear result-loading-icon" style="margin-right: 4px;"></i>
+                Loading
+            </h4>
         </a>
 
         <!-- Footer -->

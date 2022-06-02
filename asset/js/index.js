@@ -173,7 +173,7 @@ const app = {
                         _this.renderProducts(_this.idLayoutDisplayed, 4)
                         
                         // Loading UI
-                        btn.innerHTML = '<i class="fa-solid fa-fan loading-spiner"></i>'
+                        btn.innerHTML = '<i class="fa-solid fa-gear loading-spiner"></i>'
                         var loadNumber = 0
 
                         const idInterval = setInterval(() => {
