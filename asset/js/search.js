@@ -73,12 +73,12 @@ const selectModel = {
     ],
     opel: [
         'Adam',
-        'Altima',
         'Agila',
         'Ampera',
         'Ampera-e',
         'Antara',
-        'Astra'
+        'Astra',
+        'Cascada'
     ],
     porsche: [
         '918',

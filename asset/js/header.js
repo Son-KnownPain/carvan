@@ -42,3 +42,47 @@ $('.mbm__brands-arrow').onclick = function() {
         $('.mbm__brands-arrow').classList.remove('fa-chevron-up')
     }
 }
+
+
+// Handle click subnav brands
+
+
+$$('.header__subnav-item-link').forEach(element => {
+    element.removeAttribute('href')
+    element.classList.add('pointer')
+})
+
+
+const handleClickBrand = (element) => {
+    const dataSearch = {
+        bodyStyle: [],
+        brand: element.textContent,
+        fuelType: [],
+        idNo: "",
+        model: "ANY",
+        numberOfDoors: "",
+        numberOfSeats: "",
+        slidingDoors: ""
+    }
+    localStorage.setItem('APP_DATA_SEARCH', JSON.stringify(dataSearch))
+    fetch(urlCarsApi)
+        .then(res => res.json())
+        .then(cars => {
+            let idsValid = []
+            cars.forEach(car => {
+                if (car.brand == dataSearch.brand) {
+                    idsValid.push(car.id)
+                }
+            })
+            localStorage.setItem('IDS_VALID_ARRAY', JSON.stringify(idsValid))
+            window.location.href = 'http://127.0.0.1:5500/other-html/list-car.html'
+        })
+
+}
+
+
+$$('.header__subnav-item-link').forEach(element => {
+    element.onclick = () => {
+        handleClickBrand(element)
+    }
+})

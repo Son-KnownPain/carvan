@@ -65,9 +65,7 @@ ul {
 /* List car */
 
 .list-car {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
 }
 
 .list-car-loading-icon {

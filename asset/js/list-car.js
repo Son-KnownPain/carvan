@@ -1,5 +1,6 @@
 const DATA_SEARCH = 'APP_DATA_SEARCH'
 const ID_VALID_ARRAY = 'IDS_VALID_ARRAY'
+const CAR_ID = 'CAR_ID'
 
 const app = {
     // Query localStorage to get data
@@ -7,18 +8,26 @@ const app = {
     // Query localStorage to get ids valid
     idsValid: JSON.parse(localStorage.getItem(ID_VALID_ARRAY)),
 
+    // Create element car
+    carsElement: undefined,
+    // Function handle click car product
+    handleClickCarProduct: function(carItem) {
+        localStorage.setItem(CAR_ID, JSON.stringify(carItem.dataset.carid))
+        $('#go-to-car-details').click()
+    },
+    
     // Create global filterArr
     filterArr: [],
-
+    
     // Initialize the number of vehicles initially displayed in the product list
     carQuantity: 6,
-
+    
     // Create an external indexCheck variable that can be used in functions other than renderCars, default = 0
     indexCheck: 0,
 
     // Create a variable that holds the value of the number of valid ids
     idsValidLength: JSON.parse(localStorage.getItem(ID_VALID_ARRAY)).length,
-
+    
     // handle 'dataSearch' into 'filterArr' array
     handleFilterArr: function(dataSearch) {
         let filterArr = []
@@ -58,11 +67,11 @@ const app = {
         dataSearch.fuelType.forEach(element => {
             filterArr.push(element)
         })
-
+        
         app.filterArr = filterArr
         return filterArr
     },
-
+    
     // Render filter HTML
     renderFilters: function(dataSearch) {
         // Create an array containing the filter parts
@@ -74,15 +83,17 @@ const app = {
         filterArr = this.handleFilterArr(dataSearch)
         const htmlFilter = filterArr.map((filter, index) => {
             return `<div class="filter-section">
-                        <h3 class="filter__name">${filter}</h3>
-                    </div>`
+            <h3 class="filter__name">${filter}</h3>
+            </div>`
         })
         filterElement.innerHTML = htmlFilter.join('')
     },
 
     // Render cars
     renderCars: function() {
+
         const _this = this
+
         fetch(urlCarsApi)
             .then(res => res.json())
             .then(cars => {
@@ -93,7 +104,7 @@ const app = {
                         _this.indexCheck = indexCheck
                         indexCheck++
                         return `<div class="mb-60 col-xl-4 col-lg-4 col-md-6 col-12">
-                                    <a href="" class="list-car__item a-handle">
+                                    <a class="list-car__item a-handle" data-carid="${car.id}">
                                         <div class="list-car__img-wrapper flex-center">
                                             <img src="../asset/img/car-detail/test/select1.jfif" alt="" class="list-car__img">
                                         </div>
@@ -125,7 +136,15 @@ const app = {
                                 </div>`
                     }
                 })
-                $('.list-car').innerHTML = `<div class="row gx-5">${htmlCars.join('')}</div>`
+                $('.list-car').innerHTML = `<div class="row">${htmlCars.join('')}</div>`
+
+                // After rendering is done, get element car and handle click, send carId to localStorage
+                _this.carsElement = $$('.list-car__item')
+                _this.carsElement.forEach(carItem => {
+                    carItem.onclick = function() {
+                        _this.handleClickCarProduct(carItem)
+                    }
+                })
             })
     },
 
@@ -141,12 +160,6 @@ const app = {
     handleEvents: function() {
         // Get 'this'
         const _this = this
-
-        // Handle remove filter section
-        // Get element remove button
-        $$('.filter__remove-btn').forEach(btn => {
-            
-        })
 
         // Handle click show more
         $('.show-more-btn').addEventListener('click', function() {

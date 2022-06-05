@@ -14,6 +14,59 @@ ul {
     border-top: 1px solid #b3b3b3;
 }
 
+/* Menu range of cars */
+.menu-roc-btn {
+    position: relative;
+}
+
+.menu-roc-text {
+    padding: 8px;
+}
+
+.menu-roc {
+    position: absolute;
+    top: 36px;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    display: none;
+    animation: showDown ease-out 0.3s;
+    overflow: hidden;
+}
+
+.menu-roc.active {
+    display: block;
+}
+
+@keyframes showDown {
+    from {
+        height: 0;
+    }
+    to {
+        height: 225px;
+    }
+}
+
+.menu-roc__list {
+
+}
+
+.menu-roc__item {
+
+}
+
+.menu-roc__link {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+}
+
+
+/* Range of cars */
+
 .roc__name {
     margin-bottom: 32px;
 }
@@ -61,4 +114,12 @@ ul {
     overflow: hidden;
     white-space: nowrap;
     font-size: 2rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 739px) {
+    .roc__name-text {
+        font-size: 1.6rem;
+    }
 }
