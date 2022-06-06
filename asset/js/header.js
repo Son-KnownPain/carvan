@@ -1,5 +1,6 @@
 // Handle click mobile menu button
 
+
 // Set state for model
 let isShowMenu = false
 let isShowBrands = false
@@ -79,7 +80,7 @@ const handleClickBrand = (element) => {
                 }
             })
             localStorage.setItem('IDS_VALID_ARRAY', JSON.stringify(idsValid))
-            window.location.href = 'http://127.0.0.1:5500/other-html/list-car.html'
+            window.location.href = `http://${window.location.host}/other-html/list-car.html`
         })
 
 }
