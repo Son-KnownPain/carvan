@@ -25,6 +25,37 @@
 
 
 <body>
+
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "100186208260125");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function() {
+        FB.init({
+            xfbml            : true,
+            version          : 'v14.0'
+        });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div class="app">
         <!-- Header -->
         <header class="header header--bg-white">
@@ -368,6 +399,16 @@
                             Google Map location
                         </a>
                     </div>
+
+                    <!-- Heading - Map API -->
+                    <div class="contact__heading text-uppercase fs-20 b_text-weight-700 mt-48">
+                        <i class="fa-regular fa-map"></i>
+                        Map
+                    </div>
+                    <div class="strike-through-dark">
+                        <div class="strike-through-dark-line"></div>
+                    </div>
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
@@ -511,6 +552,24 @@
 
         }
     })
+</script>
+
+<!-- Google map API handler JavaScript -->
+<script>
+    function initMap() {
+        var options = {
+            zoom: 14,
+            center: { lat: 9.9756477,lng: 105.8328083 }
+        }
+        var map = new google.maps.Map(document.getElementById('map'), options)
+        var marker = new google.maps.Marker({
+            position: { lat: 9.9756477,lng: 105.8328083 },
+            map: map
+        })
+    }
+</script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAti_MuNucjpaK7Mr4upkkDP8iCuoyVbLo&callback=initMap">
 </script>
 
 </html>

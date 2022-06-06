@@ -28,3 +28,9 @@
 .contact__address-text {
     
 }
+
+/* MAP API */
+#map {
+    height: 400px;
+    width: 100%;
+}

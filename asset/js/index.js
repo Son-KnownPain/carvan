@@ -8,6 +8,30 @@ Array.prototype.noIncludes = function(data) {
 }
 
 
+// Create class of cars layout
+class CarsLayout {
+    constructor(id, name, quantity = 4) {
+        this.id = id
+        this.name = name
+        this.quantity = quantity
+    }
+    renderIntoUI(htmlRender) {
+        $$('.product__layout').forEach(layout => {
+            
+            if ( Number(layout.dataset.idlayout) == this.id ) {
+                layout.innerHTML = `<div class="row">${htmlRender}</div>`
+            }
+
+        })
+    }
+    increaseQuantity() {
+        this.quantity += 4
+    }
+}
+
+// Constant
+const CAR_ID = 'CAR_ID'
+
 
 // Get element
 const viewMoreBtns = $$('.product__view-more-btn')
@@ -19,7 +43,16 @@ const app = {
     // -----------------|
     // Variables config |
     // -----------------|
-    idLayoutDisplayed: [1, 2, 3, 4],
+        // The ids in this array have not been pressed the "show more" button
+        idLayoutDisplayed: [1, 2, 3, 4],
+
+        // Create an array containing the layout and its properties
+        carsLayoutConfig: [
+            new CarsLayout(1, 'cars recommended'),
+            new CarsLayout(2, 'cars listed in last 24 hours'),
+            new CarsLayout(3, 'most searched cars'),
+            new CarsLayout(4, 'cars viewed by clients')
+        ],
 
 
     // ---------------|
@@ -151,7 +184,7 @@ const app = {
             }
         },
 
-        // --Handle events
+        // Handle events
         handleEvents: function() {
             var _this = this;
             // Handle mouse enter / mouse out product item
@@ -163,14 +196,19 @@ const app = {
             })();
             //----------------------------------------------
 
-            // Handle click view more btn to show all cars product
+            // Handle click show more btn to show all cars product
             viewMoreBtns.forEach((btn, indexBtn) => {
                 
                 btn.onclick = function() {
                     if (_this.idLayoutDisplayed.includes(indexBtn + 1)) {
 
                         _this.idLayoutDisplayed = _this.idLayoutDisplayed.filter(id => id != indexBtn + 1)
-                        _this.renderProducts(_this.idLayoutDisplayed, 4)
+                        _this.carsLayoutConfig.forEach(item => {
+                            if ( btn.dataset.idbtn == item.id ) {
+                                item.increaseQuantity()
+                                _this.renderCarsProduct()
+                            }
+                        })
                         
                         // Loading UI
                         btn.innerHTML = '<i class="fa-solid fa-gear loading-spiner"></i>'
@@ -206,6 +244,56 @@ const app = {
 
             //----------------------------------------------
         },
+
+        // Render cars in layouts
+        renderCarsProduct: function() {
+            // Get this
+            const _this = this
+
+
+            _this.carsLayoutConfig.forEach(item => {
+                fetch(urlCarsApi)
+                    .then(res => res.json())
+                    .then(cars => {
+                        let quantityRendered = 0
+                        let htmlRender = cars.map(car => {
+                            if ( car.homeMode == item.name && quantityRendered < item.quantity ) {
+                                quantityRendered++
+                                return `<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                                            <a class="product-item" data-carId="${car.id}">
+                                                <div class="flex-center" style="height: 160px; overflow: hidden;">
+                                                    <img src="./asset/img/car-api/${car.id}/car1.jpg" alt="" class="product__img">
+                                                </div>
+                                                <div class="product-info">
+                                                    <h5 class="product-name">
+                                                        ${car.name}
+                                                    </h5>
+                                                    <p class="product-price">${car.netPrice}</p>
+                                                </div>
+                                            </a>
+                                        </div>`
+                            } else {
+                                return ``
+                            }
+
+                        })
+                        htmlRender = htmlRender.join('')
+                        item.renderIntoUI(htmlRender)
+
+                        // Handle click car product
+                        $$('.product-item').forEach(carItem => {
+                            carItem.onclick = () => {
+                                console.log(carItem.dataset.carid)
+                                localStorage.setItem(CAR_ID, JSON.stringify(carItem.dataset.carid))
+                                window.location.href = './other-html/car-detail.html'
+                            }
+                        })
+
+                    })
+            })
+        },
+
+        // No longer in use this function, you can remove it
         renderProducts: function(idLayout, quantity = 4) {
             const apiUrl = 'https://62205fd0ce99a7de19577611.mockapi.io/user/categoryCars'
             fetch(apiUrl)
@@ -252,9 +340,10 @@ const app = {
     start: function() {
         // Will call other function
         this.loadingUI('product--loading')
-        this.handleEvents()
-        this.renderProducts(this.idLayoutDisplayed, 4)
+        // this.renderProducts(this.idLayoutDisplayed, 4)
         this.clientOpinionsSlider()
+        this.renderCarsProduct()
+        this.handleEvents()
     }
 }
 

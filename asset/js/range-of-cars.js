@@ -29,7 +29,7 @@ const app = {
                             return `<div class="mb-60 col-xl-4 col-lg-4 col-md-6 col-12">
                                         <a class="list-car__item a-handle pointer" data-carid="${car.id}">
                                             <div class="list-car__img-wrapper flex-center">
-                                                <img src="../asset/img/car-detail/test/select1.jfif" alt="" class="list-car__img">
+                                                <img src="../asset/img/car-api/${car.id}/car1.jpg" alt="" class="list-car__img">
                                             </div>
                                             <div class="list-car__info">
                                                 <h4 class="list-car__name">${car.name}</h4>

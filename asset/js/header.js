@@ -51,6 +51,10 @@ $$('.header__subnav-item-link').forEach(element => {
     element.removeAttribute('href')
     element.classList.add('pointer')
 })
+$$('.mbm__subnav-item-link').forEach(element => {
+    element.removeAttribute('href')
+    element.classList.add('pointer')
+})
 
 
 const handleClickBrand = (element) => {
@@ -82,6 +86,12 @@ const handleClickBrand = (element) => {
 
 
 $$('.header__subnav-item-link').forEach(element => {
+    element.onclick = () => {
+        handleClickBrand(element)
+    }
+})
+
+$$('.mbm__subnav-item-link').forEach(element => {
     element.onclick = () => {
         handleClickBrand(element)
     }
