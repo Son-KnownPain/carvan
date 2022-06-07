@@ -180,3 +180,50 @@ section {
 {
     padding-top: 115px;
 }
+
+/* FAQ */
+.faq {
+    width: 100%; 
+    border: 0px;
+    background-color: white;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 500;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 30px;
+}
+
+.faq_content {
+    color: rgb(55, 55, 55);
+    font-size: 17px;
+    text-align: left;
+    font-weight: 400;
+    padding-left: 12px;
+    padding-bottom: 20px;
+}
+
+.f_border_top {
+    border-top: rgba(128, 128, 128, 0.5) solid 1px ;
+}
+
+@media (min-width: 992px) {
+    .f_display {
+        padding-left: 125px;
+        padding-right: 125px;
+    }
+}
+
+@media (min-width: 662px) and (max-width: 992px) {
+    .f_display {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 662px) {
+    .f_display {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
