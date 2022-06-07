@@ -98,17 +98,17 @@ const app = {
                         $('.car__img-box').innerHTML = `<div class="row fh">
                                                             <div class="col-xl-9 col-lg-9 fh">
                                                                 <div class="car__img-displaying-box">
-                                                                    <img src="../../asset/img/car-api/${car.id}/car1.jpg" alt="" class="car__img-displaying">
+                                                                    <img src="../asset/img/car-api/${car.id}/car1.jpg" alt="" class="car__img-displaying">
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-3 col-lg-3 fh">
                                                                 <div class="car__img-select-box">
-                                                                    <img src="../../asset/img/car-api/${car.id}/car1.jpg" alt="" class="car__img-select">
-                                                                    <img src="../../asset/img/car-api/${car.id}/car2.jpg" alt="" class="car__img-select">
-                                                                    <img src="../../asset/img/car-api/${car.id}/car3.jpg" alt="" class="car__img-select">
-                                                                    <img src="../../asset/img/car-api/${car.id}/car4.jpg" alt="" class="car__img-select">
-                                                                    <img src="../../asset/img/car-api/${car.id}/car5.jpg" alt="" class="car__img-select">
-                                                                    <img src="../../asset/img/car-api/${car.id}/car6.jpg" alt="" class="car__img-select">
+                                                                    <img src="../asset/img/car-api/${car.id}/car1.jpg" alt="" class="car__img-select">
+                                                                    <img src="../asset/img/car-api/${car.id}/car2.jpg" alt="" class="car__img-select">
+                                                                    <img src="../asset/img/car-api/${car.id}/car3.jpg" alt="" class="car__img-select">
+                                                                    <img src="../asset/img/car-api/${car.id}/car4.jpg" alt="" class="car__img-select">
+                                                                    <img src="../asset/img/car-api/${car.id}/car5.jpg" alt="" class="car__img-select">
+                                                                    <img src="../asset/img/car-api/${car.id}/car6.jpg" alt="" class="car__img-select">
                                                                 </div>
                                                             </div>
                                                         </div>`
