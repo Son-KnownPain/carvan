@@ -62,7 +62,11 @@ const app = {
 
                     })
 
-                    item.innerHTML = `<div class="row">${htmlCars.join('')}</div>`
+                    if ( htmlCars.join('') != '' ) {
+
+                        item.innerHTML = `<div class="row">${htmlCars.join('')}</div>`
+                    }
+
                 })
                 // Handle click car product
                 $$('.list-car__item').forEach(item => {

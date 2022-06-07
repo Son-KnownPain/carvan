@@ -34,6 +34,20 @@
     .details__other-table {
         font-size: 16px;
     }
+    /* Warranty */
+    .warranty__contain {
+        width: 88%;
+        padding: 0 20px 60px;
+    }
+    .warranty__choice-year {
+        flex-wrap: wrap;
+    }
+    .choice-year-box {
+        margin: 0;
+    }
+    .choice-year-group {
+        padding: 0 8px;
+    }
 }
 
 /* Small Mobile */

@@ -268,7 +268,7 @@ const app = {
                                                     <h5 class="product-name">
                                                         ${car.name}
                                                     </h5>
-                                                    <p class="product-price">${car.netPrice}</p>
+                                                    <p class="product-price">€ ${car.netPrice}</p>
                                                 </div>
                                             </a>
                                         </div>`

@@ -92,6 +92,12 @@ ul {
 
 }
 
+.list-car__annouce {
+    font-style: italic;
+    text-decoration: underline;
+    color: 	#ed872d;
+}
+
 .list-car__item {
     
 }
