@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="https://cdns.iconmonstr.com/wp-content/releases/preview/2016/240/iconmonstr-car-3.png" type="image/x-icon">
-    <!-- style sheet -->
+    <!-- Toast message -->
     <link rel="stylesheet" href="../asset/libary/toast-message/toast-message.css">
+    <!-- style sheet -->
     <link rel="stylesheet" href="../asset/css/base.css">
     <link rel="stylesheet" href="../asset/css/header.css">
     <link rel="stylesheet" href="../asset/css/footer.css">
@@ -389,9 +390,10 @@
             </div>
         </footer>
 
-        <!-- Toast message -->
-        <div id="toast"></div>
     </div>
+    
+    <!-- Toast message -->
+    <div id="toast"></div>
 
 </body>
 
@@ -419,9 +421,6 @@
         ],
         onSubmit: function(data) {
 
-            alert('Submit success!')
-            
-
             // Call API
             var url = "https://62205fd0ce99a7de19577611.mockapi.io/user/clientContact";
             var method = "POST";
@@ -440,15 +439,33 @@
             // the HTTP response will be handled. 
             request.onload = function () {
 
-            // Because of javascript's fabulous closure concept, the XMLHttpRequest "request"
-            // object declared above is available in this function even though this function
-            // executes long after the request is sent and long after this function is
-            // instantiated. This fact is CRUCIAL to the workings of XHR in ordinary
-            // applications.
+                // Because of javascript's fabulous closure concept, the XMLHttpRequest "request"
+                // object declared above is available in this function even though this function
+                // executes long after the request is sent and long after this function is
+                // instantiated. This fact is CRUCIAL to the workings of XHR in ordinary
+                // applications.
 
-            // You can get all kinds of information about the HTTP response.
-            var status = request.status; // HTTP response status, e.g., 200 for "200 OK"
-            var data = request.responseText; // Returned data, e.g., an HTML document.
+                // You can get all kinds of information about the HTTP response.
+                var status = request.status; // HTTP response status, e.g., 200 for "200 OK"
+                var data = request.responseText; // Returned data, e.g., an HTML document.
+
+                if (request.readyState === 4) {
+                    if (status === 201) {
+                        toast({
+                            title: 'Submit success',
+                            message: 'Your information has been sent to the system. Thank you!',
+                            type: 'success',
+                            duration: 5000
+                        })
+                    } else {
+                        toast({
+                            title: 'Submit failed',
+                            message: 'The system encountered an error message and could not send. Sorry for the problem!',
+                            type: 'error',
+                            duration: 5000
+                        })
+                    }
+                }
             }
 
             request.open(method, url, shouldBeAsync);
@@ -459,8 +476,7 @@
 
             // Actually sends the request to the server.
             request.send(postData);
-
-
+            
         }
     })
 </script>

@@ -80,7 +80,7 @@ const handleClickBrand = (element) => {
                 }
             })
             localStorage.setItem('IDS_VALID_ARRAY', JSON.stringify(idsValid))
-            window.location.href = `http://${window.location.host}/other-html/list-car.html`
+            window.location.href = `http://${window.location.host}/carvan/other-html/list-car.html`
         })
 
 }
