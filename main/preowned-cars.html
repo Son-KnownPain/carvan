@@ -41,49 +41,63 @@
                 <nav class="header__nav HOMAT">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="../main/about-us.html" class="header__nav-item-link">About us</a>
+                            <a href="#" class="header__nav-item-link">About
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="header__subnav-list" style="height: auto; overflow-y: none;">
+                                <li class="header__subnav-item">
+                                    <a href="../main/about-us.html" class="header__nav-item-link">
+                                        Who We Are
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../main/about_FAQ.html" class="header__nav-item-link">
+                                        FAQ
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="header__nav-item">
-                            <a href="../main/brands.html" class="header__nav-item-link">
+                            <a href="../main/brands.html" class="header__nav-item-link ">
                                 Brands
                                 <i class="fa-solid fa-angle-down"></i>
                             </a>
                             <ul class="header__subnav-list">
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">BMW</a>
+                                    <a class="header__subnav-item-link" data-brand="BMW">BMW</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">AUDI</a>
+                                    <a class="header__subnav-item-link" data-brand="AUDI">AUDI</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">FORD</a>
+                                    <a class="header__subnav-item-link" data-brand="FORD">FORD</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">MAZDA</a>
+                                    <a class="header__subnav-item-link" data-brand="MAZDA">MAZDA</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">MERCEDES</a>
+                                    <a class="header__subnav-item-link" data-brand="MERCEDES">MERCEDES</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">LAND ROVER</a>
+                                    <a class="header__subnav-item-link" data-brand="LAND">LAND ROVER</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">MITSUBISHI</a>
+                                    <a class="header__subnav-item-link" data-brand="MITSUBISHI">MITSUBISHI</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">NISSAN</a>
+                                    <a class="header__subnav-item-link" data-brand="NISSAN">NISSAN</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">OPEL</a>
+                                    <a class="header__subnav-item-link" data-brand="OPEL">OPEL</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">PORSCHE</a>
+                                    <a class="header__subnav-item-link" data-brand="PORSCHE">PORSCHE</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">SKODA</a>
+                                    <a class="header__subnav-item-link" data-brand="SKODA">SKODA</a>
                                 </li>
                                 <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">VOLKSWAGEN</a>
+                                    <a class="header__subnav-item-link" data-brand="VOLKSWAGEN">VOLKSWAGEN</a>
                                 </li>
                             </ul>
                         </li>
@@ -91,7 +105,7 @@
                             <a href="../main/range-of-cars.html" class="header__nav-item-link">Range of cars</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="../main/preowned-cars.html" class="header__nav-item-link">PreOwned cars</a>
+                            <a href="../main/preowned-cars.html" class="header__nav-item-link active">PreOwned cars</a>
                         </li>
                         <li class="header__nav-item">
                             <a href="../main/contact.html" class="header__nav-item-link">Contact us</a>
@@ -117,7 +131,7 @@
         </div>
 
         <!-- Model mobile menu -->
-        <div class="mbm__model">
+        <div class="mbm__model HOPC">
             <div class="mbm__contain fh">
                 <!-- Close model button -->
                 <div class="mbm__close">
@@ -133,50 +147,60 @@
                             <i class="fa-solid fa-people-group mbm__nav-item-icon"></i>
                             About us
                         </a>
+                        <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__subnav-arrow"></i>
+
+                        <ul class="mbm__subnav-list">
+                            <li class="mbm__subnav-item">
+                                <a href="../main/about-us.html" class="mbm__subnav-item-link">Who We Are</a>
+                            </li>
+                            <li class="mbm__subnav-item">
+                                <a href="../main/about_FAQ.html" class="mbm__subnav-item-link">FAQ</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="mbm__nav-item">
                         <a href="../main/brands.html" class="mbm__nav-link">
                             <i class="fa-solid fa-flag mbm__nav-item-icon"></i>
                             Brands
                         </a>
-                        <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__brands-arrow"></i>
+                        <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__subnav-arrow"></i>
 
                         <ul class="mbm__subnav-list">
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">BMW</a>
+                                <a class="mbm__subnav-item-link" data-brand="BMW">BMW</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">AUDI</a>
+                                <a class="mbm__subnav-item-link" data-brand="AUDI">AUDI</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">FORD</a>
+                                <a class="mbm__subnav-item-link" data-brand="FORD">FORD</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">MAZDA</a>
+                                <a class="mbm__subnav-item-link" data-brand="MAZDA">MAZDA</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">MERCEDES</a>
+                                <a class="mbm__subnav-item-link" data-brand="MERCEDES">MERCEDES</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">LAND ROVER</a>
+                                <a class="mbm__subnav-item-link" data-brand="LAND">LAND ROVER</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">MITSUBISHI</a>
+                                <a class="mbm__subnav-item-link" data-brand="MITSUBISHI">MITSUBISHI</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">NISSAN</a>
+                                <a class="mbm__subnav-item-link" data-brand="NISSAN">NISSAN</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">OPEL</a>
+                                <a class="mbm__subnav-item-link" data-brand="OPEL">OPEL</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">PORSCHE</a>
+                                <a class="mbm__subnav-item-link" data-brand="PORSCHE">PORSCHE</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">SKODA</a>
+                                <a class="mbm__subnav-item-link" data-brand="SKODA">SKODA</a>
                             </li>
                             <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">VOLKSWAGEN</a>
+                                <a class="mbm__subnav-item-link" data-brand="VOLKSWAGEN">VOLKSWAGEN</a>
                             </li>
                         </ul>
                     </li>
@@ -213,7 +237,7 @@
                 </ul>
             </div>
         </div>
-    </header>  
+    </header> 
 
     <section class="container-fluid section-wrapper">
         <div class="container padding-top-115">

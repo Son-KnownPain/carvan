@@ -2,14 +2,14 @@
 @media (max-width: 1023px) {
     /* Hide on mobile and tablet */
     .HOMAT {
-        display: none;
+        display: none!important;
     }
 }
 
 /* PC */
 @media (min-width: 1023.001px) {
     .HOPC {
-        display: none;
+        display: none!important;
     }
 }
 

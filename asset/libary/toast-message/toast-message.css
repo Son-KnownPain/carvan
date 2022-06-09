@@ -104,3 +104,70 @@
   color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+
+
+/* ======= Responsive toast message ======== */
+
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+  /* Hide on mobile and tablet */
+  .HOMAT {
+      display: none!important;
+  }
+}
+
+/* PC */
+@media (min-width: 1023.001px) {
+  .HOPC {
+      display: none!important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  #toast {
+    right: 12px;
+  }
+  .my-toast {
+    max-width: 350px;
+    min-width: 300px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  
+}
+
+
+/* ----------------------------------------------- */
+
+/* XL */
+@media (min-width: 1200px) {
+  
+}
+
+/* Large: lg */
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+
+/* SM */
+@media (min-width: 576px) and (max-width: 767px) {
+  
+}
+
+/* - */
+@media (max-width: 575px) {
+  
+}

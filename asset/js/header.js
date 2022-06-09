@@ -4,6 +4,8 @@
 // Set state for model
 let isShowMenu = false
 let isShowBrands = false
+let isShowAbout = false
+let isShowSubNavMobile = [false, false]
 
 // Get element
 const showMenuBtn = document.querySelector('.header__mbm-btn')
@@ -30,30 +32,33 @@ function checkShowMenu(state) {
 
 
 // Handle click show brands on mobile menu
-$('.mbm__brands-arrow').onclick = function() {
-    if (!isShowBrands) {
-        isShowBrands = true
-        $('.mbm__subnav-list').style = 'padding: 0 16px 16px; height: 105px;'
-        $('.mbm__brands-arrow').classList.remove('fa-chevron-down')
-        $('.mbm__brands-arrow').classList.add('fa-chevron-up')
-    } else {
-        isShowBrands = false
-        $('.mbm__subnav-list').style = ''
-        $('.mbm__brands-arrow').classList.add('fa-chevron-down')
-        $('.mbm__brands-arrow').classList.remove('fa-chevron-up')
+$$('.mbm__subnav-arrow').forEach((arrowBtn, index) => {
+    arrowBtn.onclick = () => {
+        if (!isShowSubNavMobile[index]) {
+            isShowSubNavMobile[index] = true
+            $$('.mbm__subnav-list')[index].style = 'padding: 0 16px 16px; height: 105px;'
+            $$('.mbm__subnav-arrow')[index].classList.remove('fa-chevron-down')
+            $$('.mbm__subnav-arrow')[index].classList.add('fa-chevron-up')
+        } else {
+            isShowSubNavMobile[index] = false
+            $$('.mbm__subnav-list')[index].style = ''
+            $$('.mbm__subnav-arrow')[index].classList.add('fa-chevron-down')
+            $$('.mbm__subnav-arrow')[index].classList.remove('fa-chevron-up')
+        }
+        
     }
-}
+})
+// $('.mbm__brands-arrow').onclick = function() {
+// }
 
 
 // Handle click subnav brands
 
 
 $$('.header__subnav-item-link').forEach(element => {
-    element.removeAttribute('href')
     element.classList.add('pointer')
 })
 $$('.mbm__subnav-item-link').forEach(element => {
-    element.removeAttribute('href')
     element.classList.add('pointer')
 })
 
@@ -61,7 +66,7 @@ $$('.mbm__subnav-item-link').forEach(element => {
 const handleClickBrand = (element) => {
     const dataSearch = {
         bodyStyle: [],
-        brand: element.textContent,
+        brand: element.dataset.brand,
         fuelType: [],
         idNo: "",
         model: "ANY",
