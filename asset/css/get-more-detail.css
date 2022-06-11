@@ -49,3 +49,7 @@
     outline: none;
     border: none;
 }
+
+.form__submit-btn:hover {
+    background-color: #74add3;
+}

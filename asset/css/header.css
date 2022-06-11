@@ -30,8 +30,62 @@
 .header__img-logo {
     width: var(--width-logo-pc);
     border-radius: 6px;
-    /* border-radius: 50%; */
-    /* animation: spinning linear 8s infinite; */
+    animation: animationLogoMain linear 10s infinite;
+}
+
+@keyframes animationLogoMain {
+    0% {
+        border-radius: 6px;
+        transform: translate3d(0, 0, 0) rotate(0);
+    }
+    2% {
+        border-radius: 50%;
+        transform: translate3d(0, 0, 0) rotate(0);
+    }
+    7% {
+        border-radius: 50%;
+        transform: translate3d(200px, 0, 0) rotate(1440deg);
+    }
+    10% {
+        border-radius: 50%;
+        transform: translate3d(120px, -50px, 0) rotate(2160deg);
+    }
+    13% {
+        border-radius: 50%;
+        transform: translate3d(0, -100px, 0) rotate(2880deg);
+    }
+    14% {
+        border-radius: 6px;
+        transform: translate3d(0, -100px, 0) rotate(12deg);
+    }
+    18% {
+        transform: translate3d(4px, -4px, 0) rotate(12deg);
+        border-radius: 6px;
+    }
+    20% {
+        transform: translate3d(0, 0, 0) rotate(0);
+        border-radius: 6px;
+    }
+    22% {
+        transform: translate3d(-3px, -4px, 0) rotate(-10deg);
+        border-radius: 6px;
+    }
+    25% {
+        transform: translate3d(0, 0, 0) rotate(0);
+        border-radius: 6px;
+    }
+    27.5% {
+        transform: translate3d(2px, -2px, 0) rotate(6deg);
+        border-radius: 6px;
+    }
+    30% {
+        transform: translate3d(0, 0, 0) rotate(0);
+        border-radius: 6px;
+    }
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0);
+        border-radius: 6px;
+    }
 }
 
 @keyframes spinning {
@@ -323,7 +377,7 @@
     padding: 12px 0;
 }
 
-.mbm__brands-arrow {
+.mbm__subnav-arrow {
     position: absolute;
     right: 20px;
     top: 4px;

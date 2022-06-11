@@ -130,7 +130,17 @@ const ID_VALID_ARRAY = 'IDS_VALID_ARRAY'
 
 const app = {
     // get data from local storage and function set data search
-    dataSearch: JSON.parse(localStorage.getItem(DATA_SEARCH)) || {},
+    dataSearch: JSON.parse(localStorage.getItem(DATA_SEARCH)) || 
+        {
+            bodyStyle: [],
+            brand: "ANY",
+            fuelType: [],
+            idNo: "",
+            model: "ANY",
+            numberOfDoors: "",
+            numberOfSeats: "",
+            slidingDoors: ""
+        },
     uploadIdValid: function(idValid) {
         localStorage.setItem(ID_VALID_ARRAY, JSON.stringify(idValid))
     },

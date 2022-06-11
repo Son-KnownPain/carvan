@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="https://cdns.iconmonstr.com/wp-content/releases/preview/2016/240/iconmonstr-car-3.png" type="image/x-icon">
+    <!-- Toast message -->
+    <link rel="stylesheet" href="../asset/libary/toast-message/toast-message.css">
     <!-- style sheet -->
     <link rel="stylesheet" href="../asset/css/base.css">
     <link rel="stylesheet" href="../asset/css/header.css">
@@ -72,54 +74,68 @@
                     <nav class="header__nav HOMAT">
                         <ul class="header__nav-list">
                             <li class="header__nav-item">
-                                <a href="../main/about-us.html" class="header__nav-item-link">About us</a>
+                                <a href="#" class="header__nav-item-link">About
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a>
+                                <ul class="header__subnav-list" style="height: auto; overflow-y: none;">
+                                    <li class="header__subnav-item">
+                                        <a href="../main/about-us.html" class="header__nav-item-link">
+                                            Who We Are
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../main/about_FAQ.html" class="header__nav-item-link">
+                                            FAQ
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="header__nav-item">
-                                <a href="../main/brands.html" class="header__nav-item-link">
+                                <a href="../main/brands.html" class="header__nav-item-link ">
                                     Brands
                                     <i class="fa-solid fa-angle-down"></i>
                                 </a>
                                 <ul class="header__subnav-list">
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">BMW</a>
+                                        <a class="header__subnav-item-link" data-brand="BMW">BMW</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">AUDI</a>
+                                        <a class="header__subnav-item-link" data-brand="AUDI">AUDI</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">FORD</a>
+                                        <a class="header__subnav-item-link" data-brand="FORD">FORD</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">MAZDA</a>
+                                        <a class="header__subnav-item-link" data-brand="MAZDA">MAZDA</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">MERCEDES</a>
+                                        <a class="header__subnav-item-link" data-brand="MERCEDES">MERCEDES</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">LAND ROVER</a>
+                                        <a class="header__subnav-item-link" data-brand="LAND">LAND ROVER</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">MITSUBISHI</a>
+                                        <a class="header__subnav-item-link" data-brand="MITSUBISHI">MITSUBISHI</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">NISSAN</a>
+                                        <a class="header__subnav-item-link" data-brand="NISSAN">NISSAN</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">OPEL</a>
+                                        <a class="header__subnav-item-link" data-brand="OPEL">OPEL</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">PORSCHE</a>
+                                        <a class="header__subnav-item-link" data-brand="PORSCHE">PORSCHE</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">SKODA</a>
+                                        <a class="header__subnav-item-link" data-brand="SKODA">SKODA</a>
                                     </li>
                                     <li class="header__subnav-item">
-                                        <a href="" class="header__subnav-item-link">VOLKSWAGEN</a>
+                                        <a class="header__subnav-item-link" data-brand="VOLKSWAGEN">VOLKSWAGEN</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="header__nav-item">
-                                <a href="../main/range-of-cars.html" class="header__nav-item-link">Range of cars</a>
+                                <a href="../main/range-of-cars.html" class="header__nav-item-link ">Range of cars</a>
                             </li>
                             <li class="header__nav-item">
                                 <a href="../main/preowned-cars.html" class="header__nav-item-link">PreOwned cars</a>
@@ -148,7 +164,7 @@
             </div>
     
             <!-- Model mobile menu -->
-            <div class="mbm__model">
+            <div class="mbm__model HOPC">
                 <div class="mbm__contain fh">
                     <!-- Close model button -->
                     <div class="mbm__close">
@@ -164,50 +180,60 @@
                                 <i class="fa-solid fa-people-group mbm__nav-item-icon"></i>
                                 About us
                             </a>
+                            <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__subnav-arrow"></i>
+
+                            <ul class="mbm__subnav-list">
+                                <li class="mbm__subnav-item">
+                                    <a href="../main/about-us.html" class="mbm__subnav-item-link">Who We Are</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a href="../main/about_FAQ.html" class="mbm__subnav-item-link">FAQ</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="mbm__nav-item">
                             <a href="../main/brands.html" class="mbm__nav-link">
                                 <i class="fa-solid fa-flag mbm__nav-item-icon"></i>
                                 Brands
                             </a>
-                            <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__brands-arrow"></i>
+                            <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__subnav-arrow"></i>
 
                             <ul class="mbm__subnav-list">
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">BMW</a>
+                                    <a class="mbm__subnav-item-link" data-brand="BMW">BMW</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">AUDI</a>
+                                    <a class="mbm__subnav-item-link" data-brand="AUDI">AUDI</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">FORD</a>
+                                    <a class="mbm__subnav-item-link" data-brand="FORD">FORD</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">MAZDA</a>
+                                    <a class="mbm__subnav-item-link" data-brand="MAZDA">MAZDA</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">MERCEDES</a>
+                                    <a class="mbm__subnav-item-link" data-brand="MERCEDES">MERCEDES</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">LAND ROVER</a>
+                                    <a class="mbm__subnav-item-link" data-brand="LAND">LAND ROVER</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">MITSUBISHI</a>
+                                    <a class="mbm__subnav-item-link" data-brand="MITSUBISHI">MITSUBISHI</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">NISSAN</a>
+                                    <a class="mbm__subnav-item-link" data-brand="NISSAN">NISSAN</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">OPEL</a>
+                                    <a class="mbm__subnav-item-link" data-brand="OPEL">OPEL</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">PORSCHE</a>
+                                    <a class="mbm__subnav-item-link" data-brand="PORSCHE">PORSCHE</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">SKODA</a>
+                                    <a class="mbm__subnav-item-link" data-brand="SKODA">SKODA</a>
                                 </li>
                                 <li class="mbm__subnav-item">
-                                    <a href="" class="mbm__subnav-item-link">VOLKSWAGEN</a>
+                                    <a class="mbm__subnav-item-link" data-brand="VOLKSWAGEN">VOLKSWAGEN</a>
                                 </li>
                             </ul>
                         </li>
@@ -483,6 +509,8 @@
             </div>
         </footer>
     </div>
+
+    <div id="toast"></div>
 </body>
 
 <!-- Base js in all file html -->
@@ -491,6 +519,8 @@
 <script src="../asset/js/header.js"></script>
 <!-- Validation libary -->
 <script src="../asset/libary/validation/validate.js"></script>
+<!-- Toast message -->
+<script src="../asset/libary/toast-message/toast-message.js"></script>
 
 <!-- Validation -->
 <script>
@@ -507,10 +537,8 @@
             Validator.minLength('#phone', 10, 'Enter at least 10 numbers')
         ],
         onSubmit: function(data) {
-
-            alert('Submit success!')
             
-
+        
             // Call API
             var url = "https://62205fd0ce99a7de19577611.mockapi.io/user/clientContact";
             var method = "POST";
@@ -529,15 +557,33 @@
             // the HTTP response will be handled. 
             request.onload = function () {
 
-            // Because of javascript's fabulous closure concept, the XMLHttpRequest "request"
-            // object declared above is available in this function even though this function
-            // executes long after the request is sent and long after this function is
-            // instantiated. This fact is CRUCIAL to the workings of XHR in ordinary
-            // applications.
+                // Because of javascript's fabulous closure concept, the XMLHttpRequest "request"
+                // object declared above is available in this function even though this function
+                // executes long after the request is sent and long after this function is
+                // instantiated. This fact is CRUCIAL to the workings of XHR in ordinary
+                // applications.
 
-            // You can get all kinds of information about the HTTP response.
-            var status = request.status; // HTTP response status, e.g., 200 for "200 OK"
-            var data = request.responseText; // Returned data, e.g., an HTML document.
+                // You can get all kinds of information about the HTTP response.
+                var status = request.status; // HTTP response status, e.g., 200 for "200 OK"
+                var data = request.responseText; // Returned data, e.g., an HTML document.
+                
+                if (request.readyState === 4) {
+                    if (status === 201) {
+                        toast({
+                            title: 'Submit success',
+                            message: 'Your information has been sent to the system. Thank you!',
+                            type: 'success',
+                            duration: 5000
+                        })
+                    } else {
+                        toast({
+                            title: 'Submit failed',
+                            message: 'The system encountered an error message and could not send. Sorry for the problem!',
+                            type: 'error',
+                            duration: 5000
+                        })
+                    }
+                }
             }
 
             request.open(method, url, shouldBeAsync);
@@ -548,7 +594,6 @@
 
             // Actually sends the request to the server.
             request.send(postData);
-
 
         }
     })
