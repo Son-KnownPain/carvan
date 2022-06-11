@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARVAN - PreOwned cars</title>
+<html>
 
-    <!-- Bootstrap 5 link css -->
+<head lang="en">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+
+	<title>CARVAN</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+	
+
+	<!-- Bootstrap 5 link css -->
     <link rel="stylesheet" href="../asset/bootstrap5/css/bootstrap.min.css">
     <!-- Bs5 js -->
     <script src="../asset/bootstrap5/js/bootstrap.bundle.js"></script>
@@ -14,520 +18,278 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="https://cdns.iconmonstr.com/wp-content/releases/preview/2016/240/iconmonstr-car-3.png" type="image/x-icon">
-    <!-- style sheet -->
-    <link rel="stylesheet" href="../asset/css/about-us.css">
-    <link rel="stylesheet" href="../asset/css/sup_poc.css">
 
+	<link rel="stylesheet" href="../asset/css/poc.css">	
+	<link rel="stylesheet" href="../asset/css/base.css">
     <link rel="stylesheet" href="../asset/css/header.css">
     <link rel="stylesheet" href="../asset/css/footer.css">
-    <link rel="stylesheet" href="../asset/css/base.css">
     <link rel="stylesheet" href="../asset/css/index.css">
     <link rel="stylesheet" href="../asset/css/responsive-all.css">
-    <link rel="stylesheet" href="../asset/css/responsive-index.css">  
+    <link rel="stylesheet" href="../asset/css/responsive-index.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header header--bg-white">
-        <div class="container fh">
-            <div class="header-wrapper fh">
-                <!-- Header logo -->
-                <a class="header__logo-link" href="../index.html">
-                    <img src="../asset/img/logo/carvan-logo.jpg" alt="" class="header__img-logo">
-                    <h3 class="header__logo-text">
-                        CARVAN
-                    </h3>
-                </a>
-                <!-- Header nav menu -->
-                <nav class="header__nav HOMAT">
-                    <ul class="header__nav-list">
-                        <li class="header__nav-item">
-                            <a href="../main/about-us.html" class="header__nav-item-link">About us</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="../main/brands.html" class="header__nav-item-link">
-                                Brands
-                                <i class="fa-solid fa-angle-down"></i>
+	<!-- Create a div tag has class 'app' containing all -->
+    <div class="app">
+        <!-- Header -->
+        <header class="header header--bg-white">
+            <div class="container fh">
+                <div class="header-wrapper fh">
+                    <!-- Header logo -->
+                    <a class="header__logo-link" href="../index.html">
+                        <img src="../asset/img/logo/carvan-logo.jpg" alt="" class="header__img-logo">
+                        <h3 class="header__logo-text">
+                            CARVAN
+                        </h3>
+                    </a>
+                    <!-- Header nav menu -->
+                    <nav class="header__nav HOMAT">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-item-link">About
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a>
+                                <ul class="header__subnav-list" style="height: auto; overflow-y: none;">
+                                    <li class="header__subnav-item">
+                                        <a href="../main/about-us.html" class="header__nav-item-link">
+                                            Who We Are
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../main/about_FAQ.html" class="header__nav-item-link">
+                                            FAQ
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/brands.html" class="header__nav-item-link">
+                                    Brands
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </a>
+                                <ul class="header__subnav-list">
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="BMW">BMW</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="AUDI">AUDI</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="FORD">FORD</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="MAZDA">MAZDA</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="MERCEDES">MERCEDES</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="LAND">LAND ROVER</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="MITSUBISHI">MITSUBISHI</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="NISSAN">NISSAN</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="OPEL">OPEL</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="PORSCHE">PORSCHE</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="SKODA">SKODA</a>
+                                    </li>
+                                    <li class="header__subnav-item">
+                                        <a class="header__subnav-item-link" data-brand="VOLKSWAGEN">VOLKSWAGEN</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/range-of-cars.html" class="header__nav-item-link">Range of cars</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/preowned-cars.html" class="header__nav-item-link active">PreOwned cars</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/contact.html" class="header__nav-item-link">Contact us</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/site-map.html" class="header__nav-item-link">Site map</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="../main/search.html" class="header__nav-item-link" title="Search cars">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Menu on mobile and tablet -->
+                    <!-- mbm: Mobile menu -->
+                    <div class="header__mb-menu HOPC">
+                        <span class="header__mbm-btn">
+                            <i class="fa-solid fa-bars header__mbm-icon"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Model mobile menu -->
+            <div class="mbm__model HOPC">
+                <div class="mbm__contain fh">
+                    <!-- Close model button -->
+                    <div class="mbm__close">
+                        <span class="mbm__close-btn">
+                            <i class="fa-regular fa-circle-xmark mbm__close-icon"></i>
+                        </span>
+                    </div>
+    
+                    <!-- List navigate -->
+                    <ul class="mbm__nav-list">
+                        <li class="mbm__nav-item">
+                            <a href="../main/about-us.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-people-group mbm__nav-item-icon"></i>
+                                About us
                             </a>
-                            <ul class="header__subnav-list">
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">BMW</a>
+                            <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__subnav-arrow"></i>
+
+                            <ul class="mbm__subnav-list">
+                                <li class="mbm__subnav-item">
+                                    <a href="../main/about-us.html" class="mbm__subnav-item-link">Who We Are</a>
                                 </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">AUDI</a>
-                                </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">FORD</a>
-                                </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">MAZDA</a>
-                                </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">MERCEDES</a>
-                                </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">LAND ROVER</a>
-                                </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">MITSUBISHI</a>
-                                </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">NISSAN</a>
-                                </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">OPEL</a>
-                                </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">PORSCHE</a>
-                                </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">SKODA</a>
-                                </li>
-                                <li class="header__subnav-item">
-                                    <a href="" class="header__subnav-item-link">VOLKSWAGEN</a>
+                                <li class="mbm__subnav-item">
+                                    <a href="../main/about_FAQ.html" class="mbm__subnav-item-link">FAQ</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="header__nav-item">
-                            <a href="../main/range-of-cars.html" class="header__nav-item-link">Range of cars</a>
+                        <li class="mbm__nav-item">
+                            <a href="../main/brands.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-flag mbm__nav-item-icon"></i>
+                                Brands
+                            </a>
+                            <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__subnav-arrow"></i>
+
+                            <ul class="mbm__subnav-list">
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="BMW">BMW</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="AUDI">AUDI</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="FORD">FORD</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="MAZDA">MAZDA</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="MERCEDES">MERCEDES</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="LAND">LAND ROVER</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="MITSUBISHI">MITSUBISHI</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="NISSAN">NISSAN</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="OPEL">OPEL</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="PORSCHE">PORSCHE</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="SKODA">SKODA</a>
+                                </li>
+                                <li class="mbm__subnav-item">
+                                    <a class="mbm__subnav-item-link" data-brand="VOLKSWAGEN">VOLKSWAGEN</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="header__nav-item">
-                            <a href="../main/preowned-cars.html" class="header__nav-item-link">PreOwned cars</a>
+                        <li class="mbm__nav-item">
+                            <a href="../main/range-of-cars.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-book-open mbm__nav-item-icon"></i>
+                                Range of cars
+                            </a>
                         </li>
-                        <li class="header__nav-item">
-                            <a href="../main/contact.html" class="header__nav-item-link">Contact us</a>
+                        <li class="mbm__nav-item">
+                            <a href="../main/preowned-cars.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-truck-pickup mbm__nav-item-icon"></i>
+                                PreOwned cars
+                            </a>
                         </li>
-                        <li class="header__nav-item">
-                            <a href="../main/site-map.html" class="header__nav-item-link">Site map</a>
+                        <li class="mbm__nav-item">
+                            <a href="../main/contact.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-phone-volume mbm__nav-item-icon"></i>
+                                Contact us
+                            </a>
                         </li>
-                        <li class="header__nav-item">
-                            <a href="../main/search.html" class="header__nav-item-link" title="Search cars">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                        <li class="mbm__nav-item">
+                            <a href="../main/site-map.html" class="mbm__nav-link">
+                                <i class="fa-regular fa-map mbm__nav-item-icon"></i>
+                                Site map
+                            </a>
+                        </li>
+                        <li class="mbm__nav-item">
+                            <a href="../main/search.html" class="mbm__nav-link">
+                                <i class="fa-solid fa-magnifying-glass mbm__nav-item-icon"></i>
+                                Search cars
                             </a>
                         </li>
                     </ul>
-                </nav>
-                <!-- Menu on mobile and tablet -->
-                <!-- mbm: Mobile menu -->
-                <div class="header__mb-menu HOPC">
-                    <span class="header__mbm-btn">
-                        <i class="fa-solid fa-bars header__mbm-icon"></i>
-                    </span>
                 </div>
             </div>
-        </div>
+        </header>
+	</div>
 
-        <!-- Model mobile menu -->
-        <div class="mbm__model">
-            <div class="mbm__contain fh">
-                <!-- Close model button -->
-                <div class="mbm__close">
-                    <span class="mbm__close-btn">
-                        <i class="fa-regular fa-circle-xmark mbm__close-icon"></i>
-                    </span>
-                </div>
+	<div class="main-content pt-48">
+		<div class="all-products page">
+			<!-- filter -->
+			<div class="filters">
+				<form>
+					<div class="filter-criteria">
+						<span>Brands</span>
+						<label><input type="checkbox" name="brand" value="AUDI">Audi</label>
+					</div>
 
-                <!-- List navigate -->
-                <ul class="mbm__nav-list">
-                    <li class="mbm__nav-item">
-                        <a href="../main/about-us.html" class="mbm__nav-link">
-                            <i class="fa-solid fa-people-group mbm__nav-item-icon"></i>
-                            About us
-                        </a>
-                    </li>
-                    <li class="mbm__nav-item">
-                        <a href="../main/brands.html" class="mbm__nav-link">
-                            <i class="fa-solid fa-flag mbm__nav-item-icon"></i>
-                            Brands
-                        </a>
-                        <i class="fa-solid fa-chevron-down mbm__nav-item-icon mbm__brands-arrow"></i>
+					<div class="filter-criteria">
+						<span>fuelType</span>
+						<label><input type="checkbox" name="fuelType" value="Petrol">Petrol</label>
+					</div>
+					<button>Clear filters</button>
+				</form>
+			</div>
 
-                        <ul class="mbm__subnav-list">
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">BMW</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">AUDI</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">FORD</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">MAZDA</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">MERCEDES</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">LAND ROVER</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">MITSUBISHI</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">NISSAN</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">OPEL</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">PORSCHE</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">SKODA</a>
-                            </li>
-                            <li class="mbm__subnav-item">
-                                <a href="" class="mbm__subnav-item-link">VOLKSWAGEN</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="mbm__nav-item">
-                        <a href="../main/range-of-cars.html" class="mbm__nav-link">
-                            <i class="fa-solid fa-book-open mbm__nav-item-icon"></i>
-                            Range of cars
-                        </a>
-                    </li>
-                    <li class="mbm__nav-item">
-                        <a href="../main/preowned-cars.html" class="mbm__nav-link">
-                            <i class="fa-solid fa-truck-pickup mbm__nav-item-icon"></i>
-                            PreOwned cars
-                        </a>
-                    </li>
-                    <li class="mbm__nav-item">
-                        <a href="../main/contact.html" class="mbm__nav-link">
-                            <i class="fa-solid fa-phone-volume mbm__nav-item-icon"></i>
-                            Contact us
-                        </a>
-                    </li>
-                    <li class="mbm__nav-item">
-                        <a href="../main/site-map.html" class="mbm__nav-link">
-                            <i class="fa-regular fa-map mbm__nav-item-icon"></i>
-                            Site map
-                        </a>
-                    </li>
-                    <li class="mbm__nav-item">
-                        <a href="../main/search.html" class="mbm__nav-link">
-                            <i class="fa-solid fa-magnifying-glass mbm__nav-item-icon"></i>
-                            Search cars
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>  
+			<!-- all poc-->
+			<ul class="products-list">
+				<script id="products-template" type="x-handlebars-template">​
+					{{#each this}}
+						<li data-index="{{id}}">
+							<a href="#" class="product-photo"><img src="/carvan/asset/img/car-api/{{id}}/car1.jpg" height="270" alt="{{name}}"/></a>
+							<h2> {{name}} </h2>
+							<hr>
+							<ul class="product-description">
+								<li><span>Date:&nbsp;&nbsp;</span>{{carDetails.firstRegistration}}</li>
+								<li><span>KM:&nbsp;&nbsp;</span>{{carDetails.mileage}}</li>
+								<li><span>price:&nbsp;&nbsp;</span>{{currencyIcon}}{{netPrice}}</li>
+							</ul>
+							<div class="highlight"></div>
+						</li>
+					{{/each}}
+				</script>
+			</ul>
+		</div>
 
-    <section class="container-fluid section-wrapper">
-        <div class="container padding-top-115">
-            <ol class="breadcrumb pt-1 pb-5">
-                <li class="breadcrumb-item">
-                    <a href="../index.html" target="_self" class="">Home</a>
-                </li> 
-                <li class="breadcrumb-item active">
-                    <span class="">Pre-Owned Cars</span>
-                </li> 
-            </ol> 
-            <h1 class="title-main">Pre-Owned Cars</h1>
-        </div> 
-        <hr>
-        <!---->
-        <section class="bg-gray-a-500">
-            <div class="container static-content pb-0">
-                <h2 class="mt-0">
-                    <b>
-                        Buying a Pre-Owned Car
-                    </b>
-                </h2> 
-                <p class="mb-0 ps-5 ">
-                    A pre-owned car can be a great way to get a lot of bang for your buck on your next car. New cars are great, but used cars offer big financial advantages thanks to depreciation. 
-                    The average car loses 35 percent of its value in the first three years of its life which is great news for drivers shopping for a good deal on the used market.
-                </p> <!---->
-            </div>
-        </section>
-        <hr>
-        <section class="bg-gray-a-200">
-            <div class="container static-content pb-0">
-                <h2 class="mt-0">
-                    <b>
-                        Pros and Cons of Buying a Pre-owned Car  
-                    </b>
-                </h2> 
-                <p class="mb-0 ps-5">
-                    <b>Pros:</b> The biggest pro of buying a pre-owned car is value. Like we mentioned earlier, a used car can lose a lot of its value in not a lot of time.
-                     If you really keep an eye out for which cars depreciate the fastest, it's possible to get a used car that's as little as three years old for less than half the price that is was when it was new.
-                </p> <!---->
-                <hr>
-                <p class="mb-0 ps-5">
-                    <b>Cons:</b> There are always some gambles that come with buying a pre-owned car. 
-                    If you buy a used car from a dealer, it's likely gone through some kind of inspection by professionals to ensure it doesn't have any major problems. 
-                    If you're buying from a private party, however, you're taking a bigger risk and there might be some hidden problems that you could miss no matter how hard you look it over. 
-                    Consider getting a pre-purchase inspection done by a mechanic before agreeing to buy a pre-owned car from a private seller.
-                </p>
-            </div>
-        </section>  
-        <hr>
-        <!---->
-        <h1 class="title-main">All</h1>
-        <!---->
-        <section class="section-sm">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9">
-                        <div class="product-grid-list">
-                            <div class="row mt-30">
-                                <!---->
-                                <!-- Car 1-->
-                                <div class="col-sm-12 col-lg-4 col-md-6">
-                                    <!-- product card -->
-                                    <div class="product-item bg-light">
-                                        <div class="card">
-                                            <div class="thumb-content">
-                                                <!-- <div class="price">$200</div> -->
-                                                <a href="">
-                                                    <img class="card-img-top img-fluid" src="../asset/img/poc_page/poc_car1.jfif" alt="Card image cap">
-                                                </a>
-                                            </div>
-                                            <hr>
-                                            <div class="card-body">
-                                                <h4 class="card-title">
-                                                    <a href="">Bmw 120 120d 5 Türer M Sport LED Navi SHZ Tempo</a></h4>
-                                                <hr>
-                                                <ul class="list-inline product-meta">
-                                                    <li class="list-inline-item">
-                                                        <a href=""><i class="fa fa-folder-open"></i>&nbsp;Diesel&nbsp;&nbsp;</a>
-                                                    </li>
-                                            
-                                                    <li class="list-inline-item">
-                                                        <a href="#"><i class="fa fa-calendar"></i>&nbsp;5/2016</a>
-                                                    </li>
-                                                </ul>
-                                                <hr>
-                                                <ul class="list-inline poc_price">
-                                                    <li>€ 22.601</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!---->
-                                <!-- Car 2-->
-
-                                <div class="col-sm-12 col-lg-4 col-md-6">
-                                    <!-- product card -->
-                                    <div class="product-item bg-light">
-                                        <div class="card">
-                                            <div class="thumb-content">
-                                                <!-- <div class="price">$200</div> -->
-                                                <a href="">
-                                                    <img class="card-img-top img-fluid" src="../asset/img/poc_page/poc_car2.jfif" alt="Card image cap">
-                                                </a>
-                                            </div>
-                                            <hr>
-                                            <div class="card-body">
-                                                <h4 class="card-title"><a href="">Bmw 320 320d xD MH M Sport *As. Professional *PA+*DAB*</a></h4>
-                                                <hr>
-                                                <ul class="list-inline product-meta">
-                                                    <li class="list-inline-item">
-                                                        <a href=""><i class="fa fa-folder-open"></i>&nbsp;Diesel&nbsp;&nbsp;</a>
-                                                    </li>
-                                    
-                                                    <li class="list-inline-item">
-                                                        <a href="#"><i class="fa fa-calendar"></i>&nbsp;10/2020</a>
-                                                    </li>
-                                                </ul>
-                                                <hr>
-                                                <ul class="list-inline poc_price">
-                                                    <li>€ 36.681</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!----> 
-                                <!-- Car 3-->
-
-                                <div class="col-sm-12 col-lg-4 col-md-6">
-                                    <!-- product card -->
-                                    <div class="product-item bg-light">
-                                        <div class="card">
-                                            <div class="thumb-content">
-                                                <!-- <div class="price">$200</div> -->
-                                                <a href="">
-                                                    <img class="card-img-top img-fluid" src="../asset/img/poc_page/poc_car3.jfif" alt="Card image cap">
-                                                </a>
-                                            </div>
-                                            <hr>
-                                            <div class="card-body">
-                                                <h4 class="card-title"><a href="">Bmw X1 sDrive 18 i Advantage EU6d T Aut Navi Temp Kl</a></h4>
-                                                <hr>
-                                                <ul class="list-inline product-meta">
-                                                    <li class="list-inline-item">
-                                                        <a href=""><i class="fa fa-folder-open"></i>&nbsp;Petrol&nbsp;&nbsp;</a>
-                                                    </li>
-                                    
-                                                    <li class="list-inline-item">
-                                                        <a href="#"><i class="fa fa-calendar"></i>&nbsp;03/2019</a>
-                                                    </li>
-                                                </ul>
-                                                <hr>
-                                                <ul class="list-inline poc_price">
-                                                    <li>€ 30.328</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!---->
-                                <!-- Car 4-->
-
-                                <div class="col-sm-12 col-lg-4 col-md-6">
-                                    <!-- product card -->
-                                    <div class="product-item bg-light">
-                                        <div class="card">
-                                            <div class="thumb-content">
-                                                <!-- <div class="price">$200</div> -->
-                                                <a href="">
-                                                    <img class="card-img-top img-fluid" src="../asset/img/poc_page/poc_car4.jfif" alt="Card image cap">
-                                                </a>
-                                            </div>
-                                            <hr>
-                                            <div class="card-body">
-                                                <h4 class="card-title"><a href="">Bmw 420 Gran Coupé 420i Gran Coupé M Sport Navi Parkassistent Klima</a></h4>
-                                                <hr>
-                                                <ul class="list-inline product-meta">
-                                                    <li class="list-inline-item">
-                                                        <a href=""><i class="fa fa-folder-open"></i>&nbsp;Petrol&nbsp;&nbsp;</a>
-                                                    </li>
-                                    
-                                                    <li class="list-inline-item">
-                                                        <a href="#"><i class="fa fa-calendar"></i>&nbsp;02/2018</a>
-                                                    </li>
-                                                </ul>
-                                                <hr>
-                                                <ul class="list-inline poc_price">
-                                                    <li> € 28.552</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!---->
-                                <!-- Car 5-->
-
-                                <div class="col-sm-12 col-lg-4 col-md-6">
-                                    <!-- product card -->
-                                    <div class="product-item bg-light">
-                                        <div class="card">
-                                            <div class="thumb-content">
-                                                <!-- <div class="price">$200</div> -->
-                                                <a href="">
-                                                    <img class="card-img-top img-fluid" src="../asset/img/poc_page/poc_car5.jfif" alt="Card image cap">
-                                                </a>
-                                            </div>
-                                            <hr>
-                                            <div class="card-body">
-                                                <h4 class="card-title"><a href="">Bmw 420 Gran Coupé 420i Gran Coupé M Sport Navi Parkassistent Klima</a></h4>
-                                                <hr>
-                                                <ul class="list-inline product-meta">
-                                                    <li class="list-inline-item">
-                                                        <a href=""><i class="fa fa-folder-open"></i>&nbsp;Petrol&nbsp;&nbsp;</a>
-                                                    </li>
-                                    
-                                                    <li class="list-inline-item">
-                                                        <a href="#"><i class="fa fa-calendar"></i>&nbsp;08/2017</a>
-                                                    </li>
-                                                </ul>
-                                                <hr>
-                                                <ul class="list-inline poc_price">
-                                                    <li> € 34.476</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!---->
-                                <!---->
-                            </div>
-                        </div>
-                        <!---->
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!---->
-
-    </section>
+		<div class="error page">
+			<h3>Sorry, something went wrong :(</h3>
+		</div>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+	<script src="../asset/js/poc.js"></script>
 </body>
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="footer-col">
-                <h4>BUYER PROTECTION</h4>
-                <ul>
-                    <li><a href="#">CARVAN guaranteed</a></li>
-                    <li><a href="#">Bespoke personal assistance</a></li>
-                    <li><a href="#">Transaction security</a></li>
-                    <li><a href="#">Technical and aeshetic evaluation</a></li>
-                    <li><a href="#">Verified partners and dealers</a></li>
-                    <li><a href="#">IOS 9001:2022 certified procedures</a></li>
-                    <li><a href="#">warranty and extended warranty</a></li>
-                    <li><a href="#">Safe delivery</a></li>
-                    <li><a href="#">Pre-delivery</a></li>
-                    <li><a href="#">WE deliver your car "Ready to go"</a></li>
-                    <li><a href="#">After-sales services</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>LEGAL & ASSISTANCE INFORMATION</h4>
-                <ul>
-                    <li><a href="#">Impressum</a></li>
-                    <li><a href="#">Terms and conditions</a></li>
-                    <li><a href="#">presonal data protection</a></li>
-                    <li><a href="#">Cookie policy</a></li>
-                    <li><a href="#">Glossary</a></li>
 
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>ADVANTAGES & BENEFITS</h4>
-                <ul>
-                    <li><a href="#">Used cars with warranty</a></li>
-                    <li><a href="#">New cars with short delivery time</a></li>
-                    <li><a href="#">Any car of  your choice securely traded</a></li>
-                    <li><a href="#">Extended warranty for your car</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>FOLLOW </h4>
-                <div class="footer__icon-box">
-                    <a href="#"><i class="fab fa-facebook-f footer-icon"></i></a>
-                    <a href="#"><i class="fab fa-twitter footer-icon"></i></a>
-                    <a href="#"><i class="fab fa-instagram footer-icon"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in footer-icon"></i></a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer__copyright">
-        <div class="container fh">
-            <div class="row fh">
-                <div class="col-12 fh">
-                    <div class="footer__copyright-box fh">
-                        <i class="fa-regular fa-copyright footer__copyright-icon"></i>
-                        <h3 class="footer__copyright-text">
-                            Copyright CARVAN 2011 - 2022
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-</script>
-<script src="../asset/js/main.js"></script>
-<script src="../asset/js/header.js"></script>
 </html>
