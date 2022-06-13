@@ -445,6 +445,12 @@
             Validator.minLength('#phone', 10, 'Enter at least 10 numbers')
         ],
         onSubmit: function(data) {
+            toast({
+                title: 'Processing',
+                message: 'Processing is being submitted to the system, please wait a moment',
+                type: 'info',
+                duration: 5000
+            })
 
             // Call API
             var url = "https://62205fd0ce99a7de19577611.mockapi.io/user/clientContact";
