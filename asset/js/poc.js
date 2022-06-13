@@ -179,8 +179,10 @@ $(function () {
 	}
 
 	function renderErrorPage(){
-		var page = $('.error');
+		var page = $('.error'),
+			allProducts = $('.all-products .products-list > li');
 		page.addClass('visible');
+		allProducts.addClass('hidden')
 	}
 
 	function createQueryHash(filters){
