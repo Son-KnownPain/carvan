@@ -38,7 +38,7 @@ $(function () {
 			}
 		}
 	});
-	$.getJSON("/carvan/asset/json/test.json", function( data ) {
+	$.getJSON("../asset/json/test.json", function( data ) {
 		products = data;
 		generateAllProductsHTML(products);
 		$(window).trigger('hashchange');

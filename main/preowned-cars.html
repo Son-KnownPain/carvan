@@ -268,13 +268,38 @@
 				<script id="products-template" type="x-handlebars-template">​
 					{{#each this}}
 						<li data-index="{{id}}">
-							<a href="#" class="product-photo"><img src="/carvan/asset/img/car-api/{{id}}/car1.jpg" height="270" alt="{{name}}"/></a>
+							<a href="#" class="product-photo"><img src="/asset/img/car-api/{{id}}/car1.jpg" height="270" alt="{{name}}"/></a>
 							<h2> {{name}} </h2>
 							<hr>
 							<ul class="product-description">
-								<li><span>Date:&nbsp;&nbsp;</span>{{carDetails.firstRegistration}}</li>
-								<li><span>KM:&nbsp;&nbsp;</span>{{carDetails.mileage}}</li>
-								<li><span>price:&nbsp;&nbsp;</span>{{currencyIcon}}{{netPrice}}</li>
+								<li>
+                                    <div>
+                                        <i class="fa-regular fa-calendar" style="color: #007fff;"></i>
+                                        {{carDetails.firstRegistration}}
+                                    </div>
+                                    <div></div>
+                                </li>
+
+								<li>
+                                    <div>
+                                        <i class="fa-solid fa-gauge-high" style="color: #6e7f80;"></i>
+                                        {{carDetails.mileage}}
+                                    </div>
+
+                                    <div class="poc_price">
+                                        {{currencyIcon}} {{netPrice}}
+                                    </div>    
+                                </li>
+
+                                <li>
+                                    <div>
+                                        <i class="fa-solid fa-gas-pump" style="color: #ffbf00;"></i>
+                                        {{carDetails.fuelType}}
+                                    </div>
+                                    <div class="list-car__vat fs-12 text-success">
+                                        19% VAT reclaimable
+                                    </div>
+                                </li>
 							</ul>
 							<div class="highlight"></div>
 						</li>
