@@ -258,38 +258,38 @@ const app = {
                     // // Filter search: HELL WASN'T FIXED
                     if (dataSearch.brand != 'ANY' && dataSearch.brand != '') {
                         result = car.brand == dataSearch.brand ? true : false
-                        // Kiểm tra xem đã đúng brand chưa
+                    }
+                    // Kiểm tra xem đã đúng brand chưa
+                    if (result) {
+                        if (dataSearch.model != 'ANY' && dataSearch.model != '') {
+                            result = car.model == dataSearch.model ? true : false
+                        }
+                        // Kiểm tra xem đã đúng model chưa
                         if (result) {
-                            if (dataSearch.model != 'ANY' && dataSearch.model != '') {
-                                result = car.model == dataSearch.model ? true : false
+                            if (dataSearch.numberOfSeats != 'ANY' && dataSearch.numberOfSeats != '') {
+                                result = car.carDetails.numberOfSeats == dataSearch.numberOfSeats ? true : false
                             }
-                            // Kiểm tra xem đã đúng model chưa
+                            // Đúng số ghế
                             if (result) {
-                                if (dataSearch.numberOfSeats != 'ANY' && dataSearch.numberOfSeats != '') {
-                                    result = car.carDetails.numberOfSeats == dataSearch.numberOfSeats ? true : false
+                                if (dataSearch.numberOfDoors != 'ANY' && dataSearch.numberOfDoors != '') {
+                                    result = car.carDetails.numberOfDoors == dataSearch.numberOfDoors ? true : false
                                 }
-                                // Đúng số ghế
+                                // Đúng số cửa
                                 if (result) {
-                                    if (dataSearch.numberOfDoors != 'ANY' && dataSearch.numberOfDoors != '') {
-                                        result = car.carDetails.numberOfDoors == dataSearch.numberOfDoors ? true : false
+                                    if (dataSearch.slidingDoors != 'ANY' && dataSearch.slidingDoors != '') {
+                                        result = car.carDetails.slidingDoors == dataSearch.slidingDoors ? true : false
                                     }
-                                    // Đúng số cửa
+                                    // Đúng cửa kéo
                                     if (result) {
-                                        if (dataSearch.slidingDoors != 'ANY' && dataSearch.slidingDoors != '') {
-                                            result = car.carDetails.slidingDoors == dataSearch.slidingDoors ? true : false
+                                        // Chưa xử lí được khi chọn other
+                                        if (!dataSearch.bodyStyle.includes(car.carDetails.bodyStyle) && numOfElementBodyStyle > 0) {
+                                            result = false
                                         }
-                                        // Đúng cửa kéo
+                                        // Đúng body style
                                         if (result) {
                                             // Chưa xử lí được khi chọn other
-                                            if (!dataSearch.bodyStyle.includes(car.carDetails.bodyStyle) && numOfElementBodyStyle > 0) {
+                                            if (!dataSearch.fuelType.includes(car.carDetails.fuelType) && numOfElementFuelType > 0) {
                                                 result = false
-                                            }
-                                            // Đúng body style
-                                            if (result) {
-                                                // Chưa xử lí được khi chọn other
-                                                if (!dataSearch.fuelType.includes(car.carDetails.fuelType) && numOfElementFuelType > 0) {
-                                                    result = false
-                                                }
                                             }
                                         }
                                     }
