@@ -254,49 +254,52 @@ const app = {
                     dataSearch.fuelType.forEach(element => {
                         numOfElementFuelType++
                     })
+
+                    // // Filter search: HELL WASN'T FIXED
                     if (dataSearch.brand != 'ANY' && dataSearch.brand != '') {
                         result = car.brand == dataSearch.brand ? true : false
-                    } else {
-                        result = true
-                    }
-                    if (dataSearch.model != 'ANY' && dataSearch.model != '') {
-                        result = car.model == dataSearch.model ? true : false
-                    }
-                    // Kiểm tra xem đã đúng brand hoặc model r mới kiểm tra tiếp
-                    if (result) {
-                        if (dataSearch.numberOfSeats != 'ANY' && dataSearch.numberOfSeats != '') {
-                            result = car.carDetails.numberOfSeats == dataSearch.numberOfSeats ? true : false
-                        }
-                        // Đúng số ghế
+                        // Kiểm tra xem đã đúng brand chưa
                         if (result) {
-                            if (dataSearch.numberOfDoors != 'ANY' && dataSearch.numberOfDoors != '') {
-                                result = car.carDetails.numberOfDoors == dataSearch.numberOfDoors ? true : false
+                            if (dataSearch.model != 'ANY' && dataSearch.model != '') {
+                                result = car.model == dataSearch.model ? true : false
                             }
-                            // Đúng số cửa
+                            // Kiểm tra xem đã đúng model chưa
                             if (result) {
-                                if (dataSearch.slidingDoors != 'ANY' && dataSearch.slidingDoors != '') {
-                                    result = car.carDetails.slidingDoors == dataSearch.slidingDoors ? true : false
+                                if (dataSearch.numberOfSeats != 'ANY' && dataSearch.numberOfSeats != '') {
+                                    result = car.carDetails.numberOfSeats == dataSearch.numberOfSeats ? true : false
                                 }
-                                // Đúng cửa kéo
+                                // Đúng số ghế
                                 if (result) {
-                                    // Chưa xử lí được khi chọn other
-                                    if (!dataSearch.bodyStyle.includes(car.carDetails.bodyStyle) && numOfElementBodyStyle > 0) {
-                                        result = false
+                                    if (dataSearch.numberOfDoors != 'ANY' && dataSearch.numberOfDoors != '') {
+                                        result = car.carDetails.numberOfDoors == dataSearch.numberOfDoors ? true : false
                                     }
-                                    // Đúng body style
+                                    // Đúng số cửa
                                     if (result) {
-                                        // Chưa xử lí được khi chọn other
-                                        if (!dataSearch.fuelType.includes(car.carDetails.fuelType) && numOfElementFuelType > 0) {
-                                            result = false
+                                        if (dataSearch.slidingDoors != 'ANY' && dataSearch.slidingDoors != '') {
+                                            result = car.carDetails.slidingDoors == dataSearch.slidingDoors ? true : false
+                                        }
+                                        // Đúng cửa kéo
+                                        if (result) {
+                                            // Chưa xử lí được khi chọn other
+                                            if (!dataSearch.bodyStyle.includes(car.carDetails.bodyStyle) && numOfElementBodyStyle > 0) {
+                                                result = false
+                                            }
+                                            // Đúng body style
+                                            if (result) {
+                                                // Chưa xử lí được khi chọn other
+                                                if (!dataSearch.fuelType.includes(car.carDetails.fuelType) && numOfElementFuelType > 0) {
+                                                    result = false
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                    
-                    
+
                     return result
+                        
                 }
                 // set it up, check and push which ids are valid for the search request into the idValid array
                 // Also, if it is valid, it will increase the Result Number by 1 to render the UI
