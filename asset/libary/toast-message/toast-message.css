@@ -134,6 +134,7 @@
     right: 12px;
   }
   .my-toast {
+    width: 100%;
     max-width: 350px;
     min-width: 300px;
   }
