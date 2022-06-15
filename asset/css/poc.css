@@ -283,7 +283,7 @@ body{
 .preview-large{
 	box-sizing: border-box;
 	width: 760px;
-	height: 550px;	
+	height: 570px;	
 	position: fixed;
 	left: 50%;
 	margin-left: -375px;
@@ -295,7 +295,7 @@ body{
 	z-index: 102;
 	opacity: 0;
 	transition: 0.4s;
-	overflow: auto;
+
 }
 
 .single-product.visible .preview-large{
@@ -340,6 +340,10 @@ body{
 
 .s-img {
 	display: flex;
+	overflow: auto;
+}
+
+.s-content {
 	overflow: auto;
 }
 
