@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head lang="en">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8">
@@ -245,19 +244,32 @@
         </header>
 	</div>
 
-	<div class="main-content pt-48">
-		<div class="all-products page">
+    <div class="main-content">
+
+        <div class="title-main padding-top-115">Pre-Owned cars</div>
+
+        <div style="padding-left:30px; padding-right: 30px;"><hr></div>
+
+        <!-- all product -->
+		<div class="all-products">
 			<!-- filter -->
 			<div class="filters">
 				<form>
 					<div class="filter-criteria">
 						<span>Brands</span>
 						<label><input type="checkbox" name="brand" value="AUDI">Audi</label>
+                        <label><input type="checkbox" name="brand" value="BMW">Bmw</label>
+                        <label><input type="checkbox" name="brand" value="MERCEDES">Mercedes</label>
+                        <label><input type="checkbox" name="brand" value="OPEL">Opel</label>
+                        <label><input type="checkbox" name="brand" value="SKODA">Skoda</label>
 					</div>
 
 					<div class="filter-criteria">
-						<span>fuelType</span>
+						<span>Fuel type</span>
 						<label><input type="checkbox" name="fuelType" value="Petrol">Petrol</label>
+                        <label><input type="checkbox" name="fuelType" value="Diesel">Diesel</label>
+                        <label><input type="checkbox" name="fuelType" value="Electric">Electric</label>
+                        <label><input type="checkbox" name="fuelType" value="Hybrid">Hybrid (Petrol/electric)</label>
 					</div>
 					<button>Clear filters</button>
 				</form>
@@ -267,8 +279,8 @@
 			<ul class="products-list">
 				<script id="products-template" type="x-handlebars-template">​
 					{{#each this}}
-						<li data-index="{{id}}">
-							<a href="#" class="product-photo"><img src="/asset/img/car-api/{{id}}/car1.jpg" height="270" alt="{{name}}"/></a>
+						<li data-index="{{id}}" title="{{name}}">
+							<a href="#" class="product-photo"><img src="/asset/img/car-api/{{id}}/car1.jpg" height="200" alt="{{name}}"/></a>
 							<h2> {{name}} </h2>
 							<hr>
 							<ul class="product-description">
@@ -305,19 +317,118 @@
 						</li>
 					{{/each}}
 				</script>
-			</ul>
-		</div>
-
-		<div class="error page pt-60">
-			<h3>Updating...</h3>
+			</ul>   
+            <!-- nonP -->
+            <div class="nonP">
+                <p>No product match.</p>
+            </div>
+            <!-- spa page-->
+            <div class="single-product page">
+                <div class="overlay"></div>
+                <div class="preview-large">
+                    <h3>Single product view</h3>
+                    <div class="s-img">
+                        <div class="img1"><img src=""/></div>
+                        <div class="img2"><img src=""/></div>
+                        <div class="img3"><img src=""/></div>
+                        <div class="img4"><img src=""/></div>
+                        <div class="img5"><img src=""/></div>
+                    </div>
+                    <div style="font-size:20px; padding-top: 15px;">Do you want to buy car?</div>
+                    <div style="padding-bottom:30px;">
+                        <a class="call" href="tel:01216855741">
+                            Call Us:&nbsp;
+                            <i class="fa-solid fa-phone-volume" style="margin-right: 2px;"></i>
+                            (+84) 0121 6855 741
+                        </a>
+                    </div>
+                    <span class="close">×</span>
+                </div>
+            </div>
 		</div>
 	</div>
-	
+    <!-- error -->
+	<div class="error page padding-top-400">
+		<h3>Sorry, something went wrong! Please reload the page.</h3>
+	</div>
+
+
+    <div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>BUYER PROTECTION</h4>
+                        <ul>
+                            <li><a href="#">CARVAN guaranteed</a></li>
+                            <li><a href="#">Bespoke personal assistance</a></li>
+                            <li><a href="#">Transaction security</a></li>
+                            <li><a href="#">Technical and aeshetic evaluation</a></li>
+                            <li><a href="#">Verified partners and dealers</a></li>
+                            <li><a href="#">IOS 9001:2022 certified procedures</a></li>
+                            <li><a href="#">warranty and extended warranty</a></li>
+                            <li><a href="#">Safe delivery</a></li>
+                            <li><a href="#">Pre-delivery</a></li>
+                            <li><a href="#">WE deliver your car "Ready to go"</a></li>
+                            <li><a href="#">After-sales services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>LEGAL & ASSISTANCE INFORMATION</h4>
+                        <ul>
+                            <li><a href="#">Impressum</a></li>
+                            <li><a href="#">Terms and conditions</a></li>
+                            <li><a href="#">presonal data protection</a></li>
+                            <li><a href="#">Cookie policy</a></li>
+                            <li><a href="#">Glossary</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>ADVANTAGES & BENEFITS</h4>
+                        <ul>
+                            <li><a href="#">Used cars with warranty</a></li>
+                            <li><a href="#">New cars with short delivery time</a></li>
+                            <li><a href="#">Any car of  your choice securely traded</a></li>
+                            <li><a href="#">Extended warranty for your car</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>FOLLOW </h4>
+                        <div class="footer__icon-box">
+                            <a href="#"><i class="fab fa-facebook-f footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-twitter footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-instagram footer-icon"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in footer-icon"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <div class="container fh">
+                    <div class="row fh">
+                        <div class="col-12 fh">
+                            <div class="footer__copyright-box fh">
+                                <i class="fa-regular fa-copyright footer__copyright-icon"></i>
+                                <h3 class="footer__copyright-text">
+                                    Copyright CARVAN 2011 - 2022
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
 	<script src="../asset/js/poc.js"></script>
 
     <!-- Handle header -->
-    <script src="../asset/js/header.js"></script>
+    <script src="../asset/js/header.js"></script>   
 </html>

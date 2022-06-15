@@ -29,6 +29,7 @@ $(function () {
 		e.preventDefault();
 		window.location.hash = '#';
 	});
+
 	var singleProductPage = $('.single-product');
 	singleProductPage.on('click', function (e) {
 		if (singleProductPage.hasClass('visible')) {
@@ -38,7 +39,8 @@ $(function () {
 			}
 		}
 	});
-	$.getJSON("../asset/json/test.json", function( data ) {
+	
+	$.getJSON("../asset/json/poc.json", function( data ) {
 		products = data;
 		generateAllProductsHTML(products);
 		$(window).trigger('hashchange');
@@ -55,15 +57,12 @@ $(function () {
 			'': function() {
 				filters = {};
 				checkboxes.prop('checked',false);
-
 				renderProductsPage(products);
 			},
-			/*
 			'#product': function() {
 				var index = url.split('#product/')[1].trim();
 				renderSingleProductPage(index, products);
 			},
-			*/
 			'#filter': function() {
 				url = url.split('#filter/')[1].trim();
 				try {
@@ -97,36 +96,46 @@ $(function () {
 	}
 	
 	function renderProductsPage(data){
-		var page = $('.all-products'),
+		var page = $('.all-products'), p = $('.nonP'),
 			allProducts = $('.all-products .products-list > li');
 		allProducts.addClass('hidden');
 		allProducts.each(function () {
 			var that = $(this);
 			data.forEach(function (item) {
-				if(that.data('index') == item.id){
+				if(that.data('index') == item.id) {
 					that.removeClass('hidden');
 				}
 			});
 		});
+		/* no product */
+		if (data == "") p.addClass('show')
+		else p.removeClass('show'); 
 		page.addClass('visible');
 	}
+	
 	/* SPA */
-	/*
 	function renderSingleProductPage(index, data){
 		var page = $('.single-product'),
+			img1 = '../asset/img/car-api/' + index + '/car1.jpg',
+			img2 = '../asset/img/car-api/' + index + '/car2.jpg',
+			img3 = '../asset/img/car-api/' + index + '/car3.jpg',
+			img4 = '../asset/img/car-api/' + index + '/car4.jpg',
+			img5 = '../asset/img/car-api/' + index + '/car5.jpg',
 			container = $('.preview-large');
 		if(data.length){
 			data.forEach(function (item) {
 				if(item.id == index){
 					container.find('h3').text(item.name);
-					container.find('img').attr('src', item.image.large);
-					container.find('p').text(item.description);
+					$('.img1').find('img').attr('src', img1);
+					$('.img2').find('img').attr('src', img2);
+					$('.img3').find('img').attr('src', img3);
+					$('.img4').find('img').attr('src', img4);
+					$('.img5').find('img').attr('src', img5);
 				}
 			});
 		}
 		page.addClass('visible');
 	}
-	*/
 
 	function renderFilterResults(filters, products){
 		var criteria = ['brand', 'fuelType'],
@@ -179,10 +188,13 @@ $(function () {
 	}
 
 	function renderErrorPage(){
-		var page = $('.error'),
-			allProducts = $('.all-products .products-list > li');
+		var page = $('.error'), footer = $('footer'),
+			headers = $('header'),
+			main = $('.main-content');
 		page.addClass('visible');
-		allProducts.addClass('hidden')
+		main.addClass('hidden');
+		headers.addClass('hidden');
+		footer.addClass('hidden');
 	}
 
 	function createQueryHash(filters){
