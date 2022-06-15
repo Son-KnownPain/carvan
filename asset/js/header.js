@@ -85,7 +85,14 @@ const handleClickBrand = (element) => {
                 }
             })
             localStorage.setItem('IDS_VALID_ARRAY', JSON.stringify(idsValid))
-            window.location.href = `http://${window.location.host}/carvan/other-html/list-car.html`
+
+            // Check if in home page or other page:
+            if (typeof isInHomePage != 'undefined') {
+                window.location.href = `./other-html/list-car.html`
+            } else if (typeof isInHomePage == 'undefined') {
+                window.location.href = `../other-html/list-car.html`
+            }
+
         })
 
 }

@@ -136,7 +136,18 @@ const app = {
                                 </div>`
                     }
                 })
-                $('.list-car').innerHTML = `<div class="row">${htmlCars.join('')}</div>`
+                if (htmlCars.join('') != '') {
+                    $('.list-car').innerHTML = `<div class="row">${htmlCars.join('')}</div>`
+                } else {
+                    $('.list-car').innerHTML = `<div class="row">
+                                                    <div class="flex-center">
+                                                        <h4 class="no-product-text">
+                                                            <i class="fa-solid fa-store-slash"></i>
+                                                            Sorry! The product is currently out of stock or has not been released yet
+                                                        </h4>
+                                                    </div>
+                                                </div>`
+                }
 
                 // After rendering is done, get element car and handle click, send carId to localStorage
                 _this.carsElement = $$('.list-car__item')

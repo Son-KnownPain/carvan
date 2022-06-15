@@ -398,7 +398,7 @@
 /* Large: lg */
 @media (min-width: 992px) and (max-width: 1199px) {
     .header__nav-item-link {
-        font-size: 18px;
+        font-size: 1.8rem;
     }
 }
 
