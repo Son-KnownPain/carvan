@@ -264,6 +264,11 @@ body{
 
 .single-product{
 	z-index: 100;
+	display: hidden;
+}
+
+.visible {
+	display: block;
 }
 
 .overlay {
@@ -293,13 +298,13 @@ body{
 	border-radius: 6px;
 	background-color:  #ffffff;
 	z-index: 102;
-	opacity: 0;
+	display: none;
 	transition: 0.4s;
 
 }
 
 .single-product.visible .preview-large{
-	opacity: 1;
+	display: block;
 	transition: 1.4s;
 	pointer-events: auto;
 }
