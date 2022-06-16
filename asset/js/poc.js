@@ -40,7 +40,8 @@ $(function () {
 		}
 	});
 	
-	$.getJSON("../asset/json/poc.json", function( data ) {
+	var file = "https://62aab6bba62365888bcb89b7.mockapi.io/poc";
+	$.getJSON(file, function( data ) {
 		products = data;
 		generateAllProductsHTML(products);
 		$(window).trigger('hashchange');
