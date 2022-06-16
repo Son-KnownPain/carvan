@@ -238,7 +238,7 @@ const app = {
     loadResultSearch: function(dataSearch) {
         $('.result-text').innerHTML = `<i class="fa-solid fa-gear result-loading-icon" style="margin-right: 4px;"></i>Loading`
         const _this = this // Get 'this' keyword
-        fetch('https://62205fd0ce99a7de19577611.mockapi.io/user/cars')
+        fetch(urlCarsApi)
             .then(response => response.json())
             .then(cars => {
                 let resultNumber = 0
