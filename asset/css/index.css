@@ -305,7 +305,6 @@
     text-align: center;
     min-height: 50px;
     color: #444;
-    font-family: 'cambria';
     font-size: 3rem;
     font-weight: 400;
     margin-top: 30px;
@@ -318,7 +317,6 @@
 .product--loading {
     text-align: center;
     color: #79443b;
-    font-family: Consolas;
 }
 
 .product-item {
@@ -336,7 +334,6 @@
 .product-info {
     bottom: 0;
     padding: 8px;
-    font-family: 'cambria';
     background-color: #333;
 }
 
@@ -365,7 +362,6 @@
     justify-content: center;
     align-items: center;
     font-size: 2.2rem;
-    font-family: consolas;
     font-weight: 600;
     word-spacing: 4px;
     height: 50px;
@@ -394,7 +390,6 @@
     align-items: center;
     height: 155px;
     width: 100%;
-    font-family: cursive;
     flex-direction: column;
 }
 
@@ -497,7 +492,6 @@
 
 .co-slider__content {
     font-size: 2.2rem;
-    font-family: consolas;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -524,7 +518,6 @@
 
 .advantages__heading {
     font-size: 3.6rem;
-    font-family: cursive;
     margin-bottom: 12px;
 }
 
@@ -566,7 +559,6 @@
 
 .advantages-item-text {
     font-size: 1.8rem;
-    font-family: cambria;
     padding: 0 8px;
     text-align: center;
     word-spacing: 2px;
@@ -596,7 +588,6 @@
     color: #333;
     text-align: center;
     font-size: 3.6rem;
-    font-family: cursive;
     margin-bottom: 12px;
 }
 
@@ -651,7 +642,6 @@
 .wi__heading {
     font-size: 3rem;
     color: var(--text-color);
-    font-family: sans-serif;
     font-weight: 600;
     text-align: center;
 }
@@ -822,7 +812,6 @@
 
 .wi__about-relationships-signature {
     font-size: 3.6rem;
-    font-family: Brush Script MT;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -851,7 +840,6 @@
     color: #333;
     text-align: center;
     font-size: 3.6rem;
-    font-family: cursive;
     margin-bottom: 12px;
 }
 
@@ -870,7 +858,6 @@
     margin-bottom: 20px;
     line-height: 32px;
     word-spacing: 3px;
-    font-family: cambria;
 }
 
 
@@ -894,7 +881,6 @@
     color: #333;
     text-align: center;
     font-size: 3.6rem;
-    font-family: cursive;
     margin-bottom: 12px;
 }
 

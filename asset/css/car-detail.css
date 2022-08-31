@@ -301,7 +301,6 @@ ul {
 
 .car__state-text {
     font-size: 2.4rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .car__price-table {
@@ -329,7 +328,6 @@ ul {
 .car__price-title {
     display: flex;
     align-items: center;
-    font-family: Candara, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .car__price-subtitle {
@@ -341,10 +339,6 @@ ul {
 .car__warranty-modify-btn {
     margin-left: 8px;
     font-size: 1.2rem;
-}
-
-.car__price-value {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .car__vat-value {

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 :root {
     --primary-color: #cc0000;
     --white-color: #fff;
@@ -36,6 +38,7 @@ body::-webkit-scrollbar-thumb:hover {
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .b_text-weight-700 {
@@ -328,7 +331,6 @@ body::-webkit-scrollbar-thumb:hover {
     align-items: center;
     min-height: 155px;
     width: 100%;
-    /* font-family: cursive; */
     flex-direction: column;
 }
 
